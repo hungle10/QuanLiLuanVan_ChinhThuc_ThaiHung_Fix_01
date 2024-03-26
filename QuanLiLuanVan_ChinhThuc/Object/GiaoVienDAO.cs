@@ -58,10 +58,10 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             else
                 MessageBox.Show("Xoa khong thanh cong !");
         }
-        public static List<GiaoVien> getYeuCau()
+        public static List<GiaoVien> getYeuCau(string key="")
         {
             List<GiaoVien> gvs = new List<GiaoVien>();
-            string query = String.Format("SELECT * FROM GiaoVien");
+            string query = String.Format("SELECT * FROM GiaoVien where HoTen like '%{0}%'",key);
             DataTable data = dBConn.Excute(query);
             if (data == null)
             {

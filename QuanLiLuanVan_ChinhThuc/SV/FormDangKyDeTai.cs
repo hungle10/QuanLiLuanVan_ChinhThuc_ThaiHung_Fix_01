@@ -32,10 +32,11 @@ namespace QuanLiLuanVan_ChinhThuc.SV
 
         
 
-        public void loadPanel()
+        public void loadPanel(string key="")
         {
             flowLayoutPanel1.Controls.Clear();
-            DataTable dt = dBConn.Excute("SELECT * FROM LuanVan WHERE LuanVan.IDLuanVan NOT IN (SELECT IDLuanVan FROM Duyet)");
+            string query = string.Format("SELECT * FROM LuanVan WHERE (LuanVan.IDLuanVan NOT IN (SELECT IDLuanVan FROM Duyet)) and TenLuanVan like '%{0}%'", key);
+            DataTable dt = dBConn.Excute(query);
             foreach (DataRow dr in dt.Rows)
             {
                 LuanVan luanVan = luanVanDao.convert(dr);
@@ -79,6 +80,11 @@ namespace QuanLiLuanVan_ChinhThuc.SV
             {
                 MessageBox.Show("Bạn đã có đề tài đang chờ duyệt rồi!");
             }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            loadPanel(tbTimKiem.Text);
         }
     }
 }

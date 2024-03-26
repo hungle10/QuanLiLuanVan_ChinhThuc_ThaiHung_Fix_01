@@ -313,6 +313,9 @@
     <EmbeddedResource Include="SV\childAddDangKi.resx">
       <DependentUpon>childAddDangKi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SV\FormGiangVien.resx">
+      <DependentUpon>FormGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SV\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>

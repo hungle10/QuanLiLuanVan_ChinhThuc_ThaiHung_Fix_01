@@ -23,10 +23,10 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             InitializeComponent();
         }
 
-        public void loadPanel()
+        public void loadPanel(string key="")
         {
             flowLayoutPanel1.Controls.Clear();
-            string query = string.Format("SELECT * FROM LuanVan WHERE (LuanVan.IDLuanVan IN (SELECT IDLuanVan FROM DangKi) AND LuanVan.IDLuanVan IN (SELECT IDLuanVan FROM Duyet)) and GiangVien='{0}'", UserInfo.giaoVien.HoTen);
+            string query = string.Format("SELECT * FROM LuanVan WHERE (LuanVan.IDLuanVan IN (SELECT IDLuanVan FROM DangKi) AND LuanVan.IDLuanVan IN (SELECT IDLuanVan FROM Duyet)) and GiangVien='{0}' and TenLuanVan like '%{1}%'", UserInfo.giaoVien.HoTen,key);
             DataTable dt = dBConn.Excute(query);
             foreach (DataRow dr in dt.Rows)
             {
@@ -45,6 +45,11 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         private void FormDuyet_Load(object sender, EventArgs e)
         {
             loadPanel();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            loadPanel(tbTimKiem.Text);
         }
     }
 }

@@ -42,7 +42,7 @@ namespace QuanLiLuanVan_ChinhThuc
             double tongUChoanthanh = 0; 
             YeuCauDAO yeucauDAO = new YeuCauDAO();
             //gửi id sinh viên vào đây 
-           List<YeuCau> ycs =  yeucauDAO.getYeuCau("10000");
+           List<YeuCau> ycs =  yeucauDAO.getYeuCau(UserInfo.sinhVien.Id.ToString());
             foreach(YeuCau yc in ycs) 
             {
                     UCnoidungCheck uc = new UCnoidungCheck();       

@@ -16,6 +16,10 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         {
             InitializeComponent();
         }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -32,5 +36,6 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         {
 
         }
+
     }
 }

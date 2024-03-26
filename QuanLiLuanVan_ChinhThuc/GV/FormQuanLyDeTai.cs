@@ -26,10 +26,10 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             loadPanel();    
         }
 
-        public void loadPanel()
+        public void loadPanel(string key="")
         {
             flowLayoutPanel1.Controls.Clear();
-            string query = string.Format("SELECT * FROM LuanVan WHERE (LuanVan.IDLuanVan NOT IN (SELECT IDLuanVan FROM Duyet)) and GiangVien='{0}' ", UserInfo.giaoVien.HoTen);
+            string query = string.Format("SELECT * FROM LuanVan WHERE (LuanVan.IDLuanVan NOT IN (SELECT IDLuanVan FROM Duyet)) and GiangVien like '%{0}%' and TenLuanVan like '%{1}%' ", UserInfo.giaoVien.HoTen,key);
             DataTable dt = dBConn.Excute(query);
             if(dt==null || dt.Rows.Count == 0 ) 
             {
@@ -68,5 +68,10 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         {
             loadPanel();
         }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            loadPanel(tbTimKiem.Text);
+        }
+
     }
 }
