@@ -21,5 +21,10 @@ namespace QuanLiLuanVan_ChinhThuc
         {
 
         }
+
+        private void childAddDangKi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

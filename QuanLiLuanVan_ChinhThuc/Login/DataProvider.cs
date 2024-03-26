@@ -34,9 +34,9 @@ namespace QuanLiLuanVan_ChinhThuc
             }
         }
         private DataProvider() { }
-     //   private string connectionStr = @"Data Source=DESKTOP-D1VEMR6\DINHHOA;Initial Catalog=QLLV;Integrated Security=True";
+        private string connectionStr = @"Data Source=DESKTOP-D1VEMR6\DINHHOA;Initial Catalog=QLLUANVAN;Integrated Security=True";
 
-        private string connectionStr = @"Data Source=LEHUNG\THAIHUNG;Initial Catalog=WindowFix_01;Integrated Security=True;Encrypt=False";
+        //private string connectionStr = @"Data Source=LEHUNG\THAIHUNG;Initial Catalog=WindowFix_01;Integrated Security=True;Encrypt=False";
 
         //private string connectionStr = @"Data Source=LEHUNG\\THAIHUNG;Initial Catalog=Window;Integrated Security=True;Encrypt=False";
         public DataTable GetTable(string tableName) 

@@ -41,6 +41,8 @@
             this.t1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.tnhom = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tbTenGiaoVien = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // t2
@@ -75,7 +77,7 @@
             this.t5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.t5.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.t5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t5.Location = new System.Drawing.Point(227, 193);
+            this.t5.Location = new System.Drawing.Point(227, 232);
             this.t5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.t5.MaxLength = 327670;
             this.t5.Multiline = true;
@@ -84,7 +86,7 @@
             this.t5.PlaceholderText = "";
             this.t5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.t5.SelectedText = "";
-            this.t5.Size = new System.Drawing.Size(454, 198);
+            this.t5.Size = new System.Drawing.Size(454, 273);
             this.t5.TabIndex = 84;
             // 
             // btnXacNhan
@@ -97,7 +99,7 @@
             this.btnXacNhan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnXacNhan.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnXacNhan.ForeColor = System.Drawing.Color.White;
-            this.btnXacNhan.Location = new System.Drawing.Point(577, 444);
+            this.btnXacNhan.Location = new System.Drawing.Point(666, 545);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(155, 46);
             this.btnXacNhan.TabIndex = 83;
@@ -161,7 +163,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(31, 193);
+            this.label7.Location = new System.Drawing.Point(31, 232);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(151, 23);
@@ -236,7 +238,7 @@
             this.tnhom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tnhom.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.tnhom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tnhom.Location = new System.Drawing.Point(956, 193);
+            this.tnhom.Location = new System.Drawing.Point(956, 232);
             this.tnhom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tnhom.MaxLength = 327670;
             this.tnhom.Multiline = true;
@@ -245,7 +247,7 @@
             this.tnhom.PlaceholderText = "";
             this.tnhom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tnhom.SelectedText = "";
-            this.tnhom.Size = new System.Drawing.Size(314, 198);
+            this.tnhom.Size = new System.Drawing.Size(314, 273);
             this.tnhom.TabIndex = 88;
             // 
             // label1
@@ -253,19 +255,53 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(766, 203);
+            this.label1.Location = new System.Drawing.Point(766, 242);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 23);
             this.label1.TabIndex = 89;
             this.label1.Text = "Thành viên nhóm:";
             // 
+            // tbTenGiaoVien
+            // 
+            this.tbTenGiaoVien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbTenGiaoVien.DefaultText = "";
+            this.tbTenGiaoVien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbTenGiaoVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbTenGiaoVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbTenGiaoVien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbTenGiaoVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbTenGiaoVien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbTenGiaoVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbTenGiaoVien.Location = new System.Drawing.Point(227, 176);
+            this.tbTenGiaoVien.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tbTenGiaoVien.Name = "tbTenGiaoVien";
+            this.tbTenGiaoVien.PasswordChar = '\0';
+            this.tbTenGiaoVien.PlaceholderText = "";
+            this.tbTenGiaoVien.SelectedText = "";
+            this.tbTenGiaoVien.Size = new System.Drawing.Size(268, 33);
+            this.tbTenGiaoVien.TabIndex = 91;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(91, 186);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 23);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "Giáo Viên:";
+            // 
             // FormAddDeTaiDuyet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(1306, 510);
+            this.ClientSize = new System.Drawing.Size(1306, 616);
+            this.Controls.Add(this.tbTenGiaoVien);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tnhom);
             this.Controls.Add(this.t2);
@@ -284,6 +320,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormAddDeTaiDuyet";
             this.Text = "FormAddDeTaiDuyet";
+            this.Load += new System.EventHandler(this.FormAddDeTaiDuyet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +341,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox t1;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox tnhom;
         private System.Windows.Forms.Label label1;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox tbTenGiaoVien;
+        private System.Windows.Forms.Label label3;
     }
 }

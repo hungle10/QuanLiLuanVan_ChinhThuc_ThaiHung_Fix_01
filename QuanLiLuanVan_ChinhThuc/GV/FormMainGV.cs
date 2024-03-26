@@ -24,8 +24,8 @@ namespace QuanLiLuanVan_ChinhThuc.GV
 
         private void FormMainGV_Load(object sender, EventArgs e)
         {
-            OpenChildFrom(new HomePage());
-            loadingStatusButton(guna2Button1);
+            //OpenChildFrom(new HomePage());
+            //loadingStatusButton(guna2Button1);
         }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)

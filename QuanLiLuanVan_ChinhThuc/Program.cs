@@ -18,7 +18,7 @@ namespace QuanLiLuanVan_ChinhThuc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMainSV());
+            Application.Run(new fLogin());
         }
     }
 }

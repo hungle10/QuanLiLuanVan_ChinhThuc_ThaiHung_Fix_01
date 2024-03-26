@@ -29,7 +29,7 @@ namespace QuanLiLuanVan_ChinhThuc.SV
             lv.LinhVuc = t3.Text;
             lv.CongNghe = t4.Text;
             lv.ChiTiet = t5.Text;
-            lv.GiangVien = "Nguyễn Thúy An";
+            lv.GiangVien = tbTenGiaoVien.Text;
             return lv;
         }
 
@@ -48,11 +48,16 @@ namespace QuanLiLuanVan_ChinhThuc.SV
             LuanVan lv = getLuanVan();
             lvd.add(lv);
             lv = lvd.getLastestLuanVan();
-            DangKy dk = new DangKy("10000", lv.IDLuanVan, "Nguyễn Thúy An");
+            DangKy dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, tbTenGiaoVien.Text);
             dkd.add(dk);
             dkd.addMemberNhom(tnhom.Lines, dk.IDSinhVien);
             dkd.addDuyet(dk);
             this.Close();
+        }
+
+        private void FormAddDeTaiDuyet_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

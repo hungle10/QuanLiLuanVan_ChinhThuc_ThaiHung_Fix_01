@@ -28,10 +28,10 @@ namespace QuanLiLuanVan_ChinhThuc
         private void childFromLuanVan_Load(object sender, EventArgs e)
         {
             
-            HomePageClass hp = homePageClassDAO.getInfoHomePage("10000");
+            HomePageClass hp = homePageClassDAO.getInfoHomePage(UserInfo.sinhVien.Id.ToString());
             if (hp != null )
             {
-                DangKy dk = dkd.getFromIDSinhVien("10000");
+                DangKy dk = dkd.getFromIDSinhVien(UserInfo.sinhVien.Id.ToString());
                 if (dkd.checkDKDetaiDangDuyet(dk))
                 {
                     //Thêm thanh trạng thái đề tài đang duyệt + hủy đề tài dag duyệt đó + chi tiết đề tài đang gửi đi để duyệt

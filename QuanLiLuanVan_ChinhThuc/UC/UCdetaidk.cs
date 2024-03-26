@@ -22,7 +22,7 @@ namespace QuanLiLuanVan_ChinhThuc.UC
         {
             InitializeComponent();
             this.lv = lv;
-            dk = new DangKy("10000", lv.IDLuanVan, lv.GiangVien);
+            dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, lv.GiangVien);
             FXacNhan = new FormXacNhan(lv);
             loadInfomation();
         }
@@ -73,8 +73,8 @@ namespace QuanLiLuanVan_ChinhThuc.UC
             }
             else
             {
-                ycd.delete("10000", lv.IDLuanVan);
-                dkd.remove(dkd.getFromIDSinhVien("10000"));
+                ycd.delete(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan);
+                dkd.remove(dkd.getFromIDSinhVien(UserInfo.sinhVien.Id.ToString()));
             }
             loadInfomation();
 
@@ -97,6 +97,11 @@ namespace QuanLiLuanVan_ChinhThuc.UC
         {
             FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai(lv.TenLuanVan, lv.GiangVien, lv.ChiTiet);
             frm.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -22,7 +22,8 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         {
             InitializeComponent();
             this.lv = lv;
-            dk = dkd.getFromIDSinhVien("10000");
+            //dk = dkd.getFromIDSinhVien(UserInfo.sinhVien.Id.ToString());
+            dk=dkd.getFromIDSinhVien(dkd.GetIDSvienByLV(lv).ToString());
             loadInfo();
         }
 

@@ -57,7 +57,7 @@ namespace QuanLiLuanVan_ChinhThuc.SV
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            DangKy dk = dkd.getFromIDSinhVien("10000");
+            DangKy dk = dkd.getFromIDSinhVien(UserInfo.sinhVien.Id.ToString());
             if (dk == null)
             {
                 FormAddDeTaiDuyet fadd = new FormAddDeTaiDuyet();

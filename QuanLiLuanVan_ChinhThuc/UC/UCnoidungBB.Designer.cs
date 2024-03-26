@@ -39,9 +39,9 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(281, 34);
+            this.label2.Location = new System.Drawing.Point(250, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 26);
+            this.label2.Size = new System.Drawing.Size(155, 24);
             this.label2.TabIndex = 5;
             this.label2.Text = "Cần responsive";
             // 
@@ -51,9 +51,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(120, 34);
+            this.label1.Location = new System.Drawing.Point(107, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 26);
+            this.label1.Size = new System.Drawing.Size(108, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Nội dung :";
             // 
@@ -67,20 +67,23 @@
             this.guna2Button9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button9.ForeColor = System.Drawing.Color.White;
-            this.guna2Button9.Location = new System.Drawing.Point(32, 12);
+            this.guna2Button9.Location = new System.Drawing.Point(28, 10);
+            this.guna2Button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(776, 74);
+            this.guna2Button9.Size = new System.Drawing.Size(690, 59);
             this.guna2Button9.TabIndex = 3;
+            this.guna2Button9.Click += new System.EventHandler(this.guna2Button9_Click);
             // 
             // UCnoidungBB
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Button9);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCnoidungBB";
-            this.Size = new System.Drawing.Size(826, 102);
+            this.Size = new System.Drawing.Size(734, 82);
             this.Load += new System.EventHandler(this.UCnoidungBB_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

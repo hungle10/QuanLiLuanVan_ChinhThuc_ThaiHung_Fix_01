@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.Management;
 using System.Windows.Forms;
 
 namespace QuanLiLuanVan_ChinhThuc.GV
@@ -28,7 +29,13 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         public void loadPanel()
         {
             flowLayoutPanel1.Controls.Clear();
-            DataTable dt = dBConn.Excute("SELECT * FROM LuanVan WHERE LuanVan.IDLuanVan NOT IN (SELECT IDLuanVan FROM Duyet) ");
+            string query = string.Format("SELECT * FROM LuanVan WHERE (LuanVan.IDLuanVan NOT IN (SELECT IDLuanVan FROM Duyet)) and GiangVien='{0}' ", UserInfo.giaoVien.HoTen);
+            DataTable dt = dBConn.Excute(query);
+            if(dt==null || dt.Rows.Count == 0 ) 
+            {
+                MessageBox.Show("khong the tim thay thong tin !");
+                return;
+            }
             foreach (DataRow dr in dt.Rows)
             {
                 LuanVan luanVan = luanVanDao.convert(dr);

@@ -18,7 +18,7 @@ namespace QuanLiLuanVan_ChinhThuc.SV
         {
             InitializeComponent();
             this.lv = lv;
-            dk = new DangKy("10000", lv.IDLuanVan, lv.GiangVien);
+            dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, lv.GiangVien);
             loadInfo();
         }
 

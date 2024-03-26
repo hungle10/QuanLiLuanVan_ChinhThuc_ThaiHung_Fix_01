@@ -11,6 +11,7 @@ namespace QuanLiLuanVan_ChinhThuc.Object
         string iDSinhVien;
         int iDLuanVan, iDGroup;
         string iDGiangVien;
+        private string tenGiaoVien;
 
         public DangKy(string iDSinhVien, int iDLuanVan, string iDGiangVien, int iDGroup)
         {
@@ -36,5 +37,6 @@ namespace QuanLiLuanVan_ChinhThuc.Object
         public int IDLuanVan { get => iDLuanVan; set => iDLuanVan = value; }
         public string IDGiangVien { get => iDGiangVien; set => iDGiangVien = value; }
         public int IDGroup { get => iDGroup; set => iDGroup = value; }
+        public string TenGiaoVien { get => tenGiaoVien; set => tenGiaoVien = value; }
     }
 }

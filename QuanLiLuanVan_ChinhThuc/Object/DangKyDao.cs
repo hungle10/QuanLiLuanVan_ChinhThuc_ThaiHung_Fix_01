@@ -15,6 +15,14 @@ namespace QuanLiLuanVan_ChinhThuc.Object
     public class DangKyDao
     {
         DBConnection dBConn = new DBConnection();
+        public int GetIDSvienByLV(LuanVan lv)
+        {
+            string query = string.Format("Select IDSinhVien from DangKi Where IDLuanVan={0}", lv.IDLuanVan);
+            object ob = DataProvider.Instance.ExecuteScalar(query);
+            if (ob == null)
+            { return 0; }
+            else { return Convert.ToInt32(ob); }
+        }
         public void add(DangKy dk)
         {
             string queryDK = String.Format("INSERT INTO DangKi(IDSinhVien, IDLuanVan, IDGiangVien) VALUES('{0}', '{1}', '{2}')",

@@ -29,6 +29,7 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         public void LoadInforGV()
         {
             GiaoVien gv = UserInfo.giaoVien;
+            //MessageBox.Show(gv.ToString());
             tbHoTenGV1.Text = gv.HoTen;
             tbDiaChiGV1.Text = gv.DiaChi;
             tbKhoaGV1.Text = gv.Khoa;
@@ -66,7 +67,7 @@ namespace QuanLiLuanVan_ChinhThuc.GV
 
         private void btnCapNhatMK_Click(object sender, EventArgs e)
         {
-            if(tbMatKhauMoi1.Text!=tbMatKhauMoi2.Text)
+            if(!CheckInPutGV()|| tbMatKhauMoi1.Text!=tbMatKhauMoi2.Text)
             {
                 MessageBox.Show("Mat Khau moi khong trung nhau !");
                 return;
