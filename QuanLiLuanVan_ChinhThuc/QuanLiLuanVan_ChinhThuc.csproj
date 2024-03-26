@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C577DA1-B3A5-4684-A50F-CED620829F5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLiLuanVan_ChinhThuc</RootNamespace>
+    <AssemblyName>QuanLiLuanVan_ChinhThuc</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Siticone.Desktop.UI, Version=2.1.1.0, Culture=neutral, PublicKeyToken=9683591576b7f0b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Siticone.Desktop.UI.2.1.1\lib\net40\Siticone.Desktop.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GV\FormDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FormDuyet.Designer.cs">
+      <DependentUpon>FormDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\FormQuanLyDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FormQuanLyDuyet.Designer.cs">
+      <DependentUpon>FormQuanLyDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Admin.cs" />
+    <Compile Include="Login\AdminDAO.cs" />
+    <Compile Include="Login\DataProvider.cs" />
+    <Compile Include="Login\fAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\fAdmin.Designer.cs">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\fGetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\fGetPass.Designer.cs">
+      <DependentUpon>fGetPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddYeuCau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddYeuCau.Designer.cs">
+      <DependentUpon>FormAddYeuCau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\DBConnection.cs" />
+    <Compile Include="GV\FormAddDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FormAddDeTai.Designer.cs">
+      <DependentUpon>FormAddDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\FormInfoGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FormInfoGV.Designer.cs">
+      <DependentUpon>FormInfoGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\FormListStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FormListStudent.Designer.cs">
+      <DependentUpon>FormListStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\FormQuanLyDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FormQuanLyDeTai.Designer.cs">
+      <DependentUpon>FormQuanLyDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Object\GiaoVienDAO.cs" />
+    <Compile Include="Object\DangKy.cs" />
+    <Compile Include="Object\DangKyDao.cs" />
+    <Compile Include="Object\GiaoVien.cs" />
+    <Compile Include="Object\HomePageClass.cs" />
+    <Compile Include="Object\HomePageClassDAO.cs" />
+    <Compile Include="Object\LuanVan.cs" />
+    <Compile Include="Object\LuanVanDao.cs" />
+    <Compile Include="Object\Nguoi.cs" />
+    <Compile Include="Object\SinhVien.cs" />
+    <Compile Include="Object\SinhVienDao.cs" />
+    <Compile Include="SV\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SV\HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViewProgressColumn.cs" />
+    <Compile Include="FormWatchDetailLuanVanFix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWatchDetailLuanVanFix.Designer.cs">
+      <DependentUpon>FormWatchDetailLuanVanFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWatchDetailOfDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWatchDetailOfDeTai.Designer.cs">
+      <DependentUpon>FormWatchDetailOfDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWatchDetailOfGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWatchDetailOfGiangVien.Designer.cs">
+      <DependentUpon>FormWatchDetailOfGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemDeTai.Designer.cs">
+      <DependentUpon>fThemDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Object\YeuCau.cs" />
+    <Compile Include="Object\YeuCauDAO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GV\FormMainGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FormMainGV.Designer.cs">
+      <DependentUpon>FormMainGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SV\childAddDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SV\childAddDangKi.Designer.cs">
+      <DependentUpon>childAddDangKi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SV\FormAddDeTaiDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SV\FormAddDeTaiDuyet.Designer.cs">
+      <DependentUpon>FormAddDeTaiDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SV\FormXacNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SV\FormXacNhan.Designer.cs">
+      <DependentUpon>FormXacNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SV\FormDangKyDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SV\FormDangKyDeTai.Designer.cs">
+      <DependentUpon>FormDangKyDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SV\FormGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SV\FormGiangVien.Designer.cs">
+      <DependentUpon>FormGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SV\FormInforStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SV\FormInforStudent.Designer.cs">
+      <DependentUpon>FormInforStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SV\FormMainSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SV\FormMainSV.Designer.cs">
+      <DependentUpon>FormMainSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\TaiKhoan.cs" />
+    <Compile Include="Login\TaiKhoanDAO.cs" />
+    <Compile Include="Login\ucTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login\ucTaiKhoan.Designer.cs">
+      <DependentUpon>ucTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCdetaidk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCdetaidk.Designer.cs">
+      <DependentUpon>UCdetaidk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCDuyet.Designer.cs">
+      <DependentUpon>UCDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCluanvan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCluanvan.Designer.cs">
+      <DependentUpon>UCluanvan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCdetai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCdetai.Designer.cs">
+      <DependentUpon>UCdetai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCRowGiaoVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCRowGiaoVien.Designer.cs">
+      <DependentUpon>UCRowGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCnoidungCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCnoidungCheck.Designer.cs">
+      <DependentUpon>UCnoidungCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCnoidungBB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCnoidungBB.Designer.cs">
+      <DependentUpon>UCnoidungBB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCRowStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCRowStudent.Designer.cs">
+      <DependentUpon>UCRowStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\UserInfo.cs" />
+    <EmbeddedResource Include="GV\FormDuyet.resx">
+      <DependentUpon>FormDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FormQuanLyDuyet.resx">
+      <DependentUpon>FormQuanLyDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\fAdmin.resx">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\fGetPass.resx">
+      <DependentUpon>fGetPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddYeuCau.resx">
+      <DependentUpon>FormAddYeuCau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FormAddDeTai.resx">
+      <DependentUpon>FormAddDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FormInfoGV.resx">
+      <DependentUpon>FormInfoGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FormListStudent.resx">
+      <DependentUpon>FormListStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FormQuanLyDeTai.resx">
+      <DependentUpon>FormQuanLyDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SV\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWatchDetailLuanVanFix.resx">
+      <DependentUpon>FormWatchDetailLuanVanFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWatchDetailOfDeTai.resx">
+      <DependentUpon>FormWatchDetailOfDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWatchDetailOfGiangVien.resx">
+      <DependentUpon>FormWatchDetailOfGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemDeTai.resx">
+      <DependentUpon>fThemDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FormMainGV.resx">
+      <DependentUpon>FormMainGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SV\FormAddDeTaiDuyet.resx">
+      <DependentUpon>FormAddDeTaiDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SV\FormXacNhan.resx">
+      <DependentUpon>FormXacNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SV\FormDangKyDeTai.resx">
+      <DependentUpon>FormDangKyDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SV\FormInforStudent.resx">
+      <DependentUpon>FormInforStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SV\FormMainSV.resx">
+      <DependentUpon>FormMainSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\ucTaiKhoan.resx">
+      <DependentUpon>ucTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCdetaidk.resx">
+      <DependentUpon>UCdetaidk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCDuyet.resx">
+      <DependentUpon>UCDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCluanvan.resx">
+      <DependentUpon>UCluanvan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCdetai.resx">
+      <DependentUpon>UCdetai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCRowGiaoVien.resx">
+      <DependentUpon>UCRowGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCnoidungCheck.resx">
+      <DependentUpon>UCnoidungCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCnoidungBB.resx">
+      <DependentUpon>UCnoidungBB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCRowStudent.resx">
+      <DependentUpon>UCRowStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-nen-xanh-la-26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagesXL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefing1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefing2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefing %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefing %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-management-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_253516705_TdhWJkxcWVdmfFEJPDJ3blMds3Oqx1tH1.jpg" />
+    <None Include="Resources\360_F_253516705_TdhWJkxcWVdmfFEJPDJ3blMds3Oqx1tH.jpg" />
+    <None Include="Resources\icons8-student-50.png" />
+    <None Include="Resources\icons8-home-64.png" />
+    <None Include="Resources\icons8-user-24.png" />
+    <None Include="Resources\icons8-project-50.png" />
+    <None Include="Resources\icons8-student-64.png" />
+    <None Include="Resources\icons8-logout-50.png" />
+    <None Include="Resources\LuanVanImg1.jpg" />
+    <None Include="Resources\icons8-brochure-50.png" />
+    <Content Include="Resources\student.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
