@@ -92,5 +92,9 @@ namespace QuanLiLuanVan_ChinhThuc
 
         public Guna2Button Guna2Button3 { get => guna2Button3; set => guna2Button3 = value; }
 
+        private void UCdetai_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

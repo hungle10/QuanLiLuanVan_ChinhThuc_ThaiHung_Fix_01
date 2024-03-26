@@ -66,5 +66,9 @@ namespace QuanLiLuanVan_ChinhThuc.SV
         public DangKy Dk { get => dk; set => dk = value; }
         public List<string> NoiDungs { get => noiDungs; set => noiDungs = value; }
 
+        private void FormXacNhan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
