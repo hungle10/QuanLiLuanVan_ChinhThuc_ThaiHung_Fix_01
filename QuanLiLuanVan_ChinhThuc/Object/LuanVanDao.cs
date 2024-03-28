@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace QuanLiLuanVan_ChinhThuc.GV
 {
@@ -51,6 +53,21 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         {
             string query = String.Format("UPDATE LuanVan SET YeuCau='{0}' WHERE IDLuanVan='{1}'", luanVan.YeuCau, luanVan.IDLuanVan);
             dBConn.runSql(query);
+        }
+        public LuanVan GetLVByTenLV(string Name)
+        {
+            string query = string.Format("Select * from LuanVan where TenLuanVan='{0}'", Name);
+            DataTable dt= DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count == 0)
+            {
+                LuanVan luanvan=new LuanVan();
+                luanvan.TenLuanVan = Name;
+                MessageBox.Show("Khong tim thay thong tin");
+                return luanvan;
+            }
+            DataRow row = dt.Rows[0];
+            LuanVan lv = new LuanVan(int.Parse(row["IDLuanVan"].ToString()), row["TenLuanVan"].ToString(), row["GiangVien"].ToString(), row["NenTang"].ToString(), row["LinhVuc"].ToString(),row["CongNghe"].ToString(), row["YeuCau"].ToString(), row["ChiTiet"].ToString());
+            return lv;
         }
 
     }

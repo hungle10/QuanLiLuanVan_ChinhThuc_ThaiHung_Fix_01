@@ -9,6 +9,7 @@ namespace QuanLiLuanVan_ChinhThuc
 {
     internal class UserInfo
     {
+        public static string user {  get; set; }
         public static GiaoVien giaoVien { get; set; }
         public static SinhVien sinhVien { get; set; }
         public static Admin admin { get; set; }

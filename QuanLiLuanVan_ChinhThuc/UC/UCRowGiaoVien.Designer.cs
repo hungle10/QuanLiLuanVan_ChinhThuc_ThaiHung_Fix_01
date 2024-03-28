@@ -117,7 +117,7 @@
             this.bunifuCustomLabel3.TabIndex = 25;
             this.bunifuCustomLabel3.Text = "Nguyễn Thụy An";
             // 
-            // ucRowGiaoVien
+            // UCRowGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,7 +128,7 @@
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.guna2Button1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ucRowGiaoVien";
+            this.Name = "UCRowGiaoVien";
             this.Size = new System.Drawing.Size(1298, 86);
             this.ResumeLayout(false);
             this.PerformLayout();

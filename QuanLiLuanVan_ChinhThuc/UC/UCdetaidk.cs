@@ -5,6 +5,7 @@ using QuanLiLuanVan_ChinhThuc.SV;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Web.Management;
 using System.Windows.Forms;
 
 namespace QuanLiLuanVan_ChinhThuc.UC
@@ -96,6 +97,14 @@ namespace QuanLiLuanVan_ChinhThuc.UC
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai(lv.TenLuanVan, lv.GiangVien, lv.ChiTiet);
+            LuanVanDao dao = new LuanVanDao();
+            LuanVan lvan= dao.GetLVByTenLV(lv.TenLuanVan);
+            if(lvan==null)
+            {
+                MessageBox.Show("Khong tim thay luan van");
+                return;
+            }
+            DataStorage.luanVan = lvan;
             frm.ShowDialog();
         }
 

@@ -69,6 +69,7 @@ namespace QuanLiLuanVan_ChinhThuc
                     FormMainSV f = new FormMainSV();
                     SinhVienDao dao=new SinhVienDao();
                     UserInfo.sinhVien = dao.GetSVByEmail(tk.Email);
+                    UserInfo.user = "Hoc Sinh";
                     this.Hide();
                     f.ShowDialog();
                     this.Show();
@@ -78,6 +79,7 @@ namespace QuanLiLuanVan_ChinhThuc
                     FormMainGV f = new FormMainGV();
                     GiaoVienDAO dao=new GiaoVienDAO();
                     UserInfo.giaoVien = dao.GetGVByEmail(tk.Email);
+                    UserInfo.user = "Giao Vien";
                     this.Hide();
                     f.ShowDialog();
                     this.Show();
