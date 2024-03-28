@@ -76,11 +76,11 @@ namespace QuanLiLuanVan_ChinhThuc
             foreach ( UCnoidungCheck uc in flowLayoutPanel1.Controls.OfType<UCnoidungCheck>())
             {
                 if (uc.checkbox.Checked == true)
-                    ycd.update(1, "10000",uc.idLuanVan, uc.noiDung);
+                    ycd.update(1,UserInfo.sinhVien.Id.ToString(),uc.idLuanVan, uc.noiDung);
                 if(uc.checkbox.Checked == false)
-                    ycd.update(0, "10000", uc.idLuanVan, uc.noiDung);
+                    ycd.update(0, UserInfo.sinhVien.Id.ToString(), uc.idLuanVan, uc.noiDung);
             }
-            List<YeuCau> ycs = ycd.getYeuCau("10000");
+            List<YeuCau> ycs = ycd.getYeuCau(UserInfo.sinhVien.Id.ToString());
             foreach (YeuCau yc in ycs)
             {
                 UCnoidungCheck uc = new UCnoidungCheck();
@@ -98,7 +98,7 @@ namespace QuanLiLuanVan_ChinhThuc
 
             hp.Panel2.Controls.Clear();
             HomePageClassDAO homePageClassDAO = new HomePageClassDAO();
-            HomePageClass hpg = homePageClassDAO.getInfoHomePage("10000");
+            HomePageClass hpg = homePageClassDAO.getInfoHomePage(UserInfo.sinhVien.Id.ToString());
             if (hp != null)
             {
                 UCluanvan uc = new UCluanvan(hp);

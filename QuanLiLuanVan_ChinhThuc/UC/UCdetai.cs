@@ -100,5 +100,9 @@ namespace QuanLiLuanVan_ChinhThuc
             frm.ShowDialog();
         }
 
+        private void UCdetai_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
