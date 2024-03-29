@@ -45,6 +45,12 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             this.email = email;
         }
 
+        public Nguoi(int id, string hoTen)
+        {
+            this.id = id;
+            this.hoTen = hoTen;
+        }
+
         public int Id { get => id; set => id = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }

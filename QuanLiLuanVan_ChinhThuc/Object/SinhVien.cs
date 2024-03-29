@@ -13,9 +13,6 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         private int khoaHoc;
         public SinhVien()
         { }
-        public SinhVien(int id, string hoTen, string diaChi, string khoa, DateTime ngaySinh, string sdt, string email) : base(id, hoTen, diaChi, khoa, ngaySinh, sdt, email)
-        {
-        }
         public SinhVien(int id, string hoTen, string diaChi, string khoa, DateTime ngaySinh, string sdt, string email, string chuyenNganh, string lop, int khoaHoc) : base(id, hoTen, diaChi, khoa, ngaySinh, sdt, email)
         {
             Id = id;
@@ -28,6 +25,12 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             ChuyenNganh = chuyenNganh;
             Lop = lop;
             KhoaHoc = (int)khoaHoc;
+        }
+        public SinhVien(int id, string hoTen,string lop) : base(id, hoTen)
+        {
+            Id = id;
+            HoTen = hoTen;
+            Lop = lop;
         }
         public SinhVien(string hoTen, string diaChi, string khoa, DateTime ngaySinh, string sdt, string email, string chuyenNganh, string lop, int khoaHoc) : base(hoTen, diaChi, khoa, ngaySinh, sdt, email)
         {

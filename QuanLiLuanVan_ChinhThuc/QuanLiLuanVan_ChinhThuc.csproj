@@ -240,6 +240,12 @@
       <DependentUpon>ucTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="TaskDAO.cs" />
+    <Compile Include="ucSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSV.Designer.cs">
+      <DependentUpon>ucSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucTask.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -379,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\ucTaiKhoan.resx">
       <DependentUpon>ucTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSV.resx">
+      <DependentUpon>ucSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTask.resx">
       <DependentUpon>ucTask.cs</DependentUpon>

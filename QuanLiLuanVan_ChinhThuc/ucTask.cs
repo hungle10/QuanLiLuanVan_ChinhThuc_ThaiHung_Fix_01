@@ -38,14 +38,14 @@ namespace QuanLiLuanVan_ChinhThuc
 
         }
 
-        private void ucChbHoanThanh_CheckedChanged(object sender, EventArgs e)
+        private void ucChbHoanThanh_Click(object sender, EventArgs e)
         {
             int check = 0;
             if (chbHoanThanh.Checked == false)
                 check = 0;
-            else 
+            else
                 check = 1;
-            TaskLV t=new TaskLV(int.Parse(ucLbId.Text),check);
+            TaskLV t = new TaskLV(int.Parse(ucLbId.Text), check);
             TaskDAO dao = new TaskDAO();
             dao.Update(t);
         }

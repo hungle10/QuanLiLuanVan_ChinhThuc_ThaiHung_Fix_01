@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace QuanLiLuanVan_ChinhThuc.GV
@@ -67,6 +68,21 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             }
             DataRow row = dt.Rows[0];
             LuanVan lv = new LuanVan(int.Parse(row["IDLuanVan"].ToString()), row["TenLuanVan"].ToString(), row["GiangVien"].ToString(), row["NenTang"].ToString(), row["LinhVuc"].ToString(),row["CongNghe"].ToString(), row["YeuCau"].ToString(), row["ChiTiet"].ToString());
+            return lv;
+        }
+        public LuanVan GetLVByIDLV(string ID) 
+        {
+            string query = string.Format("Select * from LuanVan where IDLuanVan='{0}'", ID);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count == 0)
+            {
+                LuanVan luanvan = new LuanVan();
+                luanvan.TenLuanVan = ID;
+                MessageBox.Show("Khong tim thay thong tin");
+                return luanvan;
+            }
+            DataRow row = dt.Rows[0];
+            LuanVan lv = new LuanVan(int.Parse(row["IDLuanVan"].ToString()), row["TenLuanVan"].ToString(), row["GiangVien"].ToString(), row["NenTang"].ToString(), row["LinhVuc"].ToString(), row["CongNghe"].ToString(), row["YeuCau"].ToString(), row["ChiTiet"].ToString());
             return lv;
         }
 

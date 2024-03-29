@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpSV = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tbTimKiem = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
@@ -65,7 +65,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
+            this.panel2.Controls.Add(this.flpSV);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 72);
@@ -74,16 +74,16 @@
             this.panel2.Size = new System.Drawing.Size(1275, 518);
             this.panel2.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // flpSV
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 109);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1275, 409);
-            this.flowLayoutPanel1.TabIndex = 1;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.flpSV.AutoScroll = true;
+            this.flpSV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpSV.Location = new System.Drawing.Point(0, 109);
+            this.flpSV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flpSV.Name = "flpSV";
+            this.flpSV.Size = new System.Drawing.Size(1275, 409);
+            this.flpSV.TabIndex = 1;
+            this.flpSV.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel3
             // 
@@ -169,7 +169,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox tbTimKiem;
         private FontAwesome.Sharp.IconButton btnTimKiem;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpSV;
 
     }
 }

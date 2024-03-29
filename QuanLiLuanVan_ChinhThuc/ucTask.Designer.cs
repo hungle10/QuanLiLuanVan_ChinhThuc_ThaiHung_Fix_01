@@ -87,7 +87,7 @@
             this.ucChbHoanThanh.UncheckedState.BorderRadius = 0;
             this.ucChbHoanThanh.UncheckedState.BorderThickness = 0;
             this.ucChbHoanThanh.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ucChbHoanThanh.CheckedChanged += new System.EventHandler(this.ucChbHoanThanh_CheckedChanged);
+            this.ucChbHoanThanh.Click += new System.EventHandler(this.ucChbHoanThanh_Click);
             // 
             // ucTbNoiDung
             // 
