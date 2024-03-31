@@ -62,7 +62,7 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             lv.YeuCau = t5.Text;
             lvd.updateYeuCau(lv);
             foreach (string line in t5.Lines)
-                ycd.add(dk.IDSinhVien, dk.IDLuanVan, line, 0);
+                ycd.add(DataStorage.getIDGroupByIDSinhVien().ToString(), dk.IDLuanVan, line, 0);
 
             dkd.removeDuyet(dk);
             this.Close();

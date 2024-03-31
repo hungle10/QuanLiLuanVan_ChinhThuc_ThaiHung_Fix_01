@@ -58,7 +58,7 @@ namespace QuanLiLuanVan_ChinhThuc.SV
             noiDungs = new List<string>(mangChuoi);
             foreach (string chuoi in noiDungs)
             {
-                ycd.add(dk.IDSinhVien, lv.IDLuanVan, chuoi, 0);
+                ycd.add(DataStorage.getIDGroupByIDSinhVien().ToString(), lv.IDLuanVan, chuoi, 0);
             }
             this.Close();
 

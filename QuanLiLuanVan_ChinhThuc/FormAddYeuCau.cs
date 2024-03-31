@@ -37,7 +37,7 @@ namespace QuanLiLuanVan_ChinhThuc
             double tongUChoanthanh = 0;
             YeuCauDAO yeucauDAO = new YeuCauDAO();
             //gửi id sinh viên vào đây 
-            List<YeuCau> ycs = yeucauDAO.getYeuCau("10000");
+            List<YeuCau> ycs = yeucauDAO.getYeuCau(DataStorage.getIDGroupByIDSinhVien().ToString());
             foreach (YeuCau yc in ycs)
             {
                 UCnoidungCheck uc = new UCnoidungCheck();
@@ -49,7 +49,7 @@ namespace QuanLiLuanVan_ChinhThuc
                     tongUChoanthanh++;
                 tongUC++;
             }
-            yeucauDAO.add("10000", ycs[0].IdLuanVan, siticoneTextBox1.Text.ToString(), 0);
+            yeucauDAO.add(DataStorage.getIDGroupByIDSinhVien().ToString(), ycs[0].IdLuanVan, siticoneTextBox1.Text.ToString(), 0);
             UCnoidungCheck ucLast = new UCnoidungCheck();
             ucLast.noiDung = siticoneTextBox1.Text.ToString();
             ucLast.tinhTrang = 0;

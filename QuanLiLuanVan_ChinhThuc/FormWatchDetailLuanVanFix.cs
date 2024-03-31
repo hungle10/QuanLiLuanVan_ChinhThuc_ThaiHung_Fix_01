@@ -42,7 +42,7 @@ namespace QuanLiLuanVan_ChinhThuc
             double tongUChoanthanh = 0; 
             YeuCauDAO yeucauDAO = new YeuCauDAO();
             //gửi id sinh viên vào đây 
-           List<YeuCau> ycs =  yeucauDAO.getYeuCau(UserInfo.sinhVien.Id.ToString());
+           List<YeuCau> ycs =  yeucauDAO.getYeuCau(DataStorage.getIDGroupByIDSinhVien().ToString());
             foreach(YeuCau yc in ycs) 
             {
                     UCnoidungCheck uc = new UCnoidungCheck();       
@@ -76,11 +76,11 @@ namespace QuanLiLuanVan_ChinhThuc
             foreach ( UCnoidungCheck uc in flowLayoutPanel1.Controls.OfType<UCnoidungCheck>())
             {
                 if (uc.checkbox.Checked == true)
-                    ycd.update(1,UserInfo.sinhVien.Id.ToString(),uc.idLuanVan, uc.noiDung);
+                    ycd.update(1,DataStorage.getIDGroupByIDSinhVien().ToString(),uc.idLuanVan, uc.noiDung);
                 if(uc.checkbox.Checked == false)
-                    ycd.update(0, UserInfo.sinhVien.Id.ToString(), uc.idLuanVan, uc.noiDung);
+                    ycd.update(0, DataStorage.getIDGroupByIDSinhVien().ToString(), uc.idLuanVan, uc.noiDung);
             }
-            List<YeuCau> ycs = ycd.getYeuCau(UserInfo.sinhVien.Id.ToString());
+            List<YeuCau> ycs = ycd.getYeuCau(DataStorage.getIDGroupByIDSinhVien().ToString());
             foreach (YeuCau yc in ycs)
             {
                 UCnoidungCheck uc = new UCnoidungCheck();

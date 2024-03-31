@@ -14,8 +14,8 @@ namespace QuanLiLuanVan_ChinhThuc.GV
 {
     public class DBConnection
     {
-        //SqlConnection conn = new SqlConnection("Data Source=LEHUNG\\THAIHUNG;Initial Catalog=WindowFix_01;Integrated Security=True;Encrypt=False");
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-D1VEMR6\\DINHHOA;Initial Catalog=QLLUANVAN;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=LEHUNG\\THAIHUNG;Initial Catalog=WindowFix_01;Integrated Security=True;Encrypt=False");
+           // SqlConnection conn = new SqlConnection("Data Source=DESKTOP-D1VEMR6\\DINHHOA;Initial Catalog=QLLUANVAN;Integrated Security=True");
      //   SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QLLUANVAN;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
         private static DBConnection instance;

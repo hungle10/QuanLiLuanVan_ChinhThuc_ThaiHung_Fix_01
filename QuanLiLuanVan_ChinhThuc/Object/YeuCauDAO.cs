@@ -12,25 +12,25 @@ namespace QuanLiLuanVan_ChinhThuc.Object
     public class YeuCauDAO
     {
         DBConnection dBConn = new DBConnection();
-        public void add(string IDsinhvien,int IDluanvan,string noidung,int tinhtrang)
+        public void add(string IDGroup,int IDluanvan,string noidung,int tinhtrang)
         {
-            string query = String.Format("INSERT INTO YeuCau VALUES ('{0}','{1}','{2}','{3}')",IDsinhvien,IDluanvan,noidung,tinhtrang); 
+            string query = String.Format("INSERT INTO YeuCau VALUES ('{0}','{1}','{2}','{3}')", IDGroup, IDluanvan,noidung,tinhtrang); 
             dBConn.runSql(query);
         }
-        public void delete(string IDsinhvien,int IDluanvan)
+        public void delete(string IDGroup, int IDluanvan)
         {
-            string query = String.Format("DELETE FROM YeuCau WHERE IDSinhVien ='{0}' AND IDLuanVan='{1}'", IDsinhvien, IDluanvan);
+            string query = String.Format("DELETE FROM YeuCau WHERE IDGroup ='{0}' AND IDLuanVan='{1}'", IDGroup, IDluanvan);
             dBConn.runSql(query);
         }
-        public void update(int tinhtrang,string idsinhvien,int idluanvan,string noidung)
+        public void update(int tinhtrang,string IDGroup, int idluanvan,string noidung)
         {
-            string query = String.Format("UPDATE dbo.YeuCau SET TinhTrang = '{0}' WHERE IDSinhVien = '{1}' AND IDLuanVan = '{2}'AND YeuCau='{3}'",tinhtrang,idsinhvien,idluanvan,noidung);
+            string query = String.Format("UPDATE dbo.YeuCau SET TinhTrang = '{0}' WHERE IDGroup = '{1}' AND IDLuanVan = '{2}'AND YeuCau='{3}'", tinhtrang, IDGroup, idluanvan,noidung);
             dBConn.runSql(query);
         }
         public List<YeuCau> getYeuCau(string id)
         {
             List<YeuCau> ycs= new List<YeuCau>();       
-            string query = String.Format("SELECT IDSinhVien,IDLuanVan,YeuCau,TinhTrang FROM YeuCau WHERE IDSinhVien = {0}", id);
+            string query = String.Format("SELECT IDGroup,IDLuanVan,YeuCau,TinhTrang FROM YeuCau WHERE IDGroup = {0}", id);
             DataTable data = dBConn.Excute(query);
             if (data == null)
             {
@@ -42,7 +42,7 @@ namespace QuanLiLuanVan_ChinhThuc.Object
                 foreach (DataRow row in data.Rows)
                 {
                     YeuCau yeucau = new YeuCau();
-                    yeucau.IdSinhVien = row["IDSinhVien"].ToString();
+                    yeucau.IdGroup = row["IDGroup"].ToString();
                     yeucau.IdLuanVan = Convert.ToInt32(row["IDluanVan"]);
                     yeucau.NoiDungYeuCau = row["YeuCau"].ToString();
                     yeucau.TinhTrang = Convert.ToInt32(row["TinhTrang"]);
@@ -53,5 +53,6 @@ namespace QuanLiLuanVan_ChinhThuc.Object
             }
             else return null;
         }
+
     }
 }

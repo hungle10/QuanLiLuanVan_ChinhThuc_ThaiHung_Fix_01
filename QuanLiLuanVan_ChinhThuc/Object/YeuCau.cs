@@ -8,6 +8,7 @@ namespace QuanLiLuanVan_ChinhThuc.Object
 {
     public class YeuCau
     {
+        private string idGroup;
         private string idSinhVien;
         private int idLuanVan;
         private string noiDungYeuCau;
@@ -16,6 +17,11 @@ namespace QuanLiLuanVan_ChinhThuc.Object
         {
             get { return idSinhVien; }      
             set { idSinhVien = value;}      
+        }
+        public string IdGroup
+        {
+            get { return idGroup; }
+            set { idGroup = value; }
         }
         public int IdLuanVan
         {
@@ -36,9 +42,9 @@ namespace QuanLiLuanVan_ChinhThuc.Object
         {
 
         }
-        public YeuCau(string idSinhVien, int idLuanVan, string yeuCau, int tinhTrang)
+        public YeuCau(string idGroup, int idLuanVan, string yeuCau, int tinhTrang)
         {
-            this.IdSinhVien = idSinhVien;
+            this.IdGroup = idGroup;
             this.IdLuanVan = idLuanVan;
             this.NoiDungYeuCau = yeuCau;
             this.TinhTrang = tinhTrang;

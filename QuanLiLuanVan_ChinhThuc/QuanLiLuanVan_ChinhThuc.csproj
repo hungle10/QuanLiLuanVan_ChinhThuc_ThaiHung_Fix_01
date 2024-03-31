@@ -497,6 +497,8 @@
     <None Include="Resources\icons8-brochure-50.png" />
     <Content Include="Resources\student.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using QuanLiLuanVan_ChinhThuc.GV;
 using System.Windows;
 using System.Windows.Shapes;
+using System.Windows.Forms;
 
 
 namespace QuanLiLuanVan_ChinhThuc.Object
