@@ -28,5 +28,14 @@ namespace QuanLiLuanVan_ChinhThuc
             else
                 MessageBox.Show("Cap nhat thanh cong!");
         }
+        public void Delete(TaskLV task)
+        {
+            string query = string.Format("Delete Task where MaTask={0}",task.MaTask);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            if (result == 0)
+                MessageBox.Show("Xoa that bai!");
+            else
+                MessageBox.Show("Xoa thanh cong!");
+        }
     }
 }

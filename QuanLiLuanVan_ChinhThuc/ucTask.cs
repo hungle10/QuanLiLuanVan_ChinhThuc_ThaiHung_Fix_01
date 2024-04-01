@@ -49,5 +49,14 @@ namespace QuanLiLuanVan_ChinhThuc
             TaskDAO dao = new TaskDAO();
             dao.Update(t);
         }
+
+        private void ucBtnXoaTask_Click(object sender, EventArgs e)
+        {
+            FormWatchDetailOfDeTai f=new FormWatchDetailOfDeTai();
+            TaskLV t = new TaskLV(int.Parse(ucLbId.Text));
+            TaskDAO dao = new TaskDAO();
+            dao.Delete(t);
+            f.LoadTask();
+        }
     }
 }

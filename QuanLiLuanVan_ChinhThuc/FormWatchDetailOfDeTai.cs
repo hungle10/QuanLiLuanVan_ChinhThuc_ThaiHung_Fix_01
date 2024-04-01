@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLiLuanVan_ChinhThuc.GV;
+using QuanLiLuanVan_ChinhThuc.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +44,7 @@ namespace QuanLiLuanVan_ChinhThuc
                 MessageBox.Show("Khong tim thay thong tin !");
                 return;
             }
+            int d = 0;
             foreach (DataRow row in dt.Rows)
             {
                 TaskLV task = new TaskLV(int.Parse(row["MaTask"].ToString()), int.Parse(row["IDLuanVan"].ToString()), row["NoiDung"].ToString(), DateTime.Parse(row["ThoiHan"].ToString()), int.Parse(row["TrangThai"].ToString()));
@@ -50,11 +53,17 @@ namespace QuanLiLuanVan_ChinhThuc
                 uc.lbThoiHan.Text = task.FormatNgay();
                 uc.lbId.Text = task.MaTask.ToString();
                 if (task.TrangThai == 1)
+                {
                     uc.chbHoanThanh.Checked = true;
+                    d++;
+                }
                 else
                     uc.chbHoanThanh.Checked = false;
                 flpTask.Controls.Add(uc);
             }
+            float tiendo=((float)d /dt.Rows.Count)*100;
+            int k = (int)tiendo;
+            lbTienDo.Text = k.ToString()+"%";
         }
             private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -84,7 +93,16 @@ namespace QuanLiLuanVan_ChinhThuc
             this.label2.Text = tenDeTai;
             this.label4.Text = tenGiaoVien;
             if (UserInfo.user == "Hoc Sinh")
+            {
                 btnThemTask.Visible = false;
+                btnChamDiem.Visible = false;
+            }
+            DiemLVDAO diemLVDAO = new DiemLVDAO();
+            if (diemLVDAO.CheckDiem(DataStorage.luanVan))
+            {
+                float diem=diemLVDAO.GetDiemByLV(DataStorage.luanVan);
+                lbDiemLV.Text=diem.ToString();
+            }
             /*string[] mangChuoi = noiDungs.Split(new string[] { "\n" }, StringSplitOptions.None);
             // Chuyển đổi mảng thành danh sách List<string>
             noiDung = new List<string>(mangChuoi);
@@ -101,6 +119,28 @@ namespace QuanLiLuanVan_ChinhThuc
             fThemTask f=new fThemTask();
             f.ShowDialog();
             LoadTask();
+        }
+
+        private void btnLoadTask_Click(object sender, EventArgs e)
+        {
+            LoadTask(); 
+        }
+
+        private void btnChamDiem_Click(object sender, EventArgs e)
+        {
+            if (lbTienDo.Text!="100%")
+            {
+                MessageBox.Show("Sinh vien chua hoan thanh het task chua the cham diem !");
+                return;
+            }
+            DiemLVDAO diemLVDAO = new DiemLVDAO();
+            if(lbDiemLV.Text!="Chưa có")
+            {
+                MessageBox.Show("De tai nay da duoc cham diem!");
+                return;
+            }
+            fChamDiem f=new fChamDiem();
+            f.ShowDialog();
         }
     }
 }

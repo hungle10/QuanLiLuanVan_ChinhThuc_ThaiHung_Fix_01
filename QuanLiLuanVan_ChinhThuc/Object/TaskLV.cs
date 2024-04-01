@@ -13,6 +13,10 @@ namespace QuanLiLuanVan_ChinhThuc
         private string noiDung;
         private DateTime thoiHan;
         private int trangThai;
+        public TaskLV(int maTask)
+        {
+            this.maTask = maTask;
+        }
 
         public TaskLV(int maTask,int trangThai)
         {

@@ -1,4 +1,5 @@
 ﻿using QuanLiLuanVan_ChinhThuc.GV;
+using QuanLiLuanVan_ChinhThuc.Object;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,21 +12,16 @@ using System.Windows.Forms;
 
 namespace QuanLiLuanVan_ChinhThuc
 {
-    public partial class ucSV : UserControl
+    public partial class ucNhomLV : UserControl
     {
-        public ucSV()
+        public ucNhomLV()
         {
             InitializeComponent();
         }
-        public Bunifu.Framework.UI.BunifuCustomLabel lbHoTen
+        public Bunifu.Framework.UI.BunifuCustomLabel lbNhom
         {
-            get { return ucLbHoTen; }
-            set { ucLbHoTen = value; }
-        }
-        public Bunifu.Framework.UI.BunifuCustomLabel lbLop
-        {
-            get { return ucLbLop; }
-            set { ucLbLop = value; }
+            get { return ucLbIdNhom; }
+            set { ucLbIdNhom = value; }
         }
         public Bunifu.Framework.UI.BunifuCustomLabel lbIdDangKi
         {
@@ -50,6 +46,14 @@ namespace QuanLiLuanVan_ChinhThuc
             }
             DataStorage.luanVan = lvan;
             frm.ShowDialog();
+        }
+
+        private void btnNhom_Click(object sender, EventArgs e)
+        {
+            Nhom n= new Nhom(int.Parse(lbNhom.Text));
+            DataStorage.nhom = n;   
+            fDSNhom f=new fDSNhom();
+            f.ShowDialog();
         }
     }
 }

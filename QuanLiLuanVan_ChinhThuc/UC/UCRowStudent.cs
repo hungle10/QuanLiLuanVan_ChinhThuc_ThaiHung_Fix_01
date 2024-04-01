@@ -12,9 +12,14 @@ namespace QuanLiLuanVan_ChinhThuc
 {
     public partial class UCRowStudent : UserControl
     {
-        public UCRowStudent(string mssv)
+        public UCRowStudent(string mssv="")
         {
             InitializeComponent();
+        }
+        public Bunifu.Framework.UI.BunifuCustomLabel lbHoTen
+        {
+            get { return ucLbHoTen; }
+            set { lbHoTen = value; }
         }
 
         private void bunifuCustomLabel3_Click(object sender, EventArgs e)
@@ -50,7 +55,7 @@ namespace QuanLiLuanVan_ChinhThuc
         {
             bunifuCustomLabel1.BackColor = System.Drawing.Color.FromArgb(r, g, b);
             bunifuCustomLabel2.BackColor = System.Drawing.Color.FromArgb(r, g, b);
-            bunifuCustomLabel3.BackColor = System.Drawing.Color.FromArgb(r, g, b);
+            ucLbHoTen.BackColor = System.Drawing.Color.FromArgb(r, g, b);
             bunifuCustomLabel4.BackColor = System.Drawing.Color.FromArgb(r, g, b);
         }
         

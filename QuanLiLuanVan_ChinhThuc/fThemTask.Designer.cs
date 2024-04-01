@@ -56,7 +56,7 @@
             this.tbNoiDung.PlaceholderText = "";
             this.tbNoiDung.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbNoiDung.SelectedText = "";
-            this.tbNoiDung.Size = new System.Drawing.Size(707, 145);
+            this.tbNoiDung.Size = new System.Drawing.Size(756, 145);
             this.tbNoiDung.TabIndex = 77;
             // 
             // lbDesThoiHan
@@ -90,7 +90,7 @@
             this.dtpThoiHan.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpThoiHan.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpThoiHan.Name = "dtpThoiHan";
-            this.dtpThoiHan.Size = new System.Drawing.Size(232, 36);
+            this.dtpThoiHan.Size = new System.Drawing.Size(303, 36);
             this.dtpThoiHan.TabIndex = 78;
             this.dtpThoiHan.Value = new System.DateTime(2024, 3, 28, 21, 6, 45, 422);
             // 
@@ -106,7 +106,7 @@
             this.btnThemTask.ForeColor = System.Drawing.Color.White;
             this.btnThemTask.Location = new System.Drawing.Point(634, 250);
             this.btnThemTask.Name = "btnThemTask";
-            this.btnThemTask.Size = new System.Drawing.Size(112, 34);
+            this.btnThemTask.Size = new System.Drawing.Size(140, 34);
             this.btnThemTask.TabIndex = 79;
             this.btnThemTask.Text = "Thêm task";
             this.btnThemTask.Click += new System.EventHandler(this.btnThemTask_Click);
@@ -116,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(824, 296);
+            this.ClientSize = new System.Drawing.Size(874, 296);
             this.Controls.Add(this.btnThemTask);
             this.Controls.Add(this.dtpThoiHan);
             this.Controls.Add(this.tbNoiDung);

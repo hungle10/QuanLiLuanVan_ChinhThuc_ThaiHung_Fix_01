@@ -65,7 +65,17 @@ namespace QuanLiLuanVan_ChinhThuc.Object
             }
             return nhomStr;
         }
-
+        public DataTable GetDKByGV(GiaoVien gv)
+        {
+            string query = string.Format("Select * from DangKi Where IDGiangVien='{0}'", gv.HoTen);
+            DataTable dt=DataProvider.Instance.ExecuteQuery(query);
+            if(dt.Rows.Count == 0 )
+            {
+                System.Windows.MessageBox.Show("Lay thong tin that bai !");
+                return null;
+            }
+            return dt;
+        }
         public void remove(DangKy dk)
         {
             string query = String.Format("DELETE FROM DangKi WHERE IDSinhVien='{0}' AND IDLuanVan='{1}'", dk.IDSinhVien, dk.IDLuanVan);

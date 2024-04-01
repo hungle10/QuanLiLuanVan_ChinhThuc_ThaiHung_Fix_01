@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ucLbHoTen = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -47,20 +47,21 @@
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(155, 17);
             this.bunifuCustomLabel4.TabIndex = 38;
             this.bunifuCustomLabel4.Text = "Công nghệ thông tin";
+            this.bunifuCustomLabel4.Visible = false;
             this.bunifuCustomLabel4.Click += new System.EventHandler(this.bunifuCustomLabel4_Click);
             // 
-            // bunifuCustomLabel3
+            // ucLbHoTen
             // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(212, 23);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(135, 17);
-            this.bunifuCustomLabel3.TabIndex = 37;
-            this.bunifuCustomLabel3.Text = "Nguyễn Đình Hòa";
-            this.bunifuCustomLabel3.Click += new System.EventHandler(this.bunifuCustomLabel3_Click);
+            this.ucLbHoTen.AutoSize = true;
+            this.ucLbHoTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ucLbHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucLbHoTen.ForeColor = System.Drawing.Color.White;
+            this.ucLbHoTen.Location = new System.Drawing.Point(212, 23);
+            this.ucLbHoTen.Name = "ucLbHoTen";
+            this.ucLbHoTen.Size = new System.Drawing.Size(135, 17);
+            this.ucLbHoTen.TabIndex = 37;
+            this.ucLbHoTen.Text = "Nguyễn Đình Hòa";
+            this.ucLbHoTen.Click += new System.EventHandler(this.bunifuCustomLabel3_Click);
             // 
             // guna2Button2
             // 
@@ -77,6 +78,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(115, 36);
             this.guna2Button2.TabIndex = 36;
             this.guna2Button2.Text = "Detail";
+            this.guna2Button2.Visible = false;
             // 
             // bunifuCustomLabel2
             // 
@@ -89,6 +91,7 @@
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(55, 17);
             this.bunifuCustomLabel2.TabIndex = 35;
             this.bunifuCustomLabel2.Text = "Khoa :";
+            this.bunifuCustomLabel2.Visible = false;
             // 
             // bunifuCustomLabel1
             // 
@@ -129,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bunifuCustomLabel4);
-            this.Controls.Add(this.bunifuCustomLabel3);
+            this.Controls.Add(this.ucLbHoTen);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuCustomLabel1);
@@ -144,7 +147,7 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
+        private Bunifu.Framework.UI.BunifuCustomLabel ucLbHoTen;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;

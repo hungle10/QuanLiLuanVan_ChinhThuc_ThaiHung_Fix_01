@@ -66,11 +66,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStorage.cs" />
+    <Compile Include="fDSNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDSNhom.Designer.cs">
+      <DependentUpon>fDSNhom.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThemTask.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fThemTask.Designer.cs">
       <DependentUpon>fThemTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\fChamDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\fChamDiem.Designer.cs">
+      <DependentUpon>fChamDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="GV\FormDuyet.cs">
       <SubType>Form</SubType>
@@ -136,6 +148,8 @@
     <Compile Include="GV\FormQuanLyDeTai.Designer.cs">
       <DependentUpon>FormQuanLyDeTai.cs</DependentUpon>
     </Compile>
+    <Compile Include="Object\DiemLV.cs" />
+    <Compile Include="Object\DiemLVDAO.cs" />
     <Compile Include="Object\GiaoVienDAO.cs" />
     <Compile Include="Object\DangKy.cs" />
     <Compile Include="Object\DangKyDao.cs" />
@@ -145,6 +159,8 @@
     <Compile Include="Object\LuanVan.cs" />
     <Compile Include="Object\LuanVanDao.cs" />
     <Compile Include="Object\Nguoi.cs" />
+    <Compile Include="Object\Nhom.cs" />
+    <Compile Include="Object\NhomDAO.cs" />
     <Compile Include="Object\SinhVien.cs" />
     <Compile Include="Object\SinhVienDao.cs" />
     <Compile Include="Object\TaskLV.cs" />
@@ -240,11 +256,11 @@
       <DependentUpon>ucTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="TaskDAO.cs" />
-    <Compile Include="ucSV.cs">
+    <Compile Include="ucNhomLV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucSV.Designer.cs">
-      <DependentUpon>ucSV.cs</DependentUpon>
+    <Compile Include="ucNhomLV.Designer.cs">
+      <DependentUpon>ucNhomLV.cs</DependentUpon>
     </Compile>
     <Compile Include="ucTask.cs">
       <SubType>UserControl</SubType>
@@ -301,8 +317,14 @@
       <DependentUpon>UCRowStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\UserInfo.cs" />
+    <EmbeddedResource Include="fDSNhom.resx">
+      <DependentUpon>fDSNhom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fThemTask.resx">
       <DependentUpon>fThemTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\fChamDiem.resx">
+      <DependentUpon>fChamDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GV\FormDuyet.resx">
       <DependentUpon>FormDuyet.cs</DependentUpon>
@@ -386,8 +408,8 @@
     <EmbeddedResource Include="Login\ucTaiKhoan.resx">
       <DependentUpon>ucTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucSV.resx">
-      <DependentUpon>ucSV.cs</DependentUpon>
+    <EmbeddedResource Include="ucNhomLV.resx">
+      <DependentUpon>ucNhomLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTask.resx">
       <DependentUpon>ucTask.cs</DependentUpon>

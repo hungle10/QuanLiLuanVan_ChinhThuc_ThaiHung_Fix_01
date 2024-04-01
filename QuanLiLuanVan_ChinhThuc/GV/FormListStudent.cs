@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLiLuanVan_ChinhThuc.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,9 +23,8 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         public void LoadSV(string key="")
         {
             flpSV.Controls.Clear();
-            //DataTable dt = DataProvider.Instance.GetTable("TaiKhoan");
-            string s = string.Format("IDGiangVien ='{0}' and HoTen", UserInfo.giaoVien.HoTen);
-            DataTable dt = DataProvider.Instance.GetTableWithKey("SinhVien inner join DangKi on SinhVien.ID= DangKi.IDSinhVien", s, key);
+            DangKyDao dao= new DangKyDao();
+            DataTable dt = dao.GetDKByGV(UserInfo.giaoVien);
             if (dt.Rows.Count == 0)
             {
                 MessageBox.Show("Khong tim thay thong tin !");
@@ -32,13 +32,12 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             }
             foreach (DataRow row in dt.Rows)
             {
-                SinhVien sv = new SinhVien(int.Parse(row["ID"].ToString()), row["HoTen"].ToString(), row["Lop"].ToString());
-                LuanVanDao dao= new LuanVanDao();
-                LuanVan lv= dao.GetLVByIDLV(row["IDLuanVan"].ToString());
-                ucSV uc=new ucSV();
-                uc.lbHoTen.Text = sv.HoTen;
+                DangKy dk=new DangKy(row["IDSinhVien"].ToString(), int.Parse(row["IDLuanVan"].ToString()), row["IDGiangVien"].ToString(), int.Parse(row["IDGroup"].ToString()));
+                LuanVanDao lvDao = new LuanVanDao();
+                LuanVan lv= lvDao.GetLVByIDLV(row["IDLuanVan"].ToString());
+                ucNhomLV uc=new ucNhomLV();
+                uc.lbNhom.Text = dk.IDGroup.ToString();
                 uc.lbIdDangKi.Text = lv.IDLuanVan.ToString();
-                uc.lbLop.Text=sv.Lop;
                 uc.lbTenDeTai.Text = lv.TenLuanVan;
                 flpSV.Controls.Add(uc);
                 //uc.Click += new EventHandler(ucTK_Click);

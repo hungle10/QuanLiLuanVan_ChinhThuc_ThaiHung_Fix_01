@@ -36,6 +36,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLoadTask = new Guna.UI2.WinForms.Guna2Button();
+            this.lbTienDo = new System.Windows.Forms.Label();
+            this.lbDesTienDo = new System.Windows.Forms.Label();
+            this.btnChamDiem = new Guna.UI2.WinForms.Guna2Button();
+            this.lbDiemLV = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -43,6 +49,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(234)))));
+            this.panel1.Controls.Add(this.btnChamDiem);
+            this.panel1.Controls.Add(this.lbTienDo);
+            this.panel1.Controls.Add(this.lbDesTienDo);
+            this.panel1.Controls.Add(this.btnLoadTask);
             this.panel1.Controls.Add(this.btnThemTask);
             this.panel1.Controls.Add(this.flpTask);
             this.panel1.Controls.Add(this.label4);
@@ -52,7 +62,7 @@
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1266, 558);
+            this.panel1.Size = new System.Drawing.Size(1325, 558);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -66,9 +76,9 @@
             this.btnThemTask.FillColor = System.Drawing.Color.LimeGreen;
             this.btnThemTask.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThemTask.ForeColor = System.Drawing.Color.White;
-            this.btnThemTask.Location = new System.Drawing.Point(1043, 88);
+            this.btnThemTask.Location = new System.Drawing.Point(1156, 88);
             this.btnThemTask.Name = "btnThemTask";
-            this.btnThemTask.Size = new System.Drawing.Size(157, 46);
+            this.btnThemTask.Size = new System.Drawing.Size(146, 46);
             this.btnThemTask.TabIndex = 41;
             this.btnThemTask.Text = "Thêm task";
             this.btnThemTask.Click += new System.EventHandler(this.btnThemTask_Click);
@@ -79,14 +89,14 @@
             this.flpTask.Location = new System.Drawing.Point(3, 148);
             this.flpTask.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpTask.Name = "flpTask";
-            this.flpTask.Size = new System.Drawing.Size(1263, 410);
+            this.flpTask.Size = new System.Drawing.Size(1322, 410);
             this.flpTask.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(318, 99);
+            this.label4.Location = new System.Drawing.Point(256, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 24);
             this.label4.TabIndex = 5;
@@ -105,13 +115,15 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
+            this.panel2.Controls.Add(this.lbDiemLV);
             this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1266, 72);
+            this.panel2.Size = new System.Drawing.Size(1325, 72);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -135,11 +147,85 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đề tài :";
             // 
+            // btnLoadTask
+            // 
+            this.btnLoadTask.BorderRadius = 10;
+            this.btnLoadTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoadTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoadTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoadTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoadTask.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnLoadTask.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLoadTask.ForeColor = System.Drawing.Color.White;
+            this.btnLoadTask.Location = new System.Drawing.Point(993, 88);
+            this.btnLoadTask.Name = "btnLoadTask";
+            this.btnLoadTask.Size = new System.Drawing.Size(125, 46);
+            this.btnLoadTask.TabIndex = 42;
+            this.btnLoadTask.Text = "Load task";
+            this.btnLoadTask.Click += new System.EventHandler(this.btnLoadTask_Click);
+            // 
+            // lbTienDo
+            // 
+            this.lbTienDo.AutoSize = true;
+            this.lbTienDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTienDo.Location = new System.Drawing.Point(641, 99);
+            this.lbTienDo.Name = "lbTienDo";
+            this.lbTienDo.Size = new System.Drawing.Size(37, 24);
+            this.lbTienDo.TabIndex = 44;
+            this.lbTienDo.Text = "0%";
+            // 
+            // lbDesTienDo
+            // 
+            this.lbDesTienDo.AutoSize = true;
+            this.lbDesTienDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDesTienDo.Location = new System.Drawing.Point(528, 99);
+            this.lbDesTienDo.Name = "lbDesTienDo";
+            this.lbDesTienDo.Size = new System.Drawing.Size(89, 24);
+            this.lbDesTienDo.TabIndex = 43;
+            this.lbDesTienDo.Text = "Tiến độ:";
+            // 
+            // btnChamDiem
+            // 
+            this.btnChamDiem.BorderRadius = 10;
+            this.btnChamDiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChamDiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChamDiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChamDiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChamDiem.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnChamDiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChamDiem.ForeColor = System.Drawing.Color.White;
+            this.btnChamDiem.Location = new System.Drawing.Point(815, 88);
+            this.btnChamDiem.Name = "btnChamDiem";
+            this.btnChamDiem.Size = new System.Drawing.Size(150, 46);
+            this.btnChamDiem.TabIndex = 45;
+            this.btnChamDiem.Text = "Chấm điểm";
+            this.btnChamDiem.Click += new System.EventHandler(this.btnChamDiem_Click);
+            // 
+            // lbDiemLV
+            // 
+            this.lbDiemLV.AutoSize = true;
+            this.lbDiemLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiemLV.Location = new System.Drawing.Point(716, 30);
+            this.lbDiemLV.Name = "lbDiemLV";
+            this.lbDiemLV.Size = new System.Drawing.Size(88, 24);
+            this.lbDiemLV.TabIndex = 47;
+            this.lbDiemLV.Text = "Chưa có";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(631, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 24);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Điểm:";
+            // 
             // FormWatchDetailOfDeTai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 557);
+            this.ClientSize = new System.Drawing.Size(1325, 557);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormWatchDetailOfDeTai";
@@ -163,5 +249,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FlowLayoutPanel flpTask;
         private Guna.UI2.WinForms.Guna2Button btnThemTask;
+        private Guna.UI2.WinForms.Guna2Button btnLoadTask;
+        private Guna.UI2.WinForms.Guna2Button btnChamDiem;
+        private System.Windows.Forms.Label lbTienDo;
+        private System.Windows.Forms.Label lbDesTienDo;
+        private System.Windows.Forms.Label lbDiemLV;
+        private System.Windows.Forms.Label label6;
     }
 }

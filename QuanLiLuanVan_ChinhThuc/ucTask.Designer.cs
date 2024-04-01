@@ -35,6 +35,7 @@
             this.ucTbNoiDung = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ucLbId = new System.Windows.Forms.Label();
+            this.ucBtnXoaTask = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // lbDesThoiHan
@@ -42,7 +43,7 @@
             this.lbDesThoiHan.AutoSize = true;
             this.lbDesThoiHan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbDesThoiHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDesThoiHan.Location = new System.Drawing.Point(491, 16);
+            this.lbDesThoiHan.Location = new System.Drawing.Point(437, 16);
             this.lbDesThoiHan.Name = "lbDesThoiHan";
             this.lbDesThoiHan.Size = new System.Drawing.Size(78, 20);
             this.lbDesThoiHan.TabIndex = 24;
@@ -64,7 +65,7 @@
             this.ucLbThoiHan.AutoSize = true;
             this.ucLbThoiHan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ucLbThoiHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.ucLbThoiHan.Location = new System.Drawing.Point(631, 16);
+            this.ucLbThoiHan.Location = new System.Drawing.Point(577, 16);
             this.ucLbThoiHan.Name = "ucLbThoiHan";
             this.ucLbThoiHan.Size = new System.Drawing.Size(80, 20);
             this.ucLbThoiHan.TabIndex = 21;
@@ -78,7 +79,7 @@
             this.ucChbHoanThanh.CheckedState.BorderThickness = 0;
             this.ucChbHoanThanh.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ucChbHoanThanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.ucChbHoanThanh.Location = new System.Drawing.Point(925, 16);
+            this.ucChbHoanThanh.Location = new System.Drawing.Point(740, 16);
             this.ucChbHoanThanh.Name = "ucChbHoanThanh";
             this.ucChbHoanThanh.Size = new System.Drawing.Size(117, 24);
             this.ucChbHoanThanh.TabIndex = 73;
@@ -135,11 +136,29 @@
             this.ucLbId.TabIndex = 74;
             this.ucLbId.Text = "@id";
             // 
+            // ucBtnXoaTask
+            // 
+            this.ucBtnXoaTask.BorderRadius = 10;
+            this.ucBtnXoaTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ucBtnXoaTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ucBtnXoaTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ucBtnXoaTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ucBtnXoaTask.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ucBtnXoaTask.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ucBtnXoaTask.ForeColor = System.Drawing.Color.White;
+            this.ucBtnXoaTask.Location = new System.Drawing.Point(914, 13);
+            this.ucBtnXoaTask.Name = "ucBtnXoaTask";
+            this.ucBtnXoaTask.Size = new System.Drawing.Size(128, 27);
+            this.ucBtnXoaTask.TabIndex = 76;
+            this.ucBtnXoaTask.Text = "Xóa task";
+            this.ucBtnXoaTask.Click += new System.EventHandler(this.ucBtnXoaTask_Click);
+            // 
             // ucTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.ucBtnXoaTask);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ucLbId);
             this.Controls.Add(this.ucChbHoanThanh);
@@ -163,5 +182,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox ucTbNoiDung;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ucLbId;
+        private Guna.UI2.WinForms.Guna2Button ucBtnXoaTask;
     }
 }

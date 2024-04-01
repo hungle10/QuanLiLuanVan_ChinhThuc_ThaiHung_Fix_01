@@ -14,6 +14,7 @@ namespace QuanLiLuanVan_ChinhThuc
     {
         static DBConnection dBConn = new DBConnection();      
         public static LuanVan luanVan { get; set; }
+        public static Nhom nhom { get; set; }  
         public static int? getIDGroupByIDSinhVien()
         {
            string query = String.Format("SELECT IDGroup FROM DangKi WHERE IDSinhVien='{0}'", UserInfo.sinhVien.Id.ToString());
