@@ -20,7 +20,7 @@ namespace QuanLiLuanVan_ChinhThuc
 
         private void btnThemTask_Click(object sender, EventArgs e)
         {
-            TaskLV t=new TaskLV(DataStorage.luanVan.IDLuanVan,tbNoiDung.Text,dtpThoiHan.Value,0);
+            TaskLV t=new TaskLV(DataStorage.nhom.IDGroup,DataStorage.luanVan.IDLuanVan,tbNoiDung.Text,dtpThoiHan.Value,0);
             TaskDAO dao=new TaskDAO();
             dao.add(t);
             this.Close();

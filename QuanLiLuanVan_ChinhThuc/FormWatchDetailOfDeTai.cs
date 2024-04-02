@@ -35,9 +35,7 @@ namespace QuanLiLuanVan_ChinhThuc
         public void LoadTask()
         {
             flpTask.Controls.Clear();
-            int id = DataStorage.luanVan.IDLuanVan;
-            //DataTable dt = DataProvider.Instance.GetTable("GiaoVien");
-            string query = string.Format("Select * from Task where IDLuanVan ='{0}'", id.ToString());
+            string query = string.Format("Select * from Task where IDGroup ='{0}'", DataStorage.nhom.IDGroup);
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             if (dt.Rows.Count == 0)
             {
@@ -47,7 +45,7 @@ namespace QuanLiLuanVan_ChinhThuc
             int d = 0;
             foreach (DataRow row in dt.Rows)
             {
-                TaskLV task = new TaskLV(int.Parse(row["MaTask"].ToString()), int.Parse(row["IDLuanVan"].ToString()), row["NoiDung"].ToString(), DateTime.Parse(row["ThoiHan"].ToString()), int.Parse(row["TrangThai"].ToString()));
+                TaskLV task = new TaskLV(int.Parse(row["MaTask"].ToString()), int.Parse(row["IDGroup"].ToString()) ,int.Parse(row["IDLuanVan"].ToString()), row["NoiDung"].ToString(), DateTime.Parse(row["ThoiHan"].ToString()), int.Parse(row["TrangThai"].ToString()));
                 ucTask uc = new ucTask();
                 uc.tbNoiDung.Text = task.NoiDung;
                 uc.lbThoiHan.Text = task.FormatNgay();
@@ -94,7 +92,6 @@ namespace QuanLiLuanVan_ChinhThuc
             this.label4.Text = tenGiaoVien;
             if (UserInfo.user == "Hoc Sinh")
             {
-                btnThemTask.Visible = false;
                 btnChamDiem.Visible = false;
             }
             DiemLVDAO diemLVDAO = new DiemLVDAO();

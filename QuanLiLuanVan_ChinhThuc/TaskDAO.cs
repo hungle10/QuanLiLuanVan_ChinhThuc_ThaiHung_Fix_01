@@ -12,7 +12,7 @@ namespace QuanLiLuanVan_ChinhThuc
         public TaskDAO() { }
         public void add(TaskLV task) 
         {
-            string query = string.Format("insert into Task(IDLuanVan,NoiDung,ThoiHan,TrangThai) values ({0},'{1}','{2}',{3})", task.IdLuanVan, task.NoiDung, task.FormatNgay(),task.TrangThai);
+            string query = string.Format("insert into Task(IDGroup,IDLuanVan,NoiDung,ThoiHan,TrangThai) values ({0},{1},'{2}','{3}',{4})", task.IDGroup, task.IdLuanVan, task.NoiDung, task.FormatNgay(),task.TrangThai);
             int result=DataProvider.Instance.ExecuteNonQuery(query);
             if (result == 0)
                 MessageBox.Show("Them that bai!");

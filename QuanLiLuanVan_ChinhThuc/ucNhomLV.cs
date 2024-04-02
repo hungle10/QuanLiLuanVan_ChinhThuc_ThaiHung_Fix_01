@@ -45,6 +45,7 @@ namespace QuanLiLuanVan_ChinhThuc
                 return;
             }
             DataStorage.luanVan = lvan;
+            DataStorage.nhom=new Nhom(int.Parse(lbNhom.Text));
             frm.ShowDialog();
         }
 

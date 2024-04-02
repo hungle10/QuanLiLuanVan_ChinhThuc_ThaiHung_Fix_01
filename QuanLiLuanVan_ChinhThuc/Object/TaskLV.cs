@@ -9,6 +9,7 @@ namespace QuanLiLuanVan_ChinhThuc
     public class TaskLV
     {
         private int maTask;
+        private int iDGroup;
         private int idLuanVan;
         private string noiDung;
         private DateTime thoiHan;
@@ -23,17 +24,19 @@ namespace QuanLiLuanVan_ChinhThuc
             this.maTask=maTask;
             this.trangThai=trangThai;
         }
-        public TaskLV(int idLuanVan, string noiDung, DateTime thoiHan, int trangThai)
+        public TaskLV(int iDGroup,int idLuanVan, string noiDung, DateTime thoiHan, int trangThai)
         {
+            this.iDGroup=iDGroup;  
             this.idLuanVan= idLuanVan;
             this.noiDung = noiDung;
             this.thoiHan = thoiHan;
             this.trangThai = trangThai;
         }
 
-        public TaskLV(int maTask, int idLuanVan, string noiDung, DateTime thoiHan, int trangThai)
+        public TaskLV(int maTask, int iDGroup, int idLuanVan, string noiDung, DateTime thoiHan, int trangThai)
         {
             this.maTask = maTask;
+            this.iDGroup = iDGroup;
             this.idLuanVan = idLuanVan;
             this.noiDung = noiDung;
             this.thoiHan = thoiHan;
@@ -51,5 +54,6 @@ namespace QuanLiLuanVan_ChinhThuc
         public string NoiDung { get => noiDung; set => noiDung = value; }
         public DateTime ThoiHan { get => thoiHan; set => thoiHan = value; }
         public int TrangThai { get => trangThai; set => trangThai = value; }
+        public int IDGroup { get => iDGroup; set => iDGroup = value; }
     }
 }

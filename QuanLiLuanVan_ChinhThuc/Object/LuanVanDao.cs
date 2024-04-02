@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLiLuanVan_ChinhThuc.Object;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -85,6 +86,19 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             LuanVan lv = new LuanVan(int.Parse(row["IDLuanVan"].ToString()), row["TenLuanVan"].ToString(), row["GiangVien"].ToString(), row["NenTang"].ToString(), row["LinhVuc"].ToString(), row["CongNghe"].ToString(), row["YeuCau"].ToString(), row["ChiTiet"].ToString());
             return lv;
         }
-
+        public LuanVan GetLVByGroup(Nhom n)
+        {
+            string query = string.Format("Select * from LuanVan inner join DangKi on LuanVan.IDLuanVan=DangKi.IDLuanVan where IDGroup='{0}'", n.IDGroup);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count == 0)
+            {
+                LuanVan luanvan = new LuanVan();
+                MessageBox.Show("Khong tim thay thong tin");
+                return luanvan;
+            }
+            DataRow row = dt.Rows[0];
+            LuanVan lv = new LuanVan(int.Parse(row["IDLuanVan"].ToString()), row["TenLuanVan"].ToString(), row["GiangVien"].ToString(), row["NenTang"].ToString(), row["LinhVuc"].ToString(), row["CongNghe"].ToString(), row["YeuCau"].ToString(), row["ChiTiet"].ToString());
+            return lv;
+        }
     }
 }

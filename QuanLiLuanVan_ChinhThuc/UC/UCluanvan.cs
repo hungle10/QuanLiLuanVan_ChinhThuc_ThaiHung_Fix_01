@@ -1,4 +1,5 @@
-﻿using QuanLiLuanVan_ChinhThuc.Object;
+﻿using QuanLiLuanVan_ChinhThuc.GV;
+using QuanLiLuanVan_ChinhThuc.Object;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -96,6 +97,21 @@ namespace QuanLiLuanVan_ChinhThuc
         {
 
         }
-        
+
+        private void btnTask_Click(object sender, EventArgs e)
+        {
+            NhomDAO dao = new NhomDAO();
+            DataStorage.nhom = new Nhom(dao.GetIDGroupByMemBer(UserInfo.sinhVien));
+            LuanVanDao daoLV = new LuanVanDao();
+            LuanVan lv = daoLV.GetLVByGroup(DataStorage.nhom);
+            FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai(lv.TenLuanVan, lv.GiangVien, lv.ChiTiet);
+            if (lv == null)
+            {
+                MessageBox.Show("Khong tim thay luan van");
+                return;
+            }
+            DataStorage.luanVan = lv;
+            frm.ShowDialog();
+        }
     }
 }

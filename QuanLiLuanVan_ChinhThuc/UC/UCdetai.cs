@@ -88,7 +88,7 @@ namespace QuanLiLuanVan_ChinhThuc
         public Guna2Button Guna2Button3 { get => guna2Button3; set => guna2Button3 = value; }
         private void ucBtnChiTiet_Click(object sender, EventArgs e)
         {
-            FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai();
+            /*FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai();
             LuanVanDao dao = new LuanVanDao();
             LuanVan lvan = dao.GetLVByTenLV(LVan.TenLuanVan);
             if (lvan == null)
@@ -97,7 +97,7 @@ namespace QuanLiLuanVan_ChinhThuc
                 return;
             }
             DataStorage.luanVan = lvan;
-            frm.ShowDialog();
+            frm.ShowDialog();*/
         }
 
         private void UCdetai_Load(object sender, EventArgs e)

@@ -96,16 +96,18 @@ namespace QuanLiLuanVan_ChinhThuc.UC
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai(lv.TenLuanVan, lv.GiangVien, lv.ChiTiet);
-            LuanVanDao dao = new LuanVanDao();
-            LuanVan lvan= dao.GetLVByTenLV(lv.TenLuanVan);
+            /*FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai(lv.TenLuanVan, lv.GiangVien, lv.ChiTiet);
+            NhomDAO dao = new NhomDAO();
+            DataStorage.nhom = new Nhom(dao.GetIDGroupByMemBer(UserInfo.sinhVien));
+            LuanVanDao daoLV = new LuanVanDao();
+            LuanVan lvan= daoLV.GetLVByTenLV(lv.TenLuanVan);
             if(lvan==null)
             {
                 MessageBox.Show("Khong tim thay luan van");
                 return;
             }
             DataStorage.luanVan = lvan;
-            frm.ShowDialog();
+            frm.ShowDialog();*/
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
