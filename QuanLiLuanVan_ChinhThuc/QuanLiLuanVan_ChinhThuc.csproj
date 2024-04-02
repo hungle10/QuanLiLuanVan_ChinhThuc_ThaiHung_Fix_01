@@ -96,6 +96,12 @@
     <Compile Include="GV\FormQuanLyDuyet.Designer.cs">
       <DependentUpon>FormQuanLyDuyet.cs</DependentUpon>
     </Compile>
+    <Compile Include="GV\fThaoLuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\fThaoLuan.Designer.cs">
+      <DependentUpon>fThaoLuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Admin.cs" />
     <Compile Include="Login\AdminDAO.cs" />
     <Compile Include="Login\DataProvider.cs" />
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GV\FormQuanLyDuyet.resx">
       <DependentUpon>FormQuanLyDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\fThaoLuan.resx">
+      <DependentUpon>fThaoLuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>

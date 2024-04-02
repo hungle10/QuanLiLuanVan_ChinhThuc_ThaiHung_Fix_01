@@ -14,7 +14,7 @@ namespace QuanLiLuanVan_ChinhThuc.Object
         public DiemLVDAO() { }
         public void Add(DiemLV diemLV)
         {
-            string query = string.Format("Insert into DiemLV values({0},{1},'{2}')", diemLV.IDLuanVan, diemLV.Diem, diemLV.NhanXet);
+            string query = string.Format("Insert into DiemLV values({0},{1},{2},'{3}')",DataStorage.nhom.IDGroup ,diemLV.IDLuanVan, diemLV.Diem, diemLV.NhanXet );
             int result=DataProvider.Instance.ExecuteNonQuery(query);
             if (result == 0)
             {

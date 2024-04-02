@@ -38,6 +38,7 @@
             // tbNoiDung
             // 
             this.tbNoiDung.AutoScroll = true;
+            this.tbNoiDung.BorderColor = System.Drawing.Color.LightGray;
             this.tbNoiDung.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNoiDung.DefaultText = "";
             this.tbNoiDung.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -46,6 +47,7 @@
             this.tbNoiDung.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbNoiDung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNoiDung.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNoiDung.ForeColor = System.Drawing.Color.Black;
             this.tbNoiDung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNoiDung.Location = new System.Drawing.Point(39, 88);
             this.tbNoiDung.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);

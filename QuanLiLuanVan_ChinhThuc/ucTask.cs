@@ -16,10 +16,20 @@ namespace QuanLiLuanVan_ChinhThuc
         {
             InitializeComponent();
         }
+        public Guna.UI2.WinForms.Guna2TrackBar pgTienDo
+        {
+            get { return ucPgTienDo; }
+            set { ucPgTienDo = value; }
+        }
         public Label lbThoiHan
         {
             get { return ucLbThoiHan; }
             set { ucLbThoiHan = value; }
+        }
+        public Label lbTienDo
+        {
+            get { return ucLbTienDo; }
+            set { ucLbTienDo = value; }
         }
         public Label lbId
         {
@@ -31,25 +41,6 @@ namespace QuanLiLuanVan_ChinhThuc
             get { return ucTbNoiDung; }
             set { ucTbNoiDung = value; }
         }
-        public Guna.UI2.WinForms.Guna2CheckBox chbHoanThanh
-        {
-            get { return ucChbHoanThanh; }
-            set {  ucChbHoanThanh = value;}
-
-        }
-
-        private void ucChbHoanThanh_Click(object sender, EventArgs e)
-        {
-            int check = 0;
-            if (chbHoanThanh.Checked == false)
-                check = 0;
-            else
-                check = 1;
-            TaskLV t = new TaskLV(int.Parse(ucLbId.Text), check);
-            TaskDAO dao = new TaskDAO();
-            dao.Update(t);
-        }
-
         private void ucBtnXoaTask_Click(object sender, EventArgs e)
         {
             FormWatchDetailOfDeTai f=new FormWatchDetailOfDeTai();
@@ -57,6 +48,19 @@ namespace QuanLiLuanVan_ChinhThuc
             TaskDAO dao = new TaskDAO();
             dao.Delete(t);
             f.LoadTask();
+        }
+
+        private void pgTienDo_ValueChanged(object sender, EventArgs e)
+        {
+            lbTienDo.Text=ucPgTienDo.Value.ToString()+"%";
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            TaskDAO dao=new TaskDAO();
+            TaskLV t=new TaskLV(int.Parse(ucLbId.Text),pgTienDo.Value);
+            dao.Update(t);
+            DataStorage.fDetailDeTai.LoadTask();
         }
     }
 }

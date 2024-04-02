@@ -34,6 +34,7 @@ namespace QuanLiLuanVan_ChinhThuc
         }
         public void LoadTask()
         {
+            
             flpTask.Controls.Clear();
             string query = string.Format("Select * from Task where IDGroup ='{0}'", DataStorage.nhom.IDGroup);
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
@@ -43,25 +44,23 @@ namespace QuanLiLuanVan_ChinhThuc
                 return;
             }
             int d = 0;
+            float tiendo = 0;
             foreach (DataRow row in dt.Rows)
             {
-                TaskLV task = new TaskLV(int.Parse(row["MaTask"].ToString()), int.Parse(row["IDGroup"].ToString()) ,int.Parse(row["IDLuanVan"].ToString()), row["NoiDung"].ToString(), DateTime.Parse(row["ThoiHan"].ToString()), int.Parse(row["TrangThai"].ToString()));
+                TaskLV task = new TaskLV(int.Parse(row["MaTask"].ToString()), int.Parse(row["IDGroup"].ToString()) ,int.Parse(row["IDLuanVan"].ToString()), row["NoiDung"].ToString(), DateTime.Parse(row["ThoiHan"].ToString()), int.Parse(row["TienDo"].ToString()));
                 ucTask uc = new ucTask();
                 uc.tbNoiDung.Text = task.NoiDung;
                 uc.lbThoiHan.Text = task.FormatNgay();
                 uc.lbId.Text = task.MaTask.ToString();
-                if (task.TrangThai == 1)
-                {
-                    uc.chbHoanThanh.Checked = true;
-                    d++;
-                }
-                else
-                    uc.chbHoanThanh.Checked = false;
+                uc.pgTienDo.Value = task.TienDo;
+                uc.lbTienDo.Text=task.TienDo.ToString()+"%";
+                tiendo += task.TienDo;
+                d++;
                 flpTask.Controls.Add(uc);
             }
-            float tiendo=((float)d /dt.Rows.Count)*100;
+            tiendo = ((float)tiendo / d);
             int k = (int)tiendo;
-            lbTienDo.Text = k.ToString()+"%";
+            lbTienDo.Text = k.ToString() + "%";
         }
             private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -86,6 +85,7 @@ namespace QuanLiLuanVan_ChinhThuc
         private void FormWatchDetailOfDeTai_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            DataStorage.fDetailDeTai = this;
             this.tenDeTai = DataStorage.luanVan.TenLuanVan;
             this.tenGiaoVien = DataStorage.luanVan.GiangVien;
             this.label2.Text = tenDeTai;
@@ -97,8 +97,8 @@ namespace QuanLiLuanVan_ChinhThuc
             DiemLVDAO diemLVDAO = new DiemLVDAO();
             if (diemLVDAO.CheckDiem(DataStorage.luanVan))
             {
-                float diem=diemLVDAO.GetDiemByLV(DataStorage.luanVan);
-                lbDiemLV.Text=diem.ToString();
+                float diem = diemLVDAO.GetDiemByLV(DataStorage.luanVan);
+                lbDiemLV.Text = diem.ToString();
             }
             /*string[] mangChuoi = noiDungs.Split(new string[] { "\n" }, StringSplitOptions.None);
             // Chuyển đổi mảng thành danh sách List<string>
@@ -125,12 +125,7 @@ namespace QuanLiLuanVan_ChinhThuc
 
         private void btnChamDiem_Click(object sender, EventArgs e)
         {
-            if (lbTienDo.Text!="100%")
-            {
-                MessageBox.Show("Sinh vien chua hoan thanh het task chua the cham diem !");
-                return;
-            }
-            DiemLVDAO diemLVDAO = new DiemLVDAO();
+            //DiemLVDAO diemLVDAO = new DiemLVDAO();
             if(lbDiemLV.Text!="Chưa có")
             {
                 MessageBox.Show("De tai nay da duoc cham diem!");

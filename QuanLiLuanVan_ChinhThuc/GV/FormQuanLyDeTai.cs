@@ -23,7 +23,7 @@ namespace QuanLiLuanVan_ChinhThuc.GV
 
         private void FormQuanLyDeTai_Load(object sender, EventArgs e)
         {
-            loadPanel();    
+            loadPanel(); 
         }
 
         public void loadPanel(string key="")

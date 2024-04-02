@@ -13,34 +13,34 @@ namespace QuanLiLuanVan_ChinhThuc
         private int idLuanVan;
         private string noiDung;
         private DateTime thoiHan;
-        private int trangThai;
+        private int tienDo;
         public TaskLV(int maTask)
         {
             this.maTask = maTask;
         }
 
-        public TaskLV(int maTask,int trangThai)
+        public TaskLV(int maTask,int tienDo)
         {
             this.maTask=maTask;
-            this.trangThai=trangThai;
+            this.tienDo=tienDo;
         }
-        public TaskLV(int iDGroup,int idLuanVan, string noiDung, DateTime thoiHan, int trangThai)
+        public TaskLV(int iDGroup,int idLuanVan, string noiDung, DateTime thoiHan, int tienDo)
         {
             this.iDGroup=iDGroup;  
             this.idLuanVan= idLuanVan;
             this.noiDung = noiDung;
             this.thoiHan = thoiHan;
-            this.trangThai = trangThai;
+            this.tienDo = tienDo;
         }
 
-        public TaskLV(int maTask, int iDGroup, int idLuanVan, string noiDung, DateTime thoiHan, int trangThai)
+        public TaskLV(int maTask, int iDGroup, int idLuanVan, string noiDung, DateTime thoiHan, int tienDo)
         {
             this.maTask = maTask;
             this.iDGroup = iDGroup;
             this.idLuanVan = idLuanVan;
             this.noiDung = noiDung;
             this.thoiHan = thoiHan;
-            this.trangThai = trangThai;
+            this.tienDo = tienDo;
         }
 
         public string FormatNgay()
@@ -53,7 +53,7 @@ namespace QuanLiLuanVan_ChinhThuc
         public int IdLuanVan { get => idLuanVan; set => idLuanVan = value; }
         public string NoiDung { get => noiDung; set => noiDung = value; }
         public DateTime ThoiHan { get => thoiHan; set => thoiHan = value; }
-        public int TrangThai { get => trangThai; set => trangThai = value; }
+        public int TienDo { get => tienDo; set => tienDo= value; }
         public int IDGroup { get => iDGroup; set => iDGroup = value; }
     }
 }
