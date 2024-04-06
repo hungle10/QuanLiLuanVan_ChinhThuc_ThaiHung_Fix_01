@@ -30,11 +30,6 @@ namespace QuanLiLuanVan_ChinhThuc
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             frm.flp.Controls.Clear();   
-                   
-            frm.gn2.Minimum = 0;
-            frm.gn2.Maximum = 100;
-            double tongUC = 0;
-            double tongUChoanthanh = 0;
             YeuCauDAO yeucauDAO = new YeuCauDAO();
             //gửi id sinh viên vào đây 
             List<YeuCau> ycs = yeucauDAO.getYeuCau(DataStorage.getIDGroupByIDSinhVien().ToString());
@@ -45,9 +40,7 @@ namespace QuanLiLuanVan_ChinhThuc
                 uc.tinhTrang = yc.TinhTrang;
                 uc.idLuanVan = yc.IdLuanVan;
                 frm.flp.Controls.Add(uc); 
-                if (uc.tinhTrang == 1)
-                    tongUChoanthanh++;
-                tongUC++;
+           
             }
             yeucauDAO.add(DataStorage.getIDGroupByIDSinhVien().ToString(), ycs[0].IdLuanVan, siticoneTextBox1.Text.ToString(), 0);
             UCnoidungCheck ucLast = new UCnoidungCheck();
@@ -55,11 +48,9 @@ namespace QuanLiLuanVan_ChinhThuc
             ucLast.tinhTrang = 0;
             ucLast.idLuanVan = ycs[0].IdLuanVan;
             frm.flp.Controls.Add(ucLast);
-            tongUC++;
-            double currentValue = (double)tongUChoanthanh * 100 / tongUC;
-            int intValue = (int)(currentValue * frm.gn2.Maximum / 100.0);
-            frm.gn2.Value = intValue;
-            uc.Lable1.Text = intValue.ToString();               
+   
+    
+                
         }
     }
 }

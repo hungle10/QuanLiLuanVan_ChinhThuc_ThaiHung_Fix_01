@@ -32,12 +32,7 @@ namespace QuanLiLuanVan_ChinhThuc
 
         private void UCnoidungCheck_Load(object sender, EventArgs e)
         {
-            this.label2.Text= noiDung;
-            if(tinhTrang==0)
-                this.guna2CheckBox1.Checked= false;
-            if (tinhTrang == 1)
-                this.guna2CheckBox1.Checked = true;
-            checkbox = this.guna2CheckBox1;
+          
         }
     }
 }
