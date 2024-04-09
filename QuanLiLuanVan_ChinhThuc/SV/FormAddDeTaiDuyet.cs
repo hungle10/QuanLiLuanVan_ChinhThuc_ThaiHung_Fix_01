@@ -19,6 +19,7 @@ namespace QuanLiLuanVan_ChinhThuc.SV
         public FormAddDeTaiDuyet()
         {
             InitializeComponent();
+            loadGiaoVien();
         }
 
         public LuanVan getLuanVan()
@@ -29,7 +30,7 @@ namespace QuanLiLuanVan_ChinhThuc.SV
             lv.LinhVuc = t3.Text;
             lv.CongNghe = t4.Text;
             lv.ChiTiet = t5.Text;
-            lv.GiangVien = tbTenGiaoVien.Text;
+            lv.GiangVien = cbbGiaoVien.Text;
             return lv;
         }
 
@@ -48,13 +49,23 @@ namespace QuanLiLuanVan_ChinhThuc.SV
             LuanVan lv = getLuanVan();
             lvd.add(lv);
             lv = lvd.getLastestLuanVan();
-            DangKy dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, tbTenGiaoVien.Text);
+            DangKy dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, cbbGiaoVien.Text);
             dkd.add(dk);
             dkd.addMemberNhom(tnhom.Lines, dk.IDSinhVien);
             dkd.addDuyet(dk);
             this.Close();
         }
-
+        public void loadGiaoVien()
+        {
+            GiaoVienDAO gvd = new GiaoVienDAO();
+            DataTable dt = DataProvider.Instance.GetTable("GiaoVien");
+            cbbGiaoVien.Items.Clear();
+            foreach (DataRow r in dt.Rows)
+            {
+                //tMessageBox.Show(cbbGiaoVien.Items.Add(r["HoTen"]).ToString());
+                cbbGiaoVien.Items.Add(r["HoTen"]);
+            }
+        }
         private void FormAddDeTaiDuyet_Load(object sender, EventArgs e)
         {
 

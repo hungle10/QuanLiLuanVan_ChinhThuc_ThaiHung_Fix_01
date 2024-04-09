@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLiLuanVan_ChinhThuc.Object;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,15 +22,9 @@ namespace QuanLiLuanVan_ChinhThuc.GV
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LuanVan lv = new LuanVan(9999, t2.Text, t1.Text, t3.Text, t4.Text, t5.Text, t6.Text, t7.Text);
+            LuanVan lv = new LuanVan(9999, tbTenDeTai.Text,UserInfo.giaoVien.HoTen, tbNenTang.Text, tbLinhVuc.Text, tbCongNghe.Text, tbYeuCauChung.Text, tbNoiDung.Text);
             lvd.add(lv);
             this.Close();
-            
-        }
-
-        private void t6_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

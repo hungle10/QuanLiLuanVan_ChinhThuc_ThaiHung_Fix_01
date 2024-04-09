@@ -15,12 +15,6 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             InitializeComponent();
             
         }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void FormQuanLyDeTai_Load(object sender, EventArgs e)
         {
             loadPanel(); 
@@ -29,8 +23,8 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         public void loadPanel(string key="")
         {
             flowLayoutPanel1.Controls.Clear();
-            string query = string.Format("SELECT * FROM LuanVan WHERE (LuanVan.IDLuanVan NOT IN (SELECT IDLuanVan FROM Duyet)) and GiangVien like '%{0}%' and TenLuanVan like '%{1}%' ", UserInfo.giaoVien.HoTen,key);
-            DataTable dt = dBConn.Excute(query);
+            LuanVanDao dao=new LuanVanDao();
+            DataTable dt = dao.GetLVByGiangVien(UserInfo.giaoVien, key);
             if(dt==null || dt.Rows.Count == 0 ) 
             {
                 MessageBox.Show("khong the tim thay thong tin !");
@@ -49,12 +43,6 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         {
             loadPanel();
         }
-
-        private void detaiClick(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             fThemDeTai fdetai = new fThemDeTai();
@@ -62,8 +50,6 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             fdetai.ShowDialog();
             
         }
-
-     
         public void Fdetai_FormClosed(object sender, FormClosedEventArgs e)
         {
             loadPanel();

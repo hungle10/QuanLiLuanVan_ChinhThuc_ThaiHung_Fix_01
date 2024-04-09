@@ -37,6 +37,7 @@
             this.ucLbTenDeTai = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnNhom = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHen = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // ucLbIdNhom
@@ -163,10 +164,28 @@
             this.btnNhom.Text = "Nhóm";
             this.btnNhom.Click += new System.EventHandler(this.btnNhom_Click);
             // 
+            // btnHen
+            // 
+            this.btnHen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHen.FillColor = System.Drawing.Color.Gainsboro;
+            this.btnHen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHen.ForeColor = System.Drawing.Color.Black;
+            this.btnHen.Location = new System.Drawing.Point(714, 27);
+            this.btnHen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHen.Name = "btnHen";
+            this.btnHen.Size = new System.Drawing.Size(115, 36);
+            this.btnHen.TabIndex = 50;
+            this.btnHen.Text = "Meeting";
+            this.btnHen.Click += new System.EventHandler(this.btnHen_Click);
+            // 
             // ucNhomLV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnHen);
             this.Controls.Add(this.btnNhom);
             this.Controls.Add(this.ucLbTenDeTai);
             this.Controls.Add(this.bunifuCustomLabel8);
@@ -193,5 +212,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel ucLbTenDeTai;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Guna.UI2.WinForms.Guna2Button btnNhom;
+        private Guna.UI2.WinForms.Guna2Button btnHen;
     }
 }

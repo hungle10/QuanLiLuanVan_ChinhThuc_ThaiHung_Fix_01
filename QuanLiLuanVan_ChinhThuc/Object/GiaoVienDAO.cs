@@ -86,5 +86,33 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             }
             return null;
         }
+        public List<GiaoVien> getListGiaoVien()
+        {
+            List<GiaoVien> gvs = new List<GiaoVien>();
+            string query = String.Format("SELECT * FROM GiaoVien");
+            DataTable data = dBConn.Excute(query);
+            if (data == null)
+            {
+                MessageBox.Show("Error");
+                return null;
+            }
+            if (data.Rows.Count > 0)
+            {
+                foreach (DataRow row in data.Rows)
+                {
+                    GiaoVien gvien = new GiaoVien();
+                    gvien.Id = Convert.ToInt32(row["ID"]);
+                    gvien.HoTen = row["HoTen"].ToString();
+                    gvien.DiaChi = row["DiaChi"].ToString();
+                    gvien.Khoa = row["Khoa"].ToString();
+                    gvien.NgaySinh = DateTime.Parse(row["NgaySinh"].ToString());
+                    gvien.Sdt = row["Sdt"].ToString();
+                    gvien.Email = row["Email"].ToString();
+                    gvs.Add(gvien);
+                }
+                return gvs;
+            }
+            return null;
+        }
     }
 }

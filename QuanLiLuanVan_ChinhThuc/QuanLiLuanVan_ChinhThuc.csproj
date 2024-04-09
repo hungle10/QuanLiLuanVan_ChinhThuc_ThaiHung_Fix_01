@@ -72,6 +72,12 @@
     <Compile Include="fDSNhom.Designer.cs">
       <DependentUpon>fDSNhom.cs</DependentUpon>
     </Compile>
+    <Compile Include="fMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMeeting.Designer.cs">
+      <DependentUpon>fMeeting.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThemTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </Compile>
     <Compile Include="GV\fChamDiem.Designer.cs">
       <DependentUpon>fChamDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\fListLichHen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\fListLichHen.Designer.cs">
+      <DependentUpon>fListLichHen.cs</DependentUpon>
     </Compile>
     <Compile Include="GV\FormDuyet.cs">
       <SubType>Form</SubType>
@@ -164,6 +176,8 @@
     <Compile Include="Object\HomePageClassDAO.cs" />
     <Compile Include="Object\LuanVan.cs" />
     <Compile Include="Object\LuanVanDao.cs" />
+    <Compile Include="Object\Meeting.cs" />
+    <Compile Include="Object\MeetingDAO.cs" />
     <Compile Include="Object\Nguoi.cs" />
     <Compile Include="Object\Nhom.cs" />
     <Compile Include="Object\NhomDAO.cs" />
@@ -325,6 +339,9 @@
     <Compile Include="Login\UserInfo.cs" />
     <EmbeddedResource Include="fDSNhom.resx">
       <DependentUpon>fDSNhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMeeting.resx">
+      <DependentUpon>fMeeting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThemTask.resx">
       <DependentUpon>fThemTask.cs</DependentUpon>

@@ -22,24 +22,23 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         {
             InitializeComponent();
             this.lv = lv;
-            //dk = dkd.getFromIDSinhVien(UserInfo.sinhVien.Id.ToString());
             dk=dkd.getFromIDSinhVien(dkd.GetIDSvienByLV(lv).ToString());
             loadInfo();
         }
 
         public void loadInfo()
         {
-            t1.Text = lv.GiangVien;
-            t2.Text = lv.NenTang;
-            t3.Text = lv.LinhVuc;
-            t4.Text = lv.CongNghe;
-            t6.Text = lv.ChiTiet;
-            tnhom.Text = dkd.getMemberNhom(dk);
+            tbGiangVien.Text = lv.GiangVien;
+            tbNenTang.Text = lv.NenTang;
+            tbLinhVuc.Text = lv.LinhVuc;
+            tbCongNghe.Text = lv.CongNghe;
+            tbNoiDung.Text = lv.ChiTiet;
+            tbNhom.Text = dkd.getMemberNhom(dk);
         }
 
         public bool isYeuCauEmpty()
         {
-            if (t5.Text.Length <= 0)
+            if (tbYeuCau.Text.Length <= 0)
                 return true;
             return false;
         }
@@ -59,9 +58,9 @@ namespace QuanLiLuanVan_ChinhThuc.GV
                 MessageBox.Show("Vui lòng điền các yêu cầu cho đề tài này");
                 return;
             }
-            lv.YeuCau = t5.Text;
+            lv.YeuCau = tbYeuCau.Text;
             lvd.updateYeuCau(lv);
-            foreach (string line in t5.Lines)
+            foreach (string line in tbYeuCau.Lines)
                 ycd.add(DataStorage.getIDGroupByIDSinhVien().ToString(), dk.IDLuanVan, line, 0);
 
             dkd.removeDuyet(dk);

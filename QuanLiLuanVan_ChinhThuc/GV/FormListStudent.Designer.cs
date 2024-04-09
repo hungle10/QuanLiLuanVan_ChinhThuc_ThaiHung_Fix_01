@@ -34,8 +34,9 @@
             this.flpSV = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tbTimKiem = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnTimKiem = new FontAwesome.Sharp.IconButton();
+            this.btnWatchLichHen = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -83,10 +84,10 @@
             this.flpSV.Name = "flpSV";
             this.flpSV.Size = new System.Drawing.Size(1275, 409);
             this.flpSV.TabIndex = 1;
-            this.flpSV.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnWatchLichHen);
             this.panel3.Controls.Add(this.tbTimKiem);
             this.panel3.Controls.Add(this.btnTimKiem);
             this.panel3.Controls.Add(this.bunifuCustomLabel1);
@@ -100,22 +101,34 @@
             // tbTimKiem
             // 
             this.tbTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbTimKiem.DefaultText = "";
+            this.tbTimKiem.DefaultText = "Nhập tên đề tài";
             this.tbTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTimKiem.ForeColor = System.Drawing.Color.Black;
             this.tbTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTimKiem.Location = new System.Drawing.Point(31, 36);
+            this.tbTimKiem.Location = new System.Drawing.Point(32, 46);
             this.tbTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTimKiem.Name = "tbTimKiem";
             this.tbTimKiem.PasswordChar = '\0';
+            this.tbTimKiem.PlaceholderForeColor = System.Drawing.Color.Black;
             this.tbTimKiem.PlaceholderText = "";
             this.tbTimKiem.SelectedText = "";
-            this.tbTimKiem.Size = new System.Drawing.Size(340, 29);
+            this.tbTimKiem.Size = new System.Drawing.Size(340, 43);
             this.tbTimKiem.TabIndex = 20;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(28, 11);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(91, 20);
+            this.bunifuCustomLabel1.TabIndex = 24;
+            this.bunifuCustomLabel1.Text = "Tìm kiếm ";
             // 
             // btnTimKiem
             // 
@@ -123,23 +136,27 @@
             this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.btnTimKiem.IconColor = System.Drawing.Color.White;
             this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimKiem.Location = new System.Drawing.Point(393, 24);
+            this.btnTimKiem.Location = new System.Drawing.Point(396, 46);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(57, 41);
+            this.btnTimKiem.Size = new System.Drawing.Size(57, 43);
             this.btnTimKiem.TabIndex = 21;
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // bunifuCustomLabel1
+            // btnWatchLichHen
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(31, 2);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(91, 20);
-            this.bunifuCustomLabel1.TabIndex = 24;
-            this.bunifuCustomLabel1.Text = "Tìm kiếm ";
+            this.btnWatchLichHen.BackColor = System.Drawing.Color.LightGreen;
+            this.btnWatchLichHen.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnWatchLichHen.IconColor = System.Drawing.Color.Black;
+            this.btnWatchLichHen.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnWatchLichHen.Location = new System.Drawing.Point(942, 31);
+            this.btnWatchLichHen.Name = "btnWatchLichHen";
+            this.btnWatchLichHen.Size = new System.Drawing.Size(165, 58);
+            this.btnWatchLichHen.TabIndex = 25;
+            this.btnWatchLichHen.Text = "Xem lịch hẹn";
+            this.btnWatchLichHen.UseVisualStyleBackColor = false;
+            this.btnWatchLichHen.Click += new System.EventHandler(this.btnWatchLichHen_Click);
             // 
             // FormListStudent
             // 
@@ -151,7 +168,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormListStudent";
             this.Text = "FormGiangVien";
-            this.Load += new System.EventHandler(this.FormStudent_Load);
+            this.Load += new System.EventHandler(this.FormListStudent_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -170,6 +187,6 @@
         private FontAwesome.Sharp.IconButton btnTimKiem;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.FlowLayoutPanel flpSV;
-
+        private FontAwesome.Sharp.IconButton btnWatchLichHen;
     }
 }

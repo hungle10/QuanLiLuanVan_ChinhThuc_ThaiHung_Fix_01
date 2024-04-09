@@ -47,36 +47,5 @@ namespace QuanLiLuanVan_ChinhThuc
 
        
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            FormAddYeuCau frm = new FormAddYeuCau(this,uc);
-            frm.ShowDialog();
-        }
-        //nut cap nhat
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-           
-            YeuCauDAO ycd = new YeuCauDAO();
-            List<YeuCau> ycs = ycd.getYeuCau(DataStorage.getIDGroupByIDSinhVien().ToString());
-            foreach (YeuCau yc in ycs)
-            {
-                UCnoidungCheck uc = new UCnoidungCheck();
-                uc.noiDung = yc.NoiDungYeuCau.ToString();
-                uc.tinhTrang = yc.TinhTrang;
-                uc.idLuanVan = yc.IdLuanVan;
-               
-            }
-            hp.Panel2.Controls.Clear();
-            HomePageClassDAO homePageClassDAO = new HomePageClassDAO();
-            HomePageClass hpg = homePageClassDAO.getInfoHomePage(UserInfo.sinhVien.Id.ToString());
-            if (hp != null)
-            {
-                UCluanvan uc = new UCluanvan(hp);
-                uc.tenDeTai = hpg.TenDeTai;
-                uc.tenGiaoVienHuongDan = hpg.GiaoVien;
-                hp.Panel2.Controls.Add(uc);
-            }
-        }
     }
 }

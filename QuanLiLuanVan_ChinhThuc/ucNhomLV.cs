@@ -56,5 +56,13 @@ namespace QuanLiLuanVan_ChinhThuc
             fDSNhom f=new fDSNhom();
             f.ShowDialog();
         }
+
+        private void btnHen_Click(object sender, EventArgs e)
+        {
+            Nhom n = new Nhom(int.Parse(lbNhom.Text));
+            DataStorage.nhom = n;
+            fMeeting frm = new fMeeting(UserInfo.giaoVien,DataStorage.nhom);      
+            frm.ShowDialog();           
+        }
     }
 }

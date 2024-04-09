@@ -100,5 +100,11 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             LuanVan lv = new LuanVan(int.Parse(row["IDLuanVan"].ToString()), row["TenLuanVan"].ToString(), row["GiangVien"].ToString(), row["NenTang"].ToString(), row["LinhVuc"].ToString(), row["CongNghe"].ToString(), row["YeuCau"].ToString(), row["ChiTiet"].ToString());
             return lv;
         }
+        public DataTable GetLVByGiangVien(GiaoVien gv,string key)
+        {
+            string query = string.Format("SELECT * FROM LuanVan WHERE (LuanVan.IDLuanVan NOT IN (SELECT IDLuanVan FROM Duyet)) and GiangVien like '%{0}%' and TenLuanVan like '%{1}%' ", gv.HoTen,key);
+            DataTable dt= DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
     }
 }
