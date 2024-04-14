@@ -61,7 +61,12 @@ namespace QuanLiLuanVan_ChinhThuc.SV
                 ycd.add(DataStorage.getIDGroupByIDSinhVien().ToString(), lv.IDLuanVan, chuoi, 0);
             }
             this.Close();
-
+           /* public void add(DangKy dk)
+            {
+                string queryDK = String.Format("INSERT INTO DangKi(IDSinhVien, IDLuanVan, IDGiangVien) VALUES('{0}', '{1}', '{2}')",
+                   dk.IDSinhVien, dk.IDLuanVan, dk.IDGiangVien);
+                dBConn.runSql(queryDK);
+            }*/
         }
         public DangKy Dk { get => dk; set => dk = value; }
         public List<string> NoiDungs { get => noiDungs; set => noiDungs = value; }

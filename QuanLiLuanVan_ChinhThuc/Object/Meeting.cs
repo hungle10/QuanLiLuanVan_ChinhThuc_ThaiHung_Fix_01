@@ -22,6 +22,7 @@ namespace QuanLiLuanVan_ChinhThuc.Object
             this.thoiGian = thoiGian;
             this.chiTiet = chiTiet;
         }
+        public Meeting() { }        
 
         public int MaMeeting { get => maMeeting; set => maMeeting = value; }
         public string IdGiaoVien { get => idGiaoVien; set => idGiaoVien = value; }

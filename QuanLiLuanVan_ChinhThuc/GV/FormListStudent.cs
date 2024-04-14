@@ -58,7 +58,8 @@ namespace QuanLiLuanVan_ChinhThuc.GV
 
         private void btnWatchLichHen_Click(object sender, EventArgs e)
         {
-
+            fListLichHen frm = new fListLichHen();      
+            frm.ShowDialog();       
         }
 
         private void FormListStudent_Load(object sender, EventArgs e)

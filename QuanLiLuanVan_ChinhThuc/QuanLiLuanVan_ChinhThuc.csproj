@@ -312,6 +312,12 @@
     <Compile Include="UC\UCdetai.Designer.cs">
       <DependentUpon>UCdetai.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCmeeting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCmeeting.Designer.cs">
+      <DependentUpon>UCmeeting.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCRowGiaoVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -348,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GV\fChamDiem.resx">
       <DependentUpon>fChamDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\fListLichHen.resx">
+      <DependentUpon>fListLichHen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GV\FormDuyet.resx">
       <DependentUpon>FormDuyet.cs</DependentUpon>
@@ -451,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCdetai.resx">
       <DependentUpon>UCdetai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCmeeting.resx">
+      <DependentUpon>UCmeeting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCRowGiaoVien.resx">
       <DependentUpon>UCRowGiaoVien.cs</DependentUpon>

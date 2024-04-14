@@ -28,12 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flpMeeting = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnXoaLichHen = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1083, 65);
+            this.panel1.TabIndex = 0;
+            // 
+            // flpMeeting
+            // 
+            this.flpMeeting.Location = new System.Drawing.Point(3, 62);
+            this.flpMeeting.Name = "flpMeeting";
+            this.flpMeeting.Size = new System.Drawing.Size(1080, 375);
+            this.flpMeeting.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(66, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Lịch hẹn";
+            // 
+            // btnXoaLichHen
+            // 
+            this.btnXoaLichHen.BorderRadius = 10;
+            this.btnXoaLichHen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaLichHen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaLichHen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoaLichHen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoaLichHen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXoaLichHen.ForeColor = System.Drawing.Color.White;
+            this.btnXoaLichHen.Location = new System.Drawing.Point(851, 453);
+            this.btnXoaLichHen.Name = "btnXoaLichHen";
+            this.btnXoaLichHen.Size = new System.Drawing.Size(180, 45);
+            this.btnXoaLichHen.TabIndex = 2;
+            this.btnXoaLichHen.Text = "Xóa";
+            this.btnXoaLichHen.Click += new System.EventHandler(this.btnXoaLichHen_Click);
+            // 
+            // fListLichHen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1083, 510);
+            this.Controls.Add(this.btnXoaLichHen);
+            this.Controls.Add(this.flpMeeting);
+            this.Controls.Add(this.panel1);
+            this.Name = "fListLichHen";
             this.Text = "fListLichHen";
+            this.Load += new System.EventHandler(this.fListLichHen_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flpMeeting;
+        private Guna.UI2.WinForms.Guna2Button btnXoaLichHen;
     }
 }

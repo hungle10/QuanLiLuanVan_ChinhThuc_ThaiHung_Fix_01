@@ -16,5 +16,10 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         {
             InitializeComponent();
         }
+
+        private void fThaoLuan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
