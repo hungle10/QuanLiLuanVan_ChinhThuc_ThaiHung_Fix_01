@@ -31,24 +31,6 @@ namespace QuanLiLuanVan_ChinhThuc
         {
             this.bunifuCustomLabel4.Text = tenDeTai;
             this.bunifuCustomLabel6.Text = tenGiaoVienHuongDan;
-
-         
-            YeuCauDAO yeucauDAO = new YeuCauDAO();
-            //gửi id sinh viên vào đây 
-            List<YeuCau> ycs = yeucauDAO.getYeuCau(DataStorage.getIDGroupByIDSinhVien().ToString());
-            if (ycs!=null)
-            {
-                foreach (YeuCau yc in ycs)
-                {
-                    UCnoidungCheck uc = new UCnoidungCheck();
-                    uc.noiDung = yc.NoiDungYeuCau.ToString();
-                    uc.tinhTrang = yc.TinhTrang;
-                    uc.idLuanVan = yc.IdLuanVan;
-                }
-
-                // đem tiến độ của đình hòa gắn vô đây
-                //this.label1.Text = 
-            }
         }
          
        
@@ -84,8 +66,7 @@ namespace QuanLiLuanVan_ChinhThuc
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            FormWatchDetailLuanVanFix frm = new FormWatchDetailLuanVanFix(hp,this);
-            frm.ShowDialog();
+           
         }
 
         private void label2_Click(object sender, EventArgs e)

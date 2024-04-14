@@ -14,7 +14,7 @@ namespace QuanLiLuanVan_ChinhThuc.UC
     {
         LuanVan lv;
         DangKyDao dkd = new DangKyDao();
-        YeuCauDAO ycd = new YeuCauDAO();
+     //   YeuCauDAO ycd = new YeuCauDAO();
         DangKy dk;
         FormXacNhan FXacNhan;
         bool check;
@@ -74,7 +74,7 @@ namespace QuanLiLuanVan_ChinhThuc.UC
             }
             else
             {
-                ycd.delete(DataStorage.getIDGroupByIDSinhVien().ToString(), lv.IDLuanVan);
+              //  ycd.delete(DataStorage.getIDGroupByIDSinhVien().ToString(), lv.IDLuanVan);
                 dkd.remove(dkd.getFromIDSinhVien(UserInfo.sinhVien.Id.ToString()));
             }
             loadInfomation();

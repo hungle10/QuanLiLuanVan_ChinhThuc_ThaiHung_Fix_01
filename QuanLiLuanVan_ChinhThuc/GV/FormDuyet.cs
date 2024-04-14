@@ -16,7 +16,7 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         LuanVan lv;
         DangKyDao dkd = new DangKyDao();
         LuanVanDao lvd = new LuanVanDao();
-        YeuCauDAO ycd = new YeuCauDAO();
+     //   YeuCauDAO ycd = new YeuCauDAO();
         DangKy dk;
         public FormDuyet(LuanVan lv)
         {
@@ -60,9 +60,9 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             }
             lv.YeuCau = tbYeuCau.Text;
             lvd.updateYeuCau(lv);
-            foreach (string line in tbYeuCau.Lines)
+            /*foreach (string line in tbYeuCau.Lines)
                 ycd.add(DataStorage.getIDGroupByIDSinhVien().ToString(), dk.IDLuanVan, line, 0);
-
+            */
             dkd.removeDuyet(dk);
             this.Close();
 
