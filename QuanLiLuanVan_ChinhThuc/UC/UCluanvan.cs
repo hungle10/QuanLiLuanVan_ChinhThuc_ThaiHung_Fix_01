@@ -25,12 +25,30 @@ namespace QuanLiLuanVan_ChinhThuc
             this.hp = hp;       
         }
         public Label Lable1 {
-            get { return this.label1; }
-            set { this.label1 = value; } }       
+            get { return this.lbTienDo; }
+            set { this.lbTienDo = value; } }       
         private void UCluanvan_Load(object sender, EventArgs e)
         {
             this.bunifuCustomLabel4.Text = tenDeTai;
             this.bunifuCustomLabel6.Text = tenGiaoVienHuongDan;
+            string query = string.Format("Select * from Task where IDGroup ='{0}'", DataStorage.nhom.IDGroup);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Khong tim thay thong tin !");
+                return;
+            }
+            int d = 0;
+            float tiendo = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                TaskLV task = new TaskLV(int.Parse(row["MaTask"].ToString()), int.Parse(row["IDGroup"].ToString()), int.Parse(row["IDLuanVan"].ToString()), row["NoiDung"].ToString(), DateTime.Parse(row["ThoiHan"].ToString()), int.Parse(row["TienDo"].ToString()));
+                tiendo += task.TienDo;
+                d++;
+            }
+            tiendo = ((float)tiendo / d);
+            int k = (int)tiendo;
+            lbTienDo.Text=k.ToString();     
         }
          
        
@@ -43,7 +61,7 @@ namespace QuanLiLuanVan_ChinhThuc
             bunifuCustomLabel5.BackColor = System.Drawing.Color.FromArgb(r, g, b);
             bunifuCustomLabel6.BackColor = System.Drawing.Color.FromArgb(r, g, b);
             bunifuCustomLabel7.BackColor = System.Drawing.Color.FromArgb(r, g, b);
-            label1.BackColor = System.Drawing.Color.FromArgb(r, g, b);
+            lbTienDo.BackColor = System.Drawing.Color.FromArgb(r, g, b);
             guna2Button1.BorderColor = System.Drawing.Color.FromArgb(r, g, b);
             guna2Button1.BackColor = System.Drawing.Color.FromArgb(r, g, b);
 

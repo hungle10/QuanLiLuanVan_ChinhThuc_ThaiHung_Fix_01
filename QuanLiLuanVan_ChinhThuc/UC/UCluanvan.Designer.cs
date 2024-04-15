@@ -34,7 +34,7 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbTienDo = new System.Windows.Forms.Label();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -124,16 +124,16 @@
             this.bunifuCustomLabel5.TabIndex = 19;
             this.bunifuCustomLabel5.Text = "Tiến độ :";
             // 
-            // label1
+            // lbTienDo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1059, 131);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 22);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "0";
+            this.lbTienDo.AutoSize = true;
+            this.lbTienDo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbTienDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTienDo.Location = new System.Drawing.Point(1059, 131);
+            this.lbTienDo.Name = "lbTienDo";
+            this.lbTienDo.Size = new System.Drawing.Size(21, 22);
+            this.lbTienDo.TabIndex = 20;
+            this.lbTienDo.Text = "0";
             // 
             // bunifuCustomLabel7
             // 
@@ -215,7 +215,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.bunifuCustomLabel7);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbTienDo);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel3);
@@ -240,7 +240,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTienDo;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
