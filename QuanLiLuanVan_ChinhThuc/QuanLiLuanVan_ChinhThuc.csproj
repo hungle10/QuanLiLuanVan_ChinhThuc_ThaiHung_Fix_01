@@ -197,12 +197,6 @@
     <Compile Include="FormWatchDetailOfGiangVien.Designer.cs">
       <DependentUpon>FormWatchDetailOfGiangVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="fThemDeTai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fThemDeTai.Designer.cs">
-      <DependentUpon>fThemDeTai.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GV\FormMainGV.cs">
@@ -388,9 +382,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormWatchDetailOfGiangVien.resx">
       <DependentUpon>FormWatchDetailOfGiangVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fThemDeTai.resx">
-      <DependentUpon>fThemDeTai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GV\FormMainGV.resx">
       <DependentUpon>FormMainGV.cs</DependentUpon>
