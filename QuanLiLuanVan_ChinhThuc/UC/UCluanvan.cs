@@ -29,6 +29,8 @@ namespace QuanLiLuanVan_ChinhThuc
             set { this.lbTienDo = value; } }       
         private void UCluanvan_Load(object sender, EventArgs e)
         {
+            NhomDAO dao = new NhomDAO();
+            DataStorage.nhom = new Nhom(dao.GetIDGroupByMemBer(UserInfo.sinhVien));
             this.bunifuCustomLabel4.Text = tenDeTai;
             this.bunifuCustomLabel6.Text = tenGiaoVienHuongDan;
             string query = string.Format("Select * from Task where IDGroup ='{0}'", DataStorage.nhom.IDGroup);
@@ -94,8 +96,7 @@ namespace QuanLiLuanVan_ChinhThuc
 
         private void btnTask_Click(object sender, EventArgs e)
         {
-            NhomDAO dao = new NhomDAO();
-            DataStorage.nhom = new Nhom(dao.GetIDGroupByMemBer(UserInfo.sinhVien));
+            
             LuanVanDao daoLV = new LuanVanDao();
             LuanVan lv = daoLV.GetLVByGroup(DataStorage.nhom);
             FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai(lv.TenLuanVan, lv.GiangVien, lv.ChiTiet);

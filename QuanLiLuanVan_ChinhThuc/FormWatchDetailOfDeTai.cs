@@ -88,8 +88,8 @@ namespace QuanLiLuanVan_ChinhThuc
             DataStorage.fDetailDeTai = this;
             this.tenDeTai = DataStorage.luanVan.TenLuanVan;
             this.tenGiaoVien = DataStorage.luanVan.GiangVien;
-            this.label2.Text = tenDeTai;
-            this.label4.Text = tenGiaoVien;
+            this.lbLuanVan.Text = tenDeTai;
+            this.lbTenGiangVien.Text = tenGiaoVien;
             if (UserInfo.user == "Hoc Sinh")
             {
                 btnChamDiem.Visible = false;

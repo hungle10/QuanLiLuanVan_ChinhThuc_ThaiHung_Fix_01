@@ -25,10 +25,20 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             dk=dkd.getFromIDSinhVien(dkd.GetIDSvienByLV(lv).ToString());
             loadInfo();
         }
-
+        public void loadGiaoVien()
+        {
+            GiaoVienDAO gvd = new GiaoVienDAO();
+            DataTable dt = DataProvider.Instance.GetTable("GiaoVien");
+            cbbGiaoVien.Items.Clear();
+            foreach (DataRow r in dt.Rows)
+            {
+                //tMessageBox.Show(cbbGiaoVien.Items.Add(r["HoTen"]).ToString());
+                cbbGiaoVien.Items.Add(r["HoTen"]);
+            }
+        }
         public void loadInfo()
         {
-            tbGiangVien.Text = lv.GiangVien;
+            cbbGiaoVien.Text = lv.GiangVien;
             tbNenTang.Text = lv.NenTang;
             tbLinhVuc.Text = lv.LinhVuc;
             tbCongNghe.Text = lv.CongNghe;

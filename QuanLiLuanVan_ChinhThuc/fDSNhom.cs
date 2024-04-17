@@ -1,4 +1,5 @@
-﻿using QuanLiLuanVan_ChinhThuc.Object;
+﻿using QuanLiLuanVan_ChinhThuc.GV;
+using QuanLiLuanVan_ChinhThuc.Object;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,9 @@ namespace QuanLiLuanVan_ChinhThuc
             {
                 Nhom n = new Nhom(int.Parse(row["IDGroup"].ToString()), row["MemberName"].ToString());
                 UCRowStudent uc = new UCRowStudent();
-                uc.lbHoTen.Text = n.MemberName;
+                SinhVienDao sinhVienDao = new SinhVienDao();
+                SinhVien sv = sinhVienDao.GetSinhVienById(n.MemberName);
+                uc.lbHoTen.Text = sv.HoTen;
                 flpMember.Controls.Add(uc);
             }
         }

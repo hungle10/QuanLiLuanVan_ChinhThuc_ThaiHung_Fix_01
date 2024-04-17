@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Management;
 using System.Windows;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace QuanLiLuanVan_ChinhThuc.GV
 {
@@ -22,6 +23,22 @@ namespace QuanLiLuanVan_ChinhThuc.GV
                 giaovien.Email = email;
                 MessageBox.Show("Khong tim thay thong tin giao vien");
                 return giaovien;
+            }
+            DataRow row = dt.Rows[0];
+            //GiaoVien gv = new GiaoVien(int.Parse(row["ID"].ToString()), row["HoTen"].ToString(), row["DiaChi"].ToString(), row["Khoa"].ToString(), DateTime.Parse(row["NgaySinh"].ToString()), row["Sdt"].ToString(),row["Email"].ToString());
+            GiaoVien gv = new GiaoVien(row);
+            return gv;
+        }
+        public GiaoVien GetGiaoVienByName(string name) 
+        {
+            string query = string.Format("select * from GiaoVien where HoTen='{0}'", name);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count == 0)
+            {
+                /*GiaoVien giaovien = new GiaoVien();
+                giaovien.HoTen = name;*/
+                MessageBox.Show("Khong tim thay thong tin giao vien");
+                return null;
             }
             DataRow row = dt.Rows[0];
             //GiaoVien gv = new GiaoVien(int.Parse(row["ID"].ToString()), row["HoTen"].ToString(), row["DiaChi"].ToString(), row["Khoa"].ToString(), DateTime.Parse(row["NgaySinh"].ToString()), row["Sdt"].ToString(),row["Email"].ToString());

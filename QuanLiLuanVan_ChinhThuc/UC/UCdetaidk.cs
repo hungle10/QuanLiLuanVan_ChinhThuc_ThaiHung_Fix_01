@@ -23,7 +23,9 @@ namespace QuanLiLuanVan_ChinhThuc.UC
         {
             InitializeComponent();
             this.lv = lv;
-            dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, lv.GiangVien);
+            GiaoVienDAO dao=new GiaoVienDAO();
+            GiaoVien gv = dao.GetGiaoVienByName(lv.GiangVien);
+            dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, gv.Id.ToString());
             FXacNhan = new FormXacNhan(lv);
             loadInfomation();
         }

@@ -33,22 +33,6 @@ namespace QuanLiLuanVan_ChinhThuc
             get { return ucLbTenDeTai; }
             set { ucLbTenDeTai = value; }
         }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai();
-            LuanVanDao dao = new LuanVanDao();
-            LuanVan lvan = dao.GetLVByIDLV(lbIdDangKi.Text);
-            if (lvan == null)
-            {
-                MessageBox.Show("Khong tim thay luan van");
-                return;
-            }
-            DataStorage.luanVan = lvan;
-            DataStorage.nhom=new Nhom(int.Parse(lbNhom.Text));
-            frm.ShowDialog();
-        }
-
         private void btnNhom_Click(object sender, EventArgs e)
         {
             Nhom n= new Nhom(int.Parse(lbNhom.Text));
@@ -63,6 +47,21 @@ namespace QuanLiLuanVan_ChinhThuc
             DataStorage.nhom = n;
             fMeeting frm = new fMeeting(UserInfo.giaoVien,DataStorage.nhom);      
             frm.ShowDialog();           
+        }
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai();
+            LuanVanDao dao = new LuanVanDao();
+            LuanVan lvan = dao.GetLVByIDLV(lbIdDangKi.Text);
+            if (lvan == null)
+            {
+                MessageBox.Show("Khong tim thay luan van");
+                return;
+            }
+            DataStorage.luanVan = lvan;
+            DataStorage.nhom = new Nhom(int.Parse(lbNhom.Text));
+            frm.ShowDialog();
         }
     }
 }

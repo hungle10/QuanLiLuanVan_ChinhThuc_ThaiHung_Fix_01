@@ -36,7 +36,9 @@ namespace QuanLiLuanVan_ChinhThuc.Object
             DangKy dk = getFromIDSinhVien(id);
             foreach(string line in lines)
             {
-                string queryDK = String.Format("INSERT INTO Nhom(IDGroup, MemberName) VALUES({0}, '{1}')", dk.IDGroup, line);
+                SinhVienDao dao=new SinhVienDao();
+                SinhVien sv=dao.GetSinhVienByName(line);
+                string queryDK = String.Format("INSERT INTO Nhom(IDGroup, MemberName) VALUES({0}, '{1}')", dk.IDGroup, sv.Id);
                 dBConn.runSql(queryDK);
             }
         }
@@ -67,7 +69,7 @@ namespace QuanLiLuanVan_ChinhThuc.Object
         }
         public DataTable GetDKByGV(GiaoVien gv)
         {
-            string query = string.Format("Select * from DangKi Where IDGiangVien='{0}'", gv.HoTen);
+            string query = string.Format("Select * from DangKi Where IDGiangVien='{0}'", gv.Id);
             DataTable dt=DataProvider.Instance.ExecuteQuery(query);
             if(dt.Rows.Count == 0 )
             {

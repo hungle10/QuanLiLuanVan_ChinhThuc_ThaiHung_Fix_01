@@ -49,7 +49,11 @@ namespace QuanLiLuanVan_ChinhThuc.SV
             LuanVan lv = getLuanVan();
             lvd.add(lv);
             lv = lvd.getLastestLuanVan();
-            DangKy dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, cbbGiaoVien.Text);
+            GiaoVienDAO dao=new GiaoVienDAO();
+            GiaoVien gv= dao.GetGiaoVienByName(cbbGiaoVien.Text);
+            if (gv == null)
+                return;
+            DangKy dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, gv.Id.ToString());
             dkd.add(dk);
             dkd.addMemberNhom(tnhom.Lines, dk.IDSinhVien);
             dkd.addDuyet(dk);

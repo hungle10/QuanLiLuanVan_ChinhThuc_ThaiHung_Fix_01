@@ -67,7 +67,7 @@
             this.btnDetail.Size = new System.Drawing.Size(115, 36);
             this.btnDetail.TabIndex = 42;
             this.btnDetail.Text = "Task";
-            this.btnDetail.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // bunifuCustomLabel1
             // 

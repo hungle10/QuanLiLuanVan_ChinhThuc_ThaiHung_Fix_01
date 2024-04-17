@@ -12,6 +12,32 @@ namespace QuanLiLuanVan_ChinhThuc.GV
     public class SinhVienDao
     {
         DBConnection dBConn = new DBConnection();
+        public SinhVien GetSinhVienByName(string name)
+        {
+            string query = string.Format("select * from SinhVien where HoTen='{0}'", name);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Khong tim thay thong tin hoc sinh");
+                return null;
+            }
+            DataRow row = dt.Rows[0];
+            SinhVien sv = new SinhVien(int.Parse(row["ID"].ToString()), row["HoTen"].ToString(), row["DiaChi"].ToString(), row["Khoa"].ToString(), DateTime.Parse(row["NgaySinh"].ToString()), row["Sdt"].ToString(), row["Email"].ToString(), row["ChuyenNganh"].ToString(), row["Lop"].ToString(), int.Parse(row["KhoaHoc"].ToString()));
+            return sv;
+        }
+        public SinhVien GetSinhVienById(string id)
+        {
+            string query = string.Format("select * from SinhVien where ID='{0}'", id);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Khong tim thay thong tin hoc sinh");
+                return null;
+            }
+            DataRow row = dt.Rows[0];
+            SinhVien sv = new SinhVien(int.Parse(row["ID"].ToString()), row["HoTen"].ToString(), row["DiaChi"].ToString(), row["Khoa"].ToString(), DateTime.Parse(row["NgaySinh"].ToString()), row["Sdt"].ToString(), row["Email"].ToString(), row["ChuyenNganh"].ToString(), row["Lop"].ToString(), int.Parse(row["KhoaHoc"].ToString()));
+            return sv;
+        }
         public SinhVien getSinhVien(string id)
         {
             string query = String.Format("SELECT * FROM SinhVien WHERE ID='{0}'", id);
