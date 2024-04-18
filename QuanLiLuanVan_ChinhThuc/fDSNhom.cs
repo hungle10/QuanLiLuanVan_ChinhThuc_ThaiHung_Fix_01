@@ -16,6 +16,7 @@ namespace QuanLiLuanVan_ChinhThuc
     {
         public fDSNhom()
         {
+            DataStorage.fDSNhom=this;
             InitializeComponent();
             LoadMember();
         }
@@ -35,10 +36,24 @@ namespace QuanLiLuanVan_ChinhThuc
                 Nhom n = new Nhom(int.Parse(row["IDGroup"].ToString()), row["MemberName"].ToString());
                 UCRowStudent uc = new UCRowStudent();
                 SinhVienDao sinhVienDao = new SinhVienDao();
+                DiemLVDAO diemLVDAO = new DiemLVDAO();
                 SinhVien sv = sinhVienDao.GetSinhVienById(n.MemberName);
+                int diem = diemLVDAO.GetDiemBySVN(sv, n);
+                if (diem == -1)
+                    uc.lbDiem.Text = "Chua co";
+                else
+                    uc.lbDiem.Text = diem.ToString();
                 uc.lbHoTen.Text = sv.HoTen;
+                TaskDAO tdao=new TaskDAO();
+                uc.lbTaskDone.Text = tdao.GetTienDoSV(sv, n).ToString()+"%";
                 flpMember.Controls.Add(uc);
             }
+        }
+
+        private void btnChamDiem_Click(object sender, EventArgs e)
+        {
+            fChamDiem f = new fChamDiem();
+            f.ShowDialog();
         }
     }
 }

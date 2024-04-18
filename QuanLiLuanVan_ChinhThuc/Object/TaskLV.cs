@@ -14,15 +14,17 @@ namespace QuanLiLuanVan_ChinhThuc
         private string noiDung;
         private DateTime thoiHan;
         private int tienDo;
+        private int iDSinhVien;
         public TaskLV(int maTask)
         {
             this.maTask = maTask;
         }
 
-        public TaskLV(int maTask,int tienDo)
+        public TaskLV(int maTask,int tienDo,int iDSinhVien)
         {
             this.maTask=maTask;
             this.tienDo=tienDo;
+            this.iDSinhVien=iDSinhVien;
         }
         public TaskLV(int iDGroup,int idLuanVan, string noiDung, DateTime thoiHan, int tienDo)
         {
@@ -33,6 +35,16 @@ namespace QuanLiLuanVan_ChinhThuc
             this.tienDo = tienDo;
         }
 
+        public TaskLV(int maTask, int iDGroup, int idLuanVan, string noiDung, DateTime thoiHan, int tienDo,int iDSinhVien)
+        {
+            this.maTask = maTask;
+            this.iDGroup = iDGroup;
+            this.idLuanVan = idLuanVan;
+            this.noiDung = noiDung;
+            this.thoiHan = thoiHan;
+            this.tienDo = tienDo;
+            this.iDSinhVien= iDSinhVien;
+        }
         public TaskLV(int maTask, int iDGroup, int idLuanVan, string noiDung, DateTime thoiHan, int tienDo)
         {
             this.maTask = maTask;
@@ -55,5 +67,6 @@ namespace QuanLiLuanVan_ChinhThuc
         public DateTime ThoiHan { get => thoiHan; set => thoiHan = value; }
         public int TienDo { get => tienDo; set => tienDo= value; }
         public int IDGroup { get => iDGroup; set => iDGroup = value; }
+        public int IDSinhVien { get => iDSinhVien; set => iDSinhVien = value; }
     }
 }

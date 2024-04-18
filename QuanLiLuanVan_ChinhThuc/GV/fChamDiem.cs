@@ -36,7 +36,7 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         {
             if (!checkInput())
                 return;
-            DiemLV d=new DiemLV(DataStorage.luanVan.IDLuanVan,float.Parse(tbDiem.Text),tbNhanXet.Text);
+            DiemLV d=new DiemLV(DataStorage.luanVan.IDLuanVan,float.Parse(tbDiem.Text),tbNhanXet.Text,DataStorage.nhom.IDGroup,DataStorage.diemLV.IDSinhVien);
             DiemLVDAO dao = new DiemLVDAO();
             dao.Add(d);
         }

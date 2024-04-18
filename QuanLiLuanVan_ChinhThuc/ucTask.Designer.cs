@@ -40,6 +40,8 @@
             this.ucLbTienDo = new System.Windows.Forms.Label();
             this.btnCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.btnThaoLuan = new Guna.UI2.WinForms.Guna2Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ucLbTenSV = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbDesThoiHan
@@ -58,7 +60,7 @@
             this.lbDesHoTen.AutoSize = true;
             this.lbDesHoTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbDesHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDesHoTen.Location = new System.Drawing.Point(42, 53);
+            this.lbDesHoTen.Location = new System.Drawing.Point(40, 89);
             this.lbDesHoTen.Name = "lbDesHoTen";
             this.lbDesHoTen.Size = new System.Drawing.Size(80, 20);
             this.lbDesHoTen.TabIndex = 22;
@@ -88,7 +90,7 @@
             this.ucTbNoiDung.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTbNoiDung.ForeColor = System.Drawing.Color.Black;
             this.ucTbNoiDung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ucTbNoiDung.Location = new System.Drawing.Point(46, 82);
+            this.ucTbNoiDung.Location = new System.Drawing.Point(44, 112);
             this.ucTbNoiDung.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ucTbNoiDung.MaxLength = 327670;
             this.ucTbNoiDung.Multiline = true;
@@ -132,7 +134,7 @@
             this.ucBtnXoaTask.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ucBtnXoaTask.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ucBtnXoaTask.ForeColor = System.Drawing.Color.White;
-            this.ucBtnXoaTask.Location = new System.Drawing.Point(888, 13);
+            this.ucBtnXoaTask.Location = new System.Drawing.Point(893, 216);
             this.ucBtnXoaTask.Name = "ucBtnXoaTask";
             this.ucBtnXoaTask.Size = new System.Drawing.Size(138, 27);
             this.ucBtnXoaTask.TabIndex = 76;
@@ -180,7 +182,7 @@
             this.btnCapNhat.FillColor = System.Drawing.Color.Green;
             this.btnCapNhat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.Location = new System.Drawing.Point(888, 46);
+            this.btnCapNhat.Location = new System.Drawing.Point(714, 216);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(138, 27);
             this.btnCapNhat.TabIndex = 80;
@@ -197,17 +199,41 @@
             this.btnThaoLuan.FillColor = System.Drawing.Color.Green;
             this.btnThaoLuan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThaoLuan.ForeColor = System.Drawing.Color.White;
-            this.btnThaoLuan.Location = new System.Drawing.Point(888, 167);
+            this.btnThaoLuan.Location = new System.Drawing.Point(893, 16);
             this.btnThaoLuan.Name = "btnThaoLuan";
             this.btnThaoLuan.Size = new System.Drawing.Size(138, 39);
             this.btnThaoLuan.TabIndex = 81;
             this.btnThaoLuan.Text = "Thảo luận";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(39, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 20);
+            this.label3.TabIndex = 83;
+            this.label3.Text = "Người làm:";
+            // 
+            // ucLbTenSV
+            // 
+            this.ucLbTenSV.AutoSize = true;
+            this.ucLbTenSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucLbTenSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.ucLbTenSV.Location = new System.Drawing.Point(144, 53);
+            this.ucLbTenSV.Name = "ucLbTenSV";
+            this.ucLbTenSV.Size = new System.Drawing.Size(71, 20);
+            this.ucLbTenSV.TabIndex = 82;
+            this.ucLbTenSV.Text = "Chưa có";
             // 
             // ucTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.ucLbTenSV);
             this.Controls.Add(this.btnThaoLuan);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.ucLbTienDo);
@@ -221,7 +247,7 @@
             this.Controls.Add(this.lbDesHoTen);
             this.Controls.Add(this.ucLbThoiHan);
             this.Name = "ucTask";
-            this.Size = new System.Drawing.Size(1074, 221);
+            this.Size = new System.Drawing.Size(1074, 266);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +267,7 @@
         private System.Windows.Forms.Label ucLbTienDo;
         private Guna.UI2.WinForms.Guna2Button btnCapNhat;
         private Guna.UI2.WinForms.Guna2Button btnThaoLuan;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ucLbTenSV;
     }
 }

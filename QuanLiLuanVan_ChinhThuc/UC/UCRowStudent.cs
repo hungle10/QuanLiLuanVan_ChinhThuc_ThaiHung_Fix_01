@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLiLuanVan_ChinhThuc.GV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,43 +22,29 @@ namespace QuanLiLuanVan_ChinhThuc
             get { return ucLbHoTen; }
             set { lbHoTen = value; }
         }
-
-        private void bunifuCustomLabel3_Click(object sender, EventArgs e)
+        public Bunifu.Framework.UI.BunifuCustomLabel lbTaskDone
         {
-
+            get { return ucLbTaskDone; }
+            set { ucLbTaskDone = value; }
         }
-
-        private void bunifuCustomLabel4_Click(object sender, EventArgs e)
+        public Bunifu.Framework.UI.BunifuCustomLabel lbDiem
         {
-
+            get { return ucLbDiem; }
+            set { ucLbDiem = value; }
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void ucBtnChamDiem_Click(object sender, EventArgs e)
         {
-
+            if(lbDiem.Text!="Chua co")
+            {
+                MessageBox.Show("Sinh vien nay da duoc cham diem !");
+                return;
+            }
+            SinhVienDao dao=new SinhVienDao();
+            SinhVien sv = dao.GetSinhVienByName(lbHoTen.Text);
+            DataStorage.diemLV = new DiemLV(sv.Id);
+            fChamDiem f = new fChamDiem();
+            f.ShowDialog();
+            DataStorage.fDSNhom.LoadMember();
         }
-
-        private void guna2Button1_MouseHover(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2Button1_MouseEnter(object sender, EventArgs e)
-        {
-            changeColorTextBox(148, 148, 235);
-        }
-
-        private void guna2Button1_MouseLeave(object sender, EventArgs e)
-        {
-            changeColorTextBox(192, 192, 255);
-        }
-
-        public void changeColorTextBox(int r, int g, int b)
-        {
-            bunifuCustomLabel1.BackColor = System.Drawing.Color.FromArgb(r, g, b);
-            bunifuCustomLabel2.BackColor = System.Drawing.Color.FromArgb(r, g, b);
-            ucLbHoTen.BackColor = System.Drawing.Color.FromArgb(r, g, b);
-            bunifuCustomLabel4.BackColor = System.Drawing.Color.FromArgb(r, g, b);
-        }
-        
     }
 }

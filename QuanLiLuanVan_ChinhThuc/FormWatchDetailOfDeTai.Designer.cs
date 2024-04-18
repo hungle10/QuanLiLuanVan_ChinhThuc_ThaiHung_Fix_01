@@ -81,6 +81,7 @@
             this.btnChamDiem.Size = new System.Drawing.Size(150, 46);
             this.btnChamDiem.TabIndex = 45;
             this.btnChamDiem.Text = "Chấm điểm";
+            this.btnChamDiem.Visible = false;
             this.btnChamDiem.Click += new System.EventHandler(this.btnChamDiem_Click);
             // 
             // lbTienDo

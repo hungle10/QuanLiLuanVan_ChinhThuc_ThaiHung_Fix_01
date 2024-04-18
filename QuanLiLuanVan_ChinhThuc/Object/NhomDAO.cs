@@ -20,7 +20,7 @@ namespace QuanLiLuanVan_ChinhThuc.Object
         }
         public int GetIDGroupByMemBer(SinhVien sv)
         {
-            string query = string.Format("Select IDGroup from Nhom where MemberName='{0}'", sv.HoTen);
+            string query = string.Format("Select IDGroup from Nhom where MemberName='{0}'", sv.Id.ToString());
             object ob = DataProvider.Instance.ExecuteScalar(query);
             if(ob != null) 
             {

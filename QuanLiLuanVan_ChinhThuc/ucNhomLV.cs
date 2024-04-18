@@ -36,6 +36,8 @@ namespace QuanLiLuanVan_ChinhThuc
         private void btnNhom_Click(object sender, EventArgs e)
         {
             Nhom n= new Nhom(int.Parse(lbNhom.Text));
+            LuanVanDao dao=new LuanVanDao();
+            DataStorage.luanVan = dao.GetLVByGroup(n);
             DataStorage.nhom = n;   
             fDSNhom f=new fDSNhom();
             f.ShowDialog();

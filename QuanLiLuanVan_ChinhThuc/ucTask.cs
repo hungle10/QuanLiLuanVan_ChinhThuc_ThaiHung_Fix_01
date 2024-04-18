@@ -26,6 +26,11 @@ namespace QuanLiLuanVan_ChinhThuc
             get { return ucLbThoiHan; }
             set { ucLbThoiHan = value; }
         }
+        public Label lbTenSV
+        {
+            get { return ucLbTenSV; }
+            set { ucLbTenSV = value; }
+        }
         public Label lbTienDo
         {
             get { return ucLbTienDo; }
@@ -58,7 +63,13 @@ namespace QuanLiLuanVan_ChinhThuc
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             TaskDAO dao=new TaskDAO();
-            TaskLV t=new TaskLV(int.Parse(ucLbId.Text),pgTienDo.Value);
+            int a;
+            if(UserInfo.user=="Giao Vien")
+            {
+                MessageBox.Show("Giao vien khong the cap nhat task !");
+                return;
+            }
+            TaskLV t=new TaskLV(int.Parse(ucLbId.Text),pgTienDo.Value,UserInfo.sinhVien.Id);
             dao.Update(t);
             DataStorage.fDetailDeTai.LoadTask();
         }

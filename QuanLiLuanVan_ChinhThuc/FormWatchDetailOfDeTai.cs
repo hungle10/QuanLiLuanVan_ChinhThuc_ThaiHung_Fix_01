@@ -49,6 +49,14 @@ namespace QuanLiLuanVan_ChinhThuc
             {
                 TaskLV task = new TaskLV(int.Parse(row["MaTask"].ToString()), int.Parse(row["IDGroup"].ToString()) ,int.Parse(row["IDLuanVan"].ToString()), row["NoiDung"].ToString(), DateTime.Parse(row["ThoiHan"].ToString()), int.Parse(row["TienDo"].ToString()));
                 ucTask uc = new ucTask();
+                int b;
+                if (int.TryParse(row["IDSinhVien"].ToString(),out b) ==true)
+                {
+                    task.IDSinhVien = int.Parse(row["IDSinhVien"].ToString());
+                    SinhVienDao svdao = new SinhVienDao();
+                    SinhVien sv = svdao.GetSinhVienById(task.IDSinhVien.ToString());
+                    uc.lbTenSV.Text = sv.HoTen;
+                }
                 uc.tbNoiDung.Text = task.NoiDung;
                 uc.lbThoiHan.Text = task.FormatNgay();
                 uc.lbId.Text = task.MaTask.ToString();
