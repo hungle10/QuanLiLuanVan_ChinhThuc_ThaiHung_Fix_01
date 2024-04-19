@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.cbbGiaoVien = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            this.tbGiangVien = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -122,7 +122,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cbbGiaoVien);
+            this.groupBox3.Controls.Add(this.tbGiangVien);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.t4);
             this.groupBox3.Controls.Add(this.label3);
@@ -290,20 +290,26 @@
             this.guna2Button1.Text = "Đồng ý đăng ký";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // cbbGiaoVien
+            // tbGiangVien
             // 
-            this.cbbGiaoVien.BackColor = System.Drawing.Color.Transparent;
-            this.cbbGiaoVien.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbGiaoVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGiaoVien.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbGiaoVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbGiaoVien.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbGiaoVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbGiaoVien.ItemHeight = 30;
-            this.cbbGiaoVien.Location = new System.Drawing.Point(195, 26);
-            this.cbbGiaoVien.Name = "cbbGiaoVien";
-            this.cbbGiaoVien.Size = new System.Drawing.Size(218, 36);
-            this.cbbGiaoVien.TabIndex = 93;
+            this.tbGiangVien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbGiangVien.DefaultText = "";
+            this.tbGiangVien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbGiangVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbGiangVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbGiangVien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbGiangVien.Enabled = false;
+            this.tbGiangVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbGiangVien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbGiangVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbGiangVien.Location = new System.Drawing.Point(195, 39);
+            this.tbGiangVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbGiangVien.Name = "tbGiangVien";
+            this.tbGiangVien.PasswordChar = '\0';
+            this.tbGiangVien.PlaceholderText = "";
+            this.tbGiangVien.SelectedText = "";
+            this.tbGiangVien.Size = new System.Drawing.Size(218, 29);
+            this.tbGiangVien.TabIndex = 94;
             // 
             // FormXacNhan
             // 
@@ -348,6 +354,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox tnhom;
-        private Siticone.Desktop.UI.WinForms.SiticoneComboBox cbbGiaoVien;
+        private Guna.UI2.WinForms.Guna2TextBox tbGiangVien;
     }
 }

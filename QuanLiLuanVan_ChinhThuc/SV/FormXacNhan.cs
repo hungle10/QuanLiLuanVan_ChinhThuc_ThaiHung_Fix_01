@@ -26,18 +26,6 @@ namespace QuanLiLuanVan_ChinhThuc.SV
             dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, gv.Id.ToString());
             loadInfo();
         }
-        public void loadGiaoVien()
-        {
-            GiaoVienDAO gvd = new GiaoVienDAO();
-            DataTable dt = DataProvider.Instance.GetTable("GiaoVien");
-            cbbGiaoVien.Items.Clear();
-            foreach (DataRow r in dt.Rows)
-            {
-                //tMessageBox.Show(cbbGiaoVien.Items.Add(r["HoTen"]).ToString());
-                cbbGiaoVien.Items.Add(r["HoTen"]);
-                //cbbGiaoVien.Items.Add(r);
-            }
-        }
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
@@ -45,7 +33,7 @@ namespace QuanLiLuanVan_ChinhThuc.SV
 
         public void loadInfo()
         {
-            cbbGiaoVien.Text = lv.GiangVien;
+            tbGiangVien.Text = lv.GiangVien;
             t2.Text = lv.NenTang;
             t3.Text = lv.LinhVuc;
             t4.Text = lv.CongNghe;
