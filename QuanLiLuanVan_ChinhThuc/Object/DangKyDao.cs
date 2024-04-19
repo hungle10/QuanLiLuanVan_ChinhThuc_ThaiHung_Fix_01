@@ -74,7 +74,7 @@ namespace QuanLiLuanVan_ChinhThuc.Object
             if(dt.Rows.Count == 0 )
             {
                 System.Windows.MessageBox.Show("Lay thong tin that bai !");
-                return null;
+                return dt;
             }
             return dt;
         }
