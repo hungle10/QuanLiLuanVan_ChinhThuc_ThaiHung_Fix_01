@@ -37,8 +37,8 @@ namespace QuanLiLuanVan_ChinhThuc.Object
             foreach(string line in lines)
             {
                 SinhVienDao dao=new SinhVienDao();
-                SinhVien sv=dao.GetSinhVienByName(line);
-                string queryDK = String.Format("INSERT INTO Nhom(IDGroup, MemberName) VALUES({0}, '{1}')", dk.IDGroup, sv.Id);
+                //SinhVien sv=dao.GetSinhVienByName(line);
+                string queryDK = String.Format("INSERT INTO Nhom(IDGroup, MemberName) VALUES({0}, '{1}')", dk.IDGroup, line);
                 dBConn.runSql(queryDK);
             }
         }
@@ -60,16 +60,18 @@ namespace QuanLiLuanVan_ChinhThuc.Object
         {
             string queryDK = String.Format("SELECT * FROM Nhom WHERE IDGroup={0}", dk.IDGroup);
             DataTable dt =  dBConn.Excute(queryDK);
-            string nhomStr = "";
+            string nhomStr = "MSSV:\n";
             foreach(DataRow row in dt.Rows)
             {
-                nhomStr = nhomStr + row["MemberName"]+"\n";
+                SinhVienDao dao= new SinhVienDao();
+                SinhVien sv = dao.GetSinhVienById(row["MemberName"].ToString());
+                nhomStr = nhomStr + sv.HoTen+"\n";
             }
             return nhomStr;
         }
         public DataTable GetDKByGV(GiaoVien gv)
         {
-            string query = string.Format("Select * from DangKi Where IDGiangVien='{0}'", gv.Id);
+            string query = string.Format("Select * from DangKi Where (DangKi.IDLuanVan NOT IN (SELECT IDLuanVan FROM Duyet)) and IDGiangVien='{0}'", gv.Id);
             DataTable dt=DataProvider.Instance.ExecuteQuery(query);
             if(dt.Rows.Count == 0 )
             {
@@ -97,6 +99,26 @@ namespace QuanLiLuanVan_ChinhThuc.Object
                 foreach (DataRow row in data.Rows)
                 {
                     
+                    dk.IDSinhVien = row["IDSinhVien"].ToString();
+                    dk.IDLuanVan = Int32.Parse(row["IDLuanVan"].ToString());
+                    dk.IDGiangVien = row["IDGiangVien"].ToString();
+                    dk.IDGroup = Int32.Parse(row["IDGroup"].ToString());
+                }
+                return dk;
+            }
+            return null;
+        }
+        public DangKy getFromMember(string id)
+        {
+            string query = String.Format("SELECT * FROM DangKi inner join Nhom on Nhom.IdGroup=DangKi.IdGroup  WHERE MemberName={0}", id);
+            DataTable data = dBConn.Excute(query);
+
+            if (data.Rows.Count > 0)
+            {
+                DangKy dk = new DangKy();
+                foreach (DataRow row in data.Rows)
+                {
+
                     dk.IDSinhVien = row["IDSinhVien"].ToString();
                     dk.IDLuanVan = Int32.Parse(row["IDLuanVan"].ToString());
                     dk.IDGiangVien = row["IDGiangVien"].ToString();
@@ -142,7 +164,7 @@ namespace QuanLiLuanVan_ChinhThuc.Object
 
         public bool checkDK(DangKy dk)
         {
-            string query = String.Format("SELECT * FROM DangKi WHERE IDSinhVien='{0}' AND IDLuanVan='{1}'", dk.IDSinhVien, dk.IDLuanVan);
+            string query = String.Format("SELECT * FROM DangKi inner join Nhom on Nhom.IdGroup=DangKi.IdGroup  WHERE MemberName={0} AND IDLuanVan={1}", dk.IDSinhVien, dk.IDLuanVan);
             SqlDataReader data = dBConn.runSqlReturn(query);
             if (data!=null)
             {

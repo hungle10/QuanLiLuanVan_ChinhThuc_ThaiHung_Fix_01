@@ -52,8 +52,6 @@ namespace QuanLiLuanVan_ChinhThuc
             int k = (int)tiendo;
             lbTienDo.Text=k.ToString();     
         }
-         
-       
         public void changeColorTextBox(int r, int g, int b)
         {
             bunifuCustomLabel1.BackColor = System.Drawing.Color.FromArgb(r, g, b);
@@ -107,6 +105,17 @@ namespace QuanLiLuanVan_ChinhThuc
             }
             DataStorage.luanVan = lv;
             frm.ShowDialog();
+        }
+
+        private void btnNhom_Click(object sender, EventArgs e)
+        {
+            NhomDAO ndao= new NhomDAO();
+            Nhom n = new Nhom(ndao.GetIDGroupByMemBer(UserInfo.sinhVien));
+            LuanVanDao dao = new LuanVanDao();
+            DataStorage.luanVan = dao.GetLVByGroup(n);
+            DataStorage.nhom = n;
+            fDSNhom f = new fDSNhom();
+            f.ShowDialog();
         }
     }
 }

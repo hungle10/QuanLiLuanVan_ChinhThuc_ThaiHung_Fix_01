@@ -36,7 +36,7 @@ namespace QuanLiLuanVan_ChinhThuc.SV
 
         public bool isEmptyNhom()
         {
-            return tnhom.Text.Length == 0;
+            return tbnhom.Text.Length == 0;
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace QuanLiLuanVan_ChinhThuc.SV
                 return;
             DangKy dk = new DangKy(UserInfo.sinhVien.Id.ToString(), lv.IDLuanVan, gv.Id.ToString());
             dkd.add(dk);
-            dkd.addMemberNhom(tnhom.Lines, dk.IDSinhVien);
+            dkd.addMemberNhom(tbnhom.Lines, dk.IDSinhVien);
             dkd.addDuyet(dk);
             this.Close();
         }

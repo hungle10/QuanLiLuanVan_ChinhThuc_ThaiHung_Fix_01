@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnChamDiem = new Guna.UI2.WinForms.Guna2Button();
             this.lbTienDo = new System.Windows.Forms.Label();
             this.lbDesTienDo = new System.Windows.Forms.Label();
             this.btnLoadTask = new Guna.UI2.WinForms.Guna2Button();
@@ -38,9 +37,7 @@
             this.lbTenGiangVien = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbDiemLV = new System.Windows.Forms.Label();
             this.lbLuanVan = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -49,7 +46,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(234)))));
-            this.panel1.Controls.Add(this.btnChamDiem);
             this.panel1.Controls.Add(this.lbTienDo);
             this.panel1.Controls.Add(this.lbDesTienDo);
             this.panel1.Controls.Add(this.btnLoadTask);
@@ -65,24 +61,6 @@
             this.panel1.Size = new System.Drawing.Size(1325, 558);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btnChamDiem
-            // 
-            this.btnChamDiem.BorderRadius = 10;
-            this.btnChamDiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChamDiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChamDiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChamDiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChamDiem.FillColor = System.Drawing.Color.LimeGreen;
-            this.btnChamDiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnChamDiem.ForeColor = System.Drawing.Color.White;
-            this.btnChamDiem.Location = new System.Drawing.Point(815, 88);
-            this.btnChamDiem.Name = "btnChamDiem";
-            this.btnChamDiem.Size = new System.Drawing.Size(150, 46);
-            this.btnChamDiem.TabIndex = 45;
-            this.btnChamDiem.Text = "Chấm điểm";
-            this.btnChamDiem.Visible = false;
-            this.btnChamDiem.Click += new System.EventHandler(this.btnChamDiem_Click);
             // 
             // lbTienDo
             // 
@@ -170,9 +148,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
-            this.panel2.Controls.Add(this.lbDiemLV);
             this.panel2.Controls.Add(this.lbLuanVan);
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -181,16 +157,6 @@
             this.panel2.Size = new System.Drawing.Size(1325, 72);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // lbDiemLV
-            // 
-            this.lbDiemLV.AutoSize = true;
-            this.lbDiemLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDiemLV.Location = new System.Drawing.Point(1119, 30);
-            this.lbDiemLV.Name = "lbDiemLV";
-            this.lbDiemLV.Size = new System.Drawing.Size(88, 24);
-            this.lbDiemLV.TabIndex = 47;
-            this.lbDiemLV.Text = "Chưa có";
             // 
             // lbLuanVan
             // 
@@ -201,16 +167,6 @@
             this.lbLuanVan.Size = new System.Drawing.Size(226, 29);
             this.lbLuanVan.TabIndex = 1;
             this.lbLuanVan.Text = "E-Commerce Web";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1034, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 24);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "Điểm:";
             // 
             // label1
             // 
@@ -251,10 +207,7 @@
         private System.Windows.Forms.FlowLayoutPanel flpTask;
         private Guna.UI2.WinForms.Guna2Button btnThemTask;
         private Guna.UI2.WinForms.Guna2Button btnLoadTask;
-        private Guna.UI2.WinForms.Guna2Button btnChamDiem;
         private System.Windows.Forms.Label lbDesTienDo;
-        private System.Windows.Forms.Label lbDiemLV;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbTienDo;
     }
 }

@@ -31,7 +31,7 @@ namespace QuanLiLuanVan_ChinhThuc
             HomePageClass hp = homePageClassDAO.getInfoHomePage(UserInfo.sinhVien.Id.ToString());
             if (hp != null )
             {
-                DangKy dk = dkd.getFromIDSinhVien(UserInfo.sinhVien.Id.ToString());
+                DangKy dk = dkd.getFromMember(UserInfo.sinhVien.Id.ToString());
                 if (dkd.checkDKDetaiDangDuyet(dk))
                 {
                     //Thêm thanh trạng thái đề tài đang duyệt + hủy đề tài dag duyệt đó + chi tiết đề tài đang gửi đi để duyệt

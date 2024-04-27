@@ -46,6 +46,8 @@ namespace QuanLiLuanVan_ChinhThuc
                 uc.lbHoTen.Text = sv.HoTen;
                 TaskDAO tdao=new TaskDAO();
                 uc.lbTaskDone.Text = tdao.GetTienDoSV(sv, n).ToString()+"%";
+                if (UserInfo.user == "Hoc Sinh")
+                    uc.btnChamDiem.Visible = false;
                 flpMember.Controls.Add(uc);
             }
         }

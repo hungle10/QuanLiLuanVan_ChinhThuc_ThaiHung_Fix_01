@@ -156,7 +156,7 @@
             this.btnNhom.FillColor = System.Drawing.Color.Gainsboro;
             this.btnNhom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNhom.ForeColor = System.Drawing.Color.Black;
-            this.btnNhom.Location = new System.Drawing.Point(860, 27);
+            this.btnNhom.Location = new System.Drawing.Point(867, 27);
             this.btnNhom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhom.Name = "btnNhom";
             this.btnNhom.Size = new System.Drawing.Size(115, 36);

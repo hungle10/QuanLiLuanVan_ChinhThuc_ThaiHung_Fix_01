@@ -23,7 +23,7 @@ namespace QuanLiLuanVan_ChinhThuc
         }
         public int GetTienDoSV(SinhVien sv,Nhom n)
         {
-            string query = string.Format("select SUM(TienDo) from Task Where IDSinhVien ={0}", sv.Id);
+            string query = string.Format("select SUM(TienDo) from Task Where IDSinhVien ={0} and IDGroup={1}", sv.Id,n.IDGroup);
             object ob1=DataProvider.Instance.ExecuteScalar(query);
             int t1;
             if(int.TryParse(ob1.ToString(),out t1)==false)
@@ -39,7 +39,7 @@ namespace QuanLiLuanVan_ChinhThuc
         }
         public void Update(TaskLV task) 
         {
-            string query = string.Format("Update Task set TienDo={0},IDSinhVien={1} where MaTask={2}",task.TienDo,task.MaTask,task.IDSinhVien);
+            string query = string.Format("Update Task set TienDo={0},IDSinhVien={1} where MaTask={2}",task.TienDo,task.IDSinhVien, task.MaTask);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             if (result == 0)
                 MessageBox.Show("Cap nhat that bai!");

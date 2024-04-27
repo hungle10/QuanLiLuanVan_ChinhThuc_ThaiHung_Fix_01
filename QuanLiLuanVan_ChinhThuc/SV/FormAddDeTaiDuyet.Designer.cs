@@ -39,7 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.t1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.tnhom = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.tbnhom = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbGiaoVien = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
@@ -226,29 +226,29 @@
             this.t1.Size = new System.Drawing.Size(268, 33);
             this.t1.TabIndex = 72;
             // 
-            // tnhom
+            // tbnhom
             // 
-            this.tnhom.AutoScroll = true;
-            this.tnhom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tnhom.DefaultText = "";
-            this.tnhom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tnhom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tnhom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tnhom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tnhom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tnhom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.tnhom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tnhom.Location = new System.Drawing.Point(956, 232);
-            this.tnhom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tnhom.MaxLength = 327670;
-            this.tnhom.Multiline = true;
-            this.tnhom.Name = "tnhom";
-            this.tnhom.PasswordChar = '\0';
-            this.tnhom.PlaceholderText = "";
-            this.tnhom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tnhom.SelectedText = "";
-            this.tnhom.Size = new System.Drawing.Size(314, 273);
-            this.tnhom.TabIndex = 88;
+            this.tbnhom.AutoScroll = true;
+            this.tbnhom.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbnhom.DefaultText = "MSSV";
+            this.tbnhom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbnhom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbnhom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbnhom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbnhom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbnhom.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.tbnhom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbnhom.Location = new System.Drawing.Point(956, 232);
+            this.tbnhom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tbnhom.MaxLength = 327670;
+            this.tbnhom.Multiline = true;
+            this.tbnhom.Name = "tbnhom";
+            this.tbnhom.PasswordChar = '\0';
+            this.tbnhom.PlaceholderText = "";
+            this.tbnhom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbnhom.SelectedText = "";
+            this.tbnhom.Size = new System.Drawing.Size(314, 273);
+            this.tbnhom.TabIndex = 88;
             // 
             // label1
             // 
@@ -298,7 +298,7 @@
             this.Controls.Add(this.cbbGiaoVien);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tnhom);
+            this.Controls.Add(this.tbnhom);
             this.Controls.Add(this.t2);
             this.Controls.Add(this.t5);
             this.Controls.Add(this.btnXacNhan);
@@ -334,7 +334,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox t1;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox tnhom;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox tbnhom;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox cbbGiaoVien;

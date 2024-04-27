@@ -98,24 +98,6 @@ namespace QuanLiLuanVan_ChinhThuc
             this.tenGiaoVien = DataStorage.luanVan.GiangVien;
             this.lbLuanVan.Text = tenDeTai;
             this.lbTenGiangVien.Text = tenGiaoVien;
-            if (UserInfo.user == "Hoc Sinh")
-            {
-                btnChamDiem.Visible = false;
-            }
-            DiemLVDAO diemLVDAO = new DiemLVDAO();
-            if (diemLVDAO.CheckDiem(DataStorage.luanVan))
-            {
-                float diem = diemLVDAO.GetDiemByLV(DataStorage.luanVan);
-                lbDiemLV.Text = diem.ToString();
-            }
-            /*string[] mangChuoi = noiDungs.Split(new string[] { "\n" }, StringSplitOptions.None);
-            // Chuyển đổi mảng thành danh sách List<string>
-            noiDung = new List<string>(mangChuoi);
-            foreach (string chuoi in noiDung)
-            {
-                UCnoidungBB uc = new UCnoidungBB(chuoi);
-                this.flpTask.Controls.Add(uc);
-            }*/
             LoadTask();
         }
 
@@ -129,18 +111,6 @@ namespace QuanLiLuanVan_ChinhThuc
         private void btnLoadTask_Click(object sender, EventArgs e)
         {
             LoadTask(); 
-        }
-
-        private void btnChamDiem_Click(object sender, EventArgs e)
-        {
-            //DiemLVDAO diemLVDAO = new DiemLVDAO();
-            if(lbDiemLV.Text!="Chưa có")
-            {
-                MessageBox.Show("De tai nay da duoc cham diem!");
-                return;
-            }
-            fChamDiem f=new fChamDiem();
-            f.ShowDialog();
         }
     }
 }

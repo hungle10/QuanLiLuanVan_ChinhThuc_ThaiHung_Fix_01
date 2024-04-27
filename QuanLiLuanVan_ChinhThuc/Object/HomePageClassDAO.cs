@@ -16,7 +16,7 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         DBConnection dBConn = new DBConnection();
         public HomePageClass getInfoHomePage(string id)
         {
-            string query = String.Format("SELECT TenLuanVan, GiangVien FROM DangKi, LuanVan where DangKi.IDSinhVien = '{0}' AND DangKi.IDLuanVan = LuanVan.IDLuanVan", id);
+            string query = String.Format("SELECT * FROM DangKi inner join Nhom on Nhom.IdGroup=DangKi.IdGroup inner join GiaoVien on GiaoVien.ID = DangKi.IDGiangVien inner join LuanVan on LuanVan.IDLuanVan=DangKi.IDLuanVan where MemberName={0}", id);
             DataTable data = dBConn.Excute(query);
             if (data == null)
             {

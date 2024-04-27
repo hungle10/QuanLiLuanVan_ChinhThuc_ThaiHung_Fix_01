@@ -77,7 +77,7 @@ namespace QuanLiLuanVan_ChinhThuc.UC
             else
             {
               //  ycd.delete(DataStorage.getIDGroupByIDSinhVien().ToString(), lv.IDLuanVan);
-                dkd.remove(dkd.getFromIDSinhVien(UserInfo.sinhVien.Id.ToString()));
+                dkd.remove(dkd.getFromMember(UserInfo.sinhVien.Id.ToString()));
             }
             loadInfomation();
 
