@@ -34,10 +34,7 @@ namespace QuanLiLuanVan_ChinhThuc
             }
         }
         private DataProvider() { }
-        private string connectionStr = @"Data Source=DESKTOP-D1VEMR6\DINHHOA;Initial Catalog=QLLUANVAN;Integrated Security=True";
-
-       // private string connectionStr = @"Data Source=LEHUNG\THAIHUNG;Initial Catalog=WindowFix_01;Integrated Security=True;Encrypt=False";
-
+        private string connectionStr = @"Data Source=LAPTOP-T2D8QL38\SQLSV2;Initial Catalog=QLLUANVAN;Integrated Security=true";
         public DataTable GetTable(string tableName) 
         {
             return instance.ExecuteQuery("Select * from " + tableName);

@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel(); 
+            this.flpLuanVan = new System.Windows.Forms.Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.quanLiDeTaiLabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -45,14 +45,23 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.flpLuanVan);
             this.panel1.Controls.Add(this.guna2Panel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 98);
+            this.panel1.Location = new System.Drawing.Point(0, 78);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1433, 921);
+            this.panel1.Size = new System.Drawing.Size(1274, 737);
             this.panel1.TabIndex = 1;
+            // 
+            // flpLuanVan
+            // 
+            this.flpLuanVan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpLuanVan.Location = new System.Drawing.Point(0, 80);
+            this.flpLuanVan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flpLuanVan.Name = "flpLuanVan";
+            this.flpLuanVan.Size = new System.Drawing.Size(1274, 657);
+            this.flpLuanVan.TabIndex = 10;
             // 
             // guna2Panel1
             // 
@@ -63,7 +72,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1433, 100);
+            this.guna2Panel1.Size = new System.Drawing.Size(1274, 80);
             this.guna2Panel1.TabIndex = 9;
             // 
             // label2
@@ -71,9 +80,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(662, 52);
+            this.label2.Location = new System.Drawing.Point(588, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(480, 25);
+            this.label2.Size = new System.Drawing.Size(416, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Address : 1 Vo Van Ngan , Linh Chieu ,Thu Duc ";
             // 
@@ -82,9 +91,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(662, 18);
+            this.label1.Location = new System.Drawing.Point(588, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(389, 25);
+            this.label1.Size = new System.Drawing.Size(336, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "School : HCMC University Technologie";
             // 
@@ -104,7 +113,7 @@
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1433, 98);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1274, 78);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // iconPictureBox1
@@ -115,11 +124,11 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.TasksAlt;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 76;
+            this.iconPictureBox1.IconSize = 68;
             this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(76, 98);
+            this.iconPictureBox1.Size = new System.Drawing.Size(68, 78);
             this.iconPictureBox1.TabIndex = 1;
             this.iconPictureBox1.TabStop = false;
             // 
@@ -128,25 +137,17 @@
             this.quanLiDeTaiLabel.AutoSize = true;
             this.quanLiDeTaiLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(220)))), ((int)(((byte)(221)))));
             this.quanLiDeTaiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quanLiDeTaiLabel.Location = new System.Drawing.Point(119, 32);
+            this.quanLiDeTaiLabel.Location = new System.Drawing.Point(106, 26);
             this.quanLiDeTaiLabel.Name = "quanLiDeTaiLabel";
-            this.quanLiDeTaiLabel.Size = new System.Drawing.Size(199, 29);
+            this.quanLiDeTaiLabel.Size = new System.Drawing.Size(169, 25);
             this.quanLiDeTaiLabel.TabIndex = 0;
             this.quanLiDeTaiLabel.Text = "Quản lí luận văn";
             // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1433, 821);
-            this.panel2.TabIndex = 10;
-            // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1433, 1019);
+            this.ClientSize = new System.Drawing.Size(1274, 815);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -172,6 +173,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel flpLuanVan;
     }
 }

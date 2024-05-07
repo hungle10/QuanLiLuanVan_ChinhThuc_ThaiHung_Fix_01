@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtpTime = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
+            this.dtpDate = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.txbChiTiet = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
@@ -37,20 +37,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnXacNhan = new FontAwesome.Sharp.IconButton();
+            this.dtpTime = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.SuspendLayout();
             // 
-            // dtpTime
+            // dtpDate
             // 
-            this.dtpTime.Checked = true;
-            this.dtpTime.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpTime.Location = new System.Drawing.Point(96, 150);
-            this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpTime.Name = "dtpTime";
-            this.dtpTime.Size = new System.Drawing.Size(279, 36);
-            this.dtpTime.TabIndex = 0;
-            this.dtpTime.Value = new System.DateTime(2024, 4, 9, 14, 56, 10, 452);
+            this.dtpDate.Checked = true;
+            this.dtpDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpDate.Location = new System.Drawing.Point(96, 150);
+            this.dtpDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(279, 36);
+            this.dtpDate.TabIndex = 0;
+            this.dtpDate.Value = new System.DateTime(2024, 4, 9, 14, 56, 10, 452);
             // 
             // txbChiTiet
             // 
@@ -146,11 +147,26 @@
             this.btnXacNhan.UseVisualStyleBackColor = false;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
+            // dtpTime
+            // 
+            this.dtpTime.Checked = true;
+            this.dtpTime.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpTime.Location = new System.Drawing.Point(509, 150);
+            this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTime.Name = "dtpTime";
+            this.dtpTime.ShowUpDown = true;
+            this.dtpTime.Size = new System.Drawing.Size(201, 36);
+            this.dtpTime.TabIndex = 9;
+            this.dtpTime.Value = new System.DateTime(2024, 4, 9, 14, 56, 10, 452);
+            // 
             // fMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 483);
+            this.Controls.Add(this.dtpTime);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -159,7 +175,7 @@
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.txbChiTiet);
-            this.Controls.Add(this.dtpTime);
+            this.Controls.Add(this.dtpDate);
             this.Name = "fMeeting";
             this.Text = "fMeeting";
             this.Load += new System.EventHandler(this.fMeeting_Load);
@@ -170,7 +186,7 @@
 
         #endregion
 
-        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtpTime;
+        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtpDate;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txbChiTiet;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl1;
@@ -179,5 +195,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton btnXacNhan;
+        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtpTime;
     }
 }

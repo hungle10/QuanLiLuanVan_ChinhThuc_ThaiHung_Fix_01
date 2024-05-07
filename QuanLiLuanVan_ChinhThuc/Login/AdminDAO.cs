@@ -10,15 +10,6 @@ namespace QuanLiLuanVan_ChinhThuc
 {
     internal class AdminDAO
     {
-        public bool CheckInput(TaiKhoan tk)
-        {
-            if (!DBConnection.IsEmail(tk.Email) || tk.LoaiTK != "Hoc Sinh" || tk.LoaiTK != "Giao Vien" || tk.LoaiTK != "Admin")
-            {
-                MessageBox.Show("Input information incorrect");
-                return false;
-            }
-            return true;
-        }
         public void Add(Admin ad)
         {
             string query = string.Format("insert into Admin(HoTen,DiaChi,NgaySinh,Sdt,Email) values ('{0}','{1}','{2}','{3}','{4}')", ad.HoTen, ad.DiaChi, ad.FormatNgaySinh(), ad.Sdt, ad.Email);

@@ -68,7 +68,6 @@ namespace QuanLiLuanVan_ChinhThuc
         void LoadTK(string key)
         {
             flpTaiKhoan.Controls.Clear();
-            //DataTable dt = DataProvider.Instance.GetTable("TaiKhoan");
             DataTable dt = DataProvider.Instance.GetTableWithKey("TaiKhoan", "HoTen", key);
             if(dt.Rows.Count==0)
             {
@@ -89,7 +88,6 @@ namespace QuanLiLuanVan_ChinhThuc
         public void LoadGV(string key)
         {
             flpGiaoVien.Controls.Clear();
-            //DataTable dt = DataProvider.Instance.GetTable("GiaoVien");
             DataTable dt = DataProvider.Instance.GetTableWithKey("GiaoVien", "HoTen", key);
             if (dt.Rows.Count == 0)
             {
@@ -110,7 +108,6 @@ namespace QuanLiLuanVan_ChinhThuc
         public void LoadSV(string key)
         {
             flpSinhVien.Controls.Clear();
-            //DataTable dt = DataProvider.Instance.GetTable("SinhVien");
             DataTable dt = DataProvider.Instance.GetTableWithKey("SinhVien", "HoTen", key);
             if (dt.Rows.Count == 0)
             {
@@ -131,7 +128,6 @@ namespace QuanLiLuanVan_ChinhThuc
         public void LoadAdmin(string key)
         {
             flpAdmin.Controls.Clear();
-            //DataTable dt = DataProvider.Instance.GetTable("Admin");
             DataTable dt = DataProvider.Instance.GetTableWithKey("Admin", "HoTen", key);
             if (dt.Rows.Count == 0)
             {
@@ -146,7 +142,6 @@ namespace QuanLiLuanVan_ChinhThuc
                 uc.lbEmail.Text = tk.Email;
                 uc.lbChucVu.Text = "Admin";
                 flpAdmin.Controls.Add(uc);
-                uc.Click += new EventHandler(ucAdmin_Click);
             }
         }
         private void ucTK_Click(object sender, EventArgs e)
@@ -182,21 +177,6 @@ namespace QuanLiLuanVan_ChinhThuc
             tbKhoaHocSV.Text = sv.KhoaHoc.ToString();
             tbChuyenNganhSV.Text = sv.ChuyenNganh;
         }
-        private void ucAdmin_Click(object sender, EventArgs e)
-        {
-            /*AdminDAO dao = new AdminDAO();
-            SinhVienDao dao = new SinhVienDao();
-            SinhVien sv = dao.GetSVByEmail(((ucTaiKhoan)sender).lbEmail.Text);
-            tbHoTenSV.Text = sv.HoTen;
-            tbDiaChiSV.Text = sv.DiaChi;
-            tbEmailSV.Text = sv.Email;
-            tbKhoaSV.Text = sv.Khoa;
-            tbSdtSV.Text = sv.Sdt;
-            dtpSV.Text = sv.Sdt;
-            tbLopSV.Text = sv.Lop;
-            tbKhoaHocSV.Text = sv.KhoaHoc.ToString();
-            tbChuyenNganhSV.Text = sv.ChuyenNganh;*/
-        }
         private void btnThemTk_Click(object sender, EventArgs e)
         {
             if (!CheckInputTK() || tbMatKhauTK.Text != tbNhapLaiMkTK.Text) return;
@@ -206,7 +186,6 @@ namespace QuanLiLuanVan_ChinhThuc
             LoadTK("");
             MessageBox.Show("Them tai khoan thanh cong!");
         }
-
         private void btnThemGV_Click(object sender, EventArgs e)
         {
             if (!CheckInputGV())
@@ -297,25 +276,5 @@ namespace QuanLiLuanVan_ChinhThuc
         {
             LoadAdmin(tbTimKiemAdmin.Text);
         }
-        private void bunifuCustomTextbox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomTextbox14_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomTextbox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomTextbox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

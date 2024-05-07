@@ -45,7 +45,7 @@ namespace QuanLiLuanVan_ChinhThuc
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(292, 22);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(266, 22);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(149, 20);
             this.bunifuCustomLabel4.TabIndex = 11;
@@ -61,7 +61,7 @@ namespace QuanLiLuanVan_ChinhThuc
             this.ucBtnChiTiet.FillColor = System.Drawing.Color.White;
             this.ucBtnChiTiet.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ucBtnChiTiet.ForeColor = System.Drawing.Color.Black;
-            this.ucBtnChiTiet.Location = new System.Drawing.Point(1009, 22);
+            this.ucBtnChiTiet.Location = new System.Drawing.Point(983, 22);
             this.ucBtnChiTiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ucBtnChiTiet.Name = "ucBtnChiTiet";
             this.ucBtnChiTiet.Size = new System.Drawing.Size(116, 36);
@@ -75,7 +75,7 @@ namespace QuanLiLuanVan_ChinhThuc
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(77, 22);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(51, 22);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(85, 20);
             this.bunifuCustomLabel2.TabIndex = 8;
@@ -94,7 +94,7 @@ namespace QuanLiLuanVan_ChinhThuc
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(235)))));
-            this.guna2Button1.Location = new System.Drawing.Point(52, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(26, 2);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(235)))));
@@ -110,7 +110,7 @@ namespace QuanLiLuanVan_ChinhThuc
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(77, 55);
+            this.label1.Location = new System.Drawing.Point(51, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 20);
             this.label1.TabIndex = 12;
@@ -122,7 +122,7 @@ namespace QuanLiLuanVan_ChinhThuc
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(292, 55);
+            this.label2.Location = new System.Drawing.Point(266, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 20);
             this.label2.TabIndex = 13;
@@ -139,7 +139,7 @@ namespace QuanLiLuanVan_ChinhThuc
             this.guna2Button3.FillColor = System.Drawing.Color.White;
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(1198, 22);
+            this.guna2Button3.Location = new System.Drawing.Point(1172, 22);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(130, 36);

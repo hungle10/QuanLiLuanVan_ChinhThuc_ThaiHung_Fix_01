@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnTask = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhom = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMeeting = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,10 +228,31 @@
             this.btnNhom.UseTransparentBackground = true;
             this.btnNhom.Click += new System.EventHandler(this.btnNhom_Click);
             // 
+            // btnMeeting
+            // 
+            this.btnMeeting.BackColor = System.Drawing.Color.Transparent;
+            this.btnMeeting.BorderRadius = 10;
+            this.btnMeeting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMeeting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMeeting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMeeting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMeeting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnMeeting.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMeeting.ForeColor = System.Drawing.Color.White;
+            this.btnMeeting.Location = new System.Drawing.Point(1029, 49);
+            this.btnMeeting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMeeting.Name = "btnMeeting";
+            this.btnMeeting.Size = new System.Drawing.Size(112, 56);
+            this.btnMeeting.TabIndex = 29;
+            this.btnMeeting.Text = "Meeting";
+            this.btnMeeting.UseTransparentBackground = true;
+            this.btnMeeting.Click += new System.EventHandler(this.btnMeeting_Click);
+            // 
             // UCluanvan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnMeeting);
             this.Controls.Add(this.btnNhom);
             this.Controls.Add(this.btnTask);
             this.Controls.Add(this.label2);
@@ -269,5 +291,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnTask;
         private Guna.UI2.WinForms.Guna2Button btnNhom;
+        private Guna.UI2.WinForms.Guna2Button btnMeeting;
     }
 }

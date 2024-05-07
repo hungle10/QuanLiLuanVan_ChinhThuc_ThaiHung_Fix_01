@@ -105,6 +105,7 @@ namespace QuanLiLuanVan_ChinhThuc
             }
             DataStorage.luanVan = lv;
             frm.ShowDialog();
+            DataStorage.homePage.LoadLuanVan();
         }
 
         private void btnNhom_Click(object sender, EventArgs e)
@@ -116,6 +117,12 @@ namespace QuanLiLuanVan_ChinhThuc
             DataStorage.nhom = n;
             fDSNhom f = new fDSNhom();
             f.ShowDialog();
+        }
+
+        private void btnMeeting_Click(object sender, EventArgs e)
+        {
+            fListLichHen fListLichHen=new fListLichHen();
+            fListLichHen.ShowDialog();
         }
     }
 }

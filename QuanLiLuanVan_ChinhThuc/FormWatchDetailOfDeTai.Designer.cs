@@ -58,15 +58,14 @@
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1325, 558);
+            this.panel1.Size = new System.Drawing.Size(1185, 558);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lbTienDo
             // 
             this.lbTienDo.AutoSize = true;
             this.lbTienDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTienDo.Location = new System.Drawing.Point(641, 99);
+            this.lbTienDo.Location = new System.Drawing.Point(715, 99);
             this.lbTienDo.Name = "lbTienDo";
             this.lbTienDo.Size = new System.Drawing.Size(37, 24);
             this.lbTienDo.TabIndex = 44;
@@ -76,7 +75,7 @@
             // 
             this.lbDesTienDo.AutoSize = true;
             this.lbDesTienDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDesTienDo.Location = new System.Drawing.Point(528, 99);
+            this.lbDesTienDo.Location = new System.Drawing.Point(602, 99);
             this.lbDesTienDo.Name = "lbDesTienDo";
             this.lbDesTienDo.Size = new System.Drawing.Size(89, 24);
             this.lbDesTienDo.TabIndex = 43;
@@ -92,7 +91,7 @@
             this.btnLoadTask.FillColor = System.Drawing.Color.LimeGreen;
             this.btnLoadTask.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLoadTask.ForeColor = System.Drawing.Color.White;
-            this.btnLoadTask.Location = new System.Drawing.Point(993, 88);
+            this.btnLoadTask.Location = new System.Drawing.Point(844, 86);
             this.btnLoadTask.Name = "btnLoadTask";
             this.btnLoadTask.Size = new System.Drawing.Size(125, 46);
             this.btnLoadTask.TabIndex = 42;
@@ -109,7 +108,7 @@
             this.btnThemTask.FillColor = System.Drawing.Color.LimeGreen;
             this.btnThemTask.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThemTask.ForeColor = System.Drawing.Color.White;
-            this.btnThemTask.Location = new System.Drawing.Point(1156, 88);
+            this.btnThemTask.Location = new System.Drawing.Point(1007, 86);
             this.btnThemTask.Name = "btnThemTask";
             this.btnThemTask.Size = new System.Drawing.Size(146, 46);
             this.btnThemTask.TabIndex = 41;
@@ -119,17 +118,17 @@
             // flpTask
             // 
             this.flpTask.AutoScroll = true;
-            this.flpTask.Location = new System.Drawing.Point(3, 148);
+            this.flpTask.Location = new System.Drawing.Point(3, 146);
             this.flpTask.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpTask.Name = "flpTask";
-            this.flpTask.Size = new System.Drawing.Size(1322, 410);
+            this.flpTask.Size = new System.Drawing.Size(1182, 410);
             this.flpTask.TabIndex = 6;
             // 
             // lbTenGiangVien
             // 
             this.lbTenGiangVien.AutoSize = true;
             this.lbTenGiangVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenGiangVien.Location = new System.Drawing.Point(256, 99);
+            this.lbTenGiangVien.Location = new System.Drawing.Point(309, 99);
             this.lbTenGiangVien.Name = "lbTenGiangVien";
             this.lbTenGiangVien.Size = new System.Drawing.Size(168, 24);
             this.lbTenGiangVien.TabIndex = 5;
@@ -154,9 +153,8 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1325, 72);
+            this.panel2.Size = new System.Drawing.Size(1185, 72);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lbLuanVan
             // 
@@ -182,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1325, 557);
+            this.ClientSize = new System.Drawing.Size(1185, 557);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormWatchDetailOfDeTai";

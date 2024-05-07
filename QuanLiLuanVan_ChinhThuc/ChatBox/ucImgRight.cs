@@ -8,23 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLiLuanVan_ChinhThuc.GV
+namespace QuanLiLuanVan_ChinhThuc.ChatBox
 {
-    public partial class fThaoLuan : Form
+    public partial class ucImgRight : UserControl
     {
-        public fThaoLuan()
+        public ucImgRight(Image img)
         {
             InitializeComponent();
-        }
-
-        private void fThaoLuan_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
+            picBox.Image = img;
         }
     }
 }

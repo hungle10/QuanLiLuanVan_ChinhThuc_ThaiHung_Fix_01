@@ -61,10 +61,5 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             fListLichHen frm = new fListLichHen();      
             frm.ShowDialog();       
         }
-
-        private void FormListStudent_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

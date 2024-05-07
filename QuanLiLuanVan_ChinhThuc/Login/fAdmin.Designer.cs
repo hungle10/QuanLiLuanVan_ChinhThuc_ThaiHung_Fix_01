@@ -992,7 +992,6 @@
             this.tbKhoaHocSV.Name = "tbKhoaHocSV";
             this.tbKhoaHocSV.Size = new System.Drawing.Size(136, 30);
             this.tbKhoaHocSV.TabIndex = 68;
-            this.tbKhoaHocSV.TextChanged += new System.EventHandler(this.bunifuCustomTextbox14_TextChanged);
             // 
             // tbLopSV
             // 
@@ -1025,7 +1024,6 @@
             this.tbChuyenNganhSV.Name = "tbChuyenNganhSV";
             this.tbChuyenNganhSV.Size = new System.Drawing.Size(225, 38);
             this.tbChuyenNganhSV.TabIndex = 64;
-            this.tbChuyenNganhSV.TextChanged += new System.EventHandler(this.bunifuCustomTextbox8_TextChanged);
             // 
             // bunifuCustomLabel8
             // 
@@ -1129,7 +1127,6 @@
             this.tbSdtSV.Name = "tbSdtSV";
             this.tbSdtSV.Size = new System.Drawing.Size(225, 30);
             this.tbSdtSV.TabIndex = 54;
-            this.tbSdtSV.TextChanged += new System.EventHandler(this.bunifuCustomTextbox2_TextChanged);
             // 
             // tbKhoaSV
             // 
@@ -1141,7 +1138,6 @@
             this.tbKhoaSV.Name = "tbKhoaSV";
             this.tbKhoaSV.Size = new System.Drawing.Size(225, 30);
             this.tbKhoaSV.TabIndex = 53;
-            this.tbKhoaSV.TextChanged += new System.EventHandler(this.bunifuCustomTextbox3_TextChanged);
             // 
             // tpAdmin
             // 

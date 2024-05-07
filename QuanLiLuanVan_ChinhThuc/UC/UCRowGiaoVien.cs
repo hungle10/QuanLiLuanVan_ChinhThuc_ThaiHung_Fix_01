@@ -1,4 +1,5 @@
 ﻿using Bunifu.Framework.UI;
+using QuanLiLuanVan_ChinhThuc.GV;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,9 +29,13 @@ namespace QuanLiLuanVan_ChinhThuc
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnDetail_Click(object sender, EventArgs e)
         {
-
+            GiaoVienDAO dao = new GiaoVienDAO();
+            GiaoVien giaoVien = dao.GetGiaoVienByName(BunifuCustomLabel3.Text);
+            DataStorage.giaoVien = giaoVien;
+            FormInfoGV f = new FormInfoGV();
+            f.ShowDialog();
         }
     }
 }

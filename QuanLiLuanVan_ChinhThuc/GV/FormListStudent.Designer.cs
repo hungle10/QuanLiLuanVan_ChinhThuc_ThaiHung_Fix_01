@@ -35,8 +35,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tbTimKiem = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.btnWatchLichHen = new FontAwesome.Sharp.IconButton();
+            this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -130,6 +130,20 @@
             this.bunifuCustomLabel1.TabIndex = 24;
             this.bunifuCustomLabel1.Text = "Tìm kiếm ";
             // 
+            // btnWatchLichHen
+            // 
+            this.btnWatchLichHen.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnWatchLichHen.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnWatchLichHen.IconColor = System.Drawing.Color.Black;
+            this.btnWatchLichHen.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnWatchLichHen.Location = new System.Drawing.Point(942, 31);
+            this.btnWatchLichHen.Name = "btnWatchLichHen";
+            this.btnWatchLichHen.Size = new System.Drawing.Size(165, 58);
+            this.btnWatchLichHen.TabIndex = 25;
+            this.btnWatchLichHen.Text = "Xem lịch hẹn";
+            this.btnWatchLichHen.UseVisualStyleBackColor = false;
+            this.btnWatchLichHen.Click += new System.EventHandler(this.btnWatchLichHen_Click);
+            // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
@@ -144,20 +158,6 @@
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // btnWatchLichHen
-            // 
-            this.btnWatchLichHen.BackColor = System.Drawing.Color.LightGreen;
-            this.btnWatchLichHen.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnWatchLichHen.IconColor = System.Drawing.Color.Black;
-            this.btnWatchLichHen.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnWatchLichHen.Location = new System.Drawing.Point(942, 31);
-            this.btnWatchLichHen.Name = "btnWatchLichHen";
-            this.btnWatchLichHen.Size = new System.Drawing.Size(165, 58);
-            this.btnWatchLichHen.TabIndex = 25;
-            this.btnWatchLichHen.Text = "Xem lịch hẹn";
-            this.btnWatchLichHen.UseVisualStyleBackColor = false;
-            this.btnWatchLichHen.Click += new System.EventHandler(this.btnWatchLichHen_Click);
-            // 
             // FormListStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -168,7 +168,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormListStudent";
             this.Text = "FormGiangVien";
-            this.Load += new System.EventHandler(this.FormListStudent_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

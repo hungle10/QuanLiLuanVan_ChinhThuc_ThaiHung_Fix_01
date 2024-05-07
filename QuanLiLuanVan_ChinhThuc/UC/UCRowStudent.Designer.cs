@@ -103,7 +103,7 @@
             this.ucLbTaskDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ucLbTaskDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucLbTaskDone.ForeColor = System.Drawing.Color.White;
-            this.ucLbTaskDone.Location = new System.Drawing.Point(358, 59);
+            this.ucLbTaskDone.Location = new System.Drawing.Point(417, 59);
             this.ucLbTaskDone.Name = "ucLbTaskDone";
             this.ucLbTaskDone.Size = new System.Drawing.Size(35, 20);
             this.ucLbTaskDone.TabIndex = 40;

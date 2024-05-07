@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDetail = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -48,21 +48,22 @@
             this.bunifuCustomLabel4.TabIndex = 26;
             this.bunifuCustomLabel4.Text = "Công nghệ thông tin";
             // 
-            // guna2Button2
+            // btnDetail
             // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(1098, 25);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(115, 36);
-            this.guna2Button2.TabIndex = 24;
-            this.guna2Button2.Text = "Detail";
+            this.btnDetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDetail.FillColor = System.Drawing.Color.Gainsboro;
+            this.btnDetail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDetail.ForeColor = System.Drawing.Color.Black;
+            this.btnDetail.Location = new System.Drawing.Point(1098, 25);
+            this.btnDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.Size = new System.Drawing.Size(115, 36);
+            this.btnDetail.TabIndex = 24;
+            this.btnDetail.Text = "Detail";
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -103,7 +104,6 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(1283, 80);
             this.guna2Button1.TabIndex = 21;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // bunifuCustomLabel3
             // 
@@ -123,7 +123,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel3);
-            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.guna2Button1);
@@ -139,7 +139,7 @@
 
 
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnDetail;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;

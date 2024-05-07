@@ -38,7 +38,7 @@
             this.ucPgTienDo = new Guna.UI2.WinForms.Guna2TrackBar();
             this.label2 = new System.Windows.Forms.Label();
             this.ucLbTienDo = new System.Windows.Forms.Label();
-            this.btnCapNhat = new Guna.UI2.WinForms.Guna2Button();
+            this.ucBtnCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.btnThaoLuan = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.ucLbTenSV = new System.Windows.Forms.Label();
@@ -118,7 +118,7 @@
             this.ucLbId.AutoSize = true;
             this.ucLbId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ucLbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.ucLbId.Location = new System.Drawing.Point(124, 16);
+            this.ucLbId.Location = new System.Drawing.Point(159, 16);
             this.ucLbId.Name = "ucLbId";
             this.ucLbId.Size = new System.Drawing.Size(39, 20);
             this.ucLbId.TabIndex = 74;
@@ -136,7 +136,7 @@
             this.ucBtnXoaTask.ForeColor = System.Drawing.Color.White;
             this.ucBtnXoaTask.Location = new System.Drawing.Point(893, 216);
             this.ucBtnXoaTask.Name = "ucBtnXoaTask";
-            this.ucBtnXoaTask.Size = new System.Drawing.Size(138, 27);
+            this.ucBtnXoaTask.Size = new System.Drawing.Size(138, 33);
             this.ucBtnXoaTask.TabIndex = 76;
             this.ucBtnXoaTask.Text = "Xóa task";
             this.ucBtnXoaTask.Click += new System.EventHandler(this.ucBtnXoaTask_Click);
@@ -172,22 +172,22 @@
             this.ucLbTienDo.TabIndex = 79;
             this.ucLbTienDo.Text = "0%";
             // 
-            // btnCapNhat
+            // ucBtnCapNhat
             // 
-            this.btnCapNhat.BorderRadius = 10;
-            this.btnCapNhat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCapNhat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCapNhat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCapNhat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCapNhat.FillColor = System.Drawing.Color.Green;
-            this.btnCapNhat.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.Location = new System.Drawing.Point(714, 216);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(138, 27);
-            this.btnCapNhat.TabIndex = 80;
-            this.btnCapNhat.Text = "Cập nhật";
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            this.ucBtnCapNhat.BorderRadius = 10;
+            this.ucBtnCapNhat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ucBtnCapNhat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ucBtnCapNhat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ucBtnCapNhat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ucBtnCapNhat.FillColor = System.Drawing.Color.Green;
+            this.ucBtnCapNhat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ucBtnCapNhat.ForeColor = System.Drawing.Color.White;
+            this.ucBtnCapNhat.Location = new System.Drawing.Point(714, 216);
+            this.ucBtnCapNhat.Name = "ucBtnCapNhat";
+            this.ucBtnCapNhat.Size = new System.Drawing.Size(138, 33);
+            this.ucBtnCapNhat.TabIndex = 80;
+            this.ucBtnCapNhat.Text = "Cập nhật";
+            this.ucBtnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnThaoLuan
             // 
@@ -204,6 +204,7 @@
             this.btnThaoLuan.Size = new System.Drawing.Size(138, 39);
             this.btnThaoLuan.TabIndex = 81;
             this.btnThaoLuan.Text = "Thảo luận";
+            this.btnThaoLuan.Click += new System.EventHandler(this.btnThaoLuan_Click);
             // 
             // label3
             // 
@@ -221,7 +222,7 @@
             this.ucLbTenSV.AutoSize = true;
             this.ucLbTenSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ucLbTenSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.ucLbTenSV.Location = new System.Drawing.Point(144, 53);
+            this.ucLbTenSV.Location = new System.Drawing.Point(179, 53);
             this.ucLbTenSV.Name = "ucLbTenSV";
             this.ucLbTenSV.Size = new System.Drawing.Size(71, 20);
             this.ucLbTenSV.TabIndex = 82;
@@ -235,7 +236,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ucLbTenSV);
             this.Controls.Add(this.btnThaoLuan);
-            this.Controls.Add(this.btnCapNhat);
+            this.Controls.Add(this.ucBtnCapNhat);
             this.Controls.Add(this.ucLbTienDo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ucPgTienDo);
@@ -265,7 +266,7 @@
         private Guna.UI2.WinForms.Guna2TrackBar ucPgTienDo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ucLbTienDo;
-        private Guna.UI2.WinForms.Guna2Button btnCapNhat;
+        private Guna.UI2.WinForms.Guna2Button ucBtnCapNhat;
         private Guna.UI2.WinForms.Guna2Button btnThaoLuan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label ucLbTenSV;

@@ -46,9 +46,11 @@ namespace QuanLiLuanVan_ChinhThuc
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            Meeting meeting = new Meeting(gv.Id.ToString(),nhom.IDGroup.ToString(),dtpTime.Value,txbChiTiet.Text.ToString());
-            MeetingDAO meetingDAO = new MeetingDAO();   
+            DateTime dt = dtpDate.Value.Date + dtpTime.Value.TimeOfDay;
+            Meeting meeting = new Meeting(gv.Id.ToString(), nhom.IDGroup.ToString(), dt, txbChiTiet.Text.ToString());
+            MeetingDAO meetingDAO = new MeetingDAO();
             meetingDAO.add(meeting);
+            this.Close();
         }
     }
 }

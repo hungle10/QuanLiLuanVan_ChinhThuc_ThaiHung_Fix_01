@@ -119,7 +119,6 @@
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(235)))));
             this.guna2Button1.Size = new System.Drawing.Size(1294, 89);
             this.guna2Button1.TabIndex = 26;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // UCDuyet
             // 

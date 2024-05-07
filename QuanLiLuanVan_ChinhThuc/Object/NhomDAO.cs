@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace QuanLiLuanVan_ChinhThuc.Object
 {
-    internal class NhomDAO
+    public class NhomDAO
     {
         public NhomDAO() { }
         public DataTable GetMember(Nhom gr)
@@ -23,6 +23,17 @@ namespace QuanLiLuanVan_ChinhThuc.Object
             string query = string.Format("Select IDGroup from Nhom where MemberName='{0}'", sv.Id.ToString());
             object ob = DataProvider.Instance.ExecuteScalar(query);
             if(ob != null) 
+            {
+                return Convert.ToInt32(ob);
+            }
+            else { return -1; }
+        }
+
+        public int GetIDGroupByMemBerID(int id)
+        {
+            string query = string.Format("Select IDGroup from Nhom where MemberName='{0}'", id);
+            object ob = DataProvider.Instance.ExecuteScalar(query);
+            if (ob != null)
             {
                 return Convert.ToInt32(ob);
             }

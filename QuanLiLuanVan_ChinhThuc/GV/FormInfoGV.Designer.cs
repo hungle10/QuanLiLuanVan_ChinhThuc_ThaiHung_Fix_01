@@ -558,7 +558,6 @@
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(64, 20);
             this.bunifuCustomLabel1.TabIndex = 51;
             this.bunifuCustomLabel1.Text = "Địa Chỉ";
-            this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // tbEmailGV1
             // 
@@ -587,7 +586,6 @@
             this.tbSdtGV1.Size = new System.Drawing.Size(316, 30);
             this.tbSdtGV1.TabIndex = 49;
             this.tbSdtGV1.Text = "Nguyễn Thùy An";
-            this.tbSdtGV1.TextChanged += new System.EventHandler(this.bunifuCustomTextbox2_TextChanged);
             // 
             // tbNgaySinhGV1
             // 
@@ -682,7 +680,6 @@
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(52, 20);
             this.bunifuCustomLabel2.TabIndex = 35;
             this.bunifuCustomLabel2.Text = "Khoa ";
-            this.bunifuCustomLabel2.Click += new System.EventHandler(this.bunifuCustomLabel2_Click);
             // 
             // tbHoTenGV1
             // 
@@ -697,7 +694,6 @@
             this.tbHoTenGV1.Size = new System.Drawing.Size(316, 30);
             this.tbHoTenGV1.TabIndex = 32;
             this.tbHoTenGV1.Text = "Nguyễn Thùy An";
-            this.tbHoTenGV1.TextChanged += new System.EventHandler(this.bunifuCustomTextbox4_TextChanged);
             // 
             // guna2PictureBox3
             // 

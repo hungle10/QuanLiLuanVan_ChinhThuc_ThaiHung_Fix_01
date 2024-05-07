@@ -46,7 +46,7 @@
             this.ucLbIdNhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ucLbIdNhom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucLbIdNhom.ForeColor = System.Drawing.Color.White;
-            this.ucLbIdNhom.Location = new System.Drawing.Point(599, 27);
+            this.ucLbIdNhom.Location = new System.Drawing.Point(684, 33);
             this.ucLbIdNhom.Name = "ucLbIdNhom";
             this.ucLbIdNhom.Size = new System.Drawing.Size(62, 17);
             this.ucLbIdNhom.TabIndex = 43;
@@ -61,7 +61,7 @@
             this.btnDetail.FillColor = System.Drawing.Color.Gainsboro;
             this.btnDetail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDetail.ForeColor = System.Drawing.Color.Black;
-            this.btnDetail.Location = new System.Drawing.Point(1015, 27);
+            this.btnDetail.Location = new System.Drawing.Point(1100, 33);
             this.btnDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(115, 36);
@@ -75,7 +75,7 @@
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(496, 27);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(581, 33);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(72, 17);
             this.bunifuCustomLabel1.TabIndex = 40;
@@ -93,7 +93,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(235)))));
-            this.guna2Button1.Location = new System.Drawing.Point(0, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(85, 8);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(1178, 91);
@@ -105,7 +105,7 @@
             this.ucLbIdDangKi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ucLbIdDangKi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucLbIdDangKi.ForeColor = System.Drawing.Color.White;
-            this.ucLbIdDangKi.Location = new System.Drawing.Point(152, 27);
+            this.ucLbIdDangKi.Location = new System.Drawing.Point(237, 33);
             this.ucLbIdDangKi.Name = "ucLbIdDangKi";
             this.ucLbIdDangKi.Size = new System.Drawing.Size(88, 17);
             this.ucLbIdDangKi.TabIndex = 46;
@@ -117,7 +117,7 @@
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(50, 27);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(135, 33);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(80, 17);
             this.bunifuCustomLabel6.TabIndex = 45;
@@ -129,7 +129,7 @@
             this.ucLbTenDeTai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ucLbTenDeTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucLbTenDeTai.ForeColor = System.Drawing.Color.White;
-            this.ucLbTenDeTai.Location = new System.Drawing.Point(152, 57);
+            this.ucLbTenDeTai.Location = new System.Drawing.Point(237, 63);
             this.ucLbTenDeTai.Name = "ucLbTenDeTai";
             this.ucLbTenDeTai.Size = new System.Drawing.Size(94, 17);
             this.ucLbTenDeTai.TabIndex = 48;
@@ -141,7 +141,7 @@
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(43, 57);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(128, 63);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(87, 17);
             this.bunifuCustomLabel8.TabIndex = 47;
@@ -156,7 +156,7 @@
             this.btnNhom.FillColor = System.Drawing.Color.Gainsboro;
             this.btnNhom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNhom.ForeColor = System.Drawing.Color.Black;
-            this.btnNhom.Location = new System.Drawing.Point(867, 27);
+            this.btnNhom.Location = new System.Drawing.Point(952, 33);
             this.btnNhom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhom.Name = "btnNhom";
             this.btnNhom.Size = new System.Drawing.Size(115, 36);
@@ -173,7 +173,7 @@
             this.btnHen.FillColor = System.Drawing.Color.Gainsboro;
             this.btnHen.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnHen.ForeColor = System.Drawing.Color.Black;
-            this.btnHen.Location = new System.Drawing.Point(714, 27);
+            this.btnHen.Location = new System.Drawing.Point(799, 33);
             this.btnHen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHen.Name = "btnHen";
             this.btnHen.Size = new System.Drawing.Size(115, 36);
@@ -196,7 +196,7 @@
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.guna2Button1);
             this.Name = "ucNhomLV";
-            this.Size = new System.Drawing.Size(1178, 95);
+            this.Size = new System.Drawing.Size(1269, 109);
             this.ResumeLayout(false);
             this.PerformLayout();
 

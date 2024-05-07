@@ -34,7 +34,6 @@
             this.chbGiaoVien = new Bunifu.Framework.UI.BunifuCheckbox();
             this.lbAdmin = new System.Windows.Forms.Label();
             this.chbAdmin = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.linklbPassword = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.tbEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
@@ -64,9 +63,9 @@
             this.lbHocSinh.Location = new System.Drawing.Point(564, 58);
             this.lbHocSinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbHocSinh.Name = "lbHocSinh";
-            this.lbHocSinh.Size = new System.Drawing.Size(86, 23);
+            this.lbHocSinh.Size = new System.Drawing.Size(91, 23);
             this.lbHocSinh.TabIndex = 4;
-            this.lbHocSinh.Text = "Hoc Sinh";
+            this.lbHocSinh.Text = "Sinh Viên";
             // 
             // lbGiaoVien
             // 
@@ -77,7 +76,7 @@
             this.lbGiaoVien.Name = "lbGiaoVien";
             this.lbGiaoVien.Size = new System.Drawing.Size(93, 23);
             this.lbGiaoVien.TabIndex = 6;
-            this.lbGiaoVien.Text = "Giao Vien";
+            this.lbGiaoVien.Text = "Giáo Viên";
             // 
             // chbGiaoVien
             // 
@@ -120,19 +119,6 @@
             this.chbAdmin.TabIndex = 7;
             this.chbAdmin.OnChange += new System.EventHandler(this.chbAdmin_OnChange);
             // 
-            // linklbPassword
-            // 
-            this.linklbPassword.AutoSize = true;
-            this.linklbPassword.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold);
-            this.linklbPassword.Location = new System.Drawing.Point(564, 273);
-            this.linklbPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linklbPassword.Name = "linklbPassword";
-            this.linklbPassword.Size = new System.Drawing.Size(142, 23);
-            this.linklbPassword.TabIndex = 18;
-            this.linklbPassword.TabStop = true;
-            this.linklbPassword.Text = "Quen mat khau";
-            this.linklbPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbPassword_LinkClicked);
-            // 
             // btnLogin
             // 
             this.btnLogin.BorderRadius = 20;
@@ -140,21 +126,21 @@
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.FillColor = System.Drawing.Color.Green;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(839, 303);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(192, 43);
             this.btnLogin.TabIndex = 19;
-            this.btnLogin.Text = "Dang nhap";
+            this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // tbEmail
             // 
             this.tbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbEmail.DefaultText = "Email";
+            this.tbEmail.DefaultText = "";
             this.tbEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -166,7 +152,7 @@
             this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.PasswordChar = '\0';
-            this.tbEmail.PlaceholderText = "";
+            this.tbEmail.PlaceholderText = "Email";
             this.tbEmail.SelectedText = "";
             this.tbEmail.Size = new System.Drawing.Size(418, 45);
             this.tbEmail.TabIndex = 0;
@@ -175,7 +161,7 @@
             // 
             this.tbMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tbMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbMatKhau.DefaultText = "Mật khẩu";
+            this.tbMatKhau.DefaultText = "";
             this.tbMatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -187,7 +173,7 @@
             this.tbMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbMatKhau.Name = "tbMatKhau";
             this.tbMatKhau.PasswordChar = '*';
-            this.tbMatKhau.PlaceholderText = "";
+            this.tbMatKhau.PlaceholderText = "Mật khẩu";
             this.tbMatKhau.SelectedText = "";
             this.tbMatKhau.Size = new System.Drawing.Size(418, 45);
             this.tbMatKhau.TabIndex = 1;
@@ -206,13 +192,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(1083, 386);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.tbMatKhau);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.linklbPassword);
             this.Controls.Add(this.lbAdmin);
             this.Controls.Add(this.chbAdmin);
             this.Controls.Add(this.lbGiaoVien);
@@ -238,7 +223,6 @@
         private Bunifu.Framework.UI.BunifuCheckbox chbGiaoVien;
         private System.Windows.Forms.Label lbAdmin;
         private Bunifu.Framework.UI.BunifuCheckbox chbAdmin;
-        private System.Windows.Forms.LinkLabel linklbPassword;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnLogin;
         private Guna.UI2.WinForms.Guna2TextBox tbEmail;
         private Guna.UI2.WinForms.Guna2TextBox tbMatKhau;

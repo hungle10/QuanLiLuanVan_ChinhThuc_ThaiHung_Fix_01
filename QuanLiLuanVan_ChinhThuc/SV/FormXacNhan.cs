@@ -11,6 +11,7 @@ namespace QuanLiLuanVan_ChinhThuc.SV
     {
         LuanVan lv;
         DangKyDao dkd = new DangKyDao();
+        SinhVienDao svd = new SinhVienDao();
 //YeuCauDAO ycd = new YeuCauDAO();
         DangKy dk;
 
@@ -52,6 +53,13 @@ namespace QuanLiLuanVan_ChinhThuc.SV
             {
                 MessageBox.Show("Vui lòng điền thành viên nhóm");
                 return;
+            }
+            foreach(string line in tnhom.Lines)
+            {
+                if (svd.GetSinhVienById(line)==null)
+                {
+                    return;
+                }
             }
             dkd.add(dk);
             dkd.addMemberNhom(tnhom.Lines, dk.IDSinhVien);

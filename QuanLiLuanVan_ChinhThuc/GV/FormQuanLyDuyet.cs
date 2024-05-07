@@ -32,12 +32,12 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             {
                 LuanVan luanVan = lvd.convert(dr);
                 UCDuyet uc = new UCDuyet(luanVan);
-                uc.Guna2Button3.Click += Guna2Button3_Click; ;
+                uc.btnDuyet.Click += btnDuyet_Click; ;
                 flowLayoutPanel1.Controls.Add(uc);
             }
         }
 
-        private void Guna2Button3_Click(object sender, EventArgs e)
+        private void btnDuyet_Click(object sender, EventArgs e)
         {
             loadPanel();
         }

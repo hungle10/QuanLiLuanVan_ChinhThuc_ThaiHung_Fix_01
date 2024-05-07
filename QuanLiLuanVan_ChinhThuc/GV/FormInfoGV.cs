@@ -28,8 +28,14 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         }
         public void LoadInforGV()
         {
-            GiaoVien gv = UserInfo.giaoVien;
-            //MessageBox.Show(gv.ToString());
+            GiaoVien gv;
+            if (UserInfo.user == "Hoc Sinh")
+            {
+                gv = DataStorage.giaoVien;
+                editInforTC.TabMenuVisible = false;
+            }
+            else
+                gv = UserInfo.giaoVien;
             tbHoTenGV1.Text = gv.HoTen;
             tbDiaChiGV1.Text = gv.DiaChi;
             tbKhoaGV1.Text = gv.Khoa;
@@ -37,26 +43,6 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             tbEmailGV1.Text = gv.Email;
             tbSdtGV1.Text = gv.Sdt;
         }
-        private void bunifuCustomTextbox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomTextbox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCapNhatGV_Click(object sender, EventArgs e)
         {
             GiaoVien gv = new GiaoVien(tbHoTenGV2.Text, tbDiaChiGV2.Text, tbKhoaGV2.Text, dtpNgaySinhGV2.Value, tbSdtGV2.Text, UserInfo.giaoVien.Email);

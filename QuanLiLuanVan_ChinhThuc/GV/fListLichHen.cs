@@ -21,8 +21,12 @@ namespace QuanLiLuanVan_ChinhThuc.GV
 
         private void fListLichHen_Load(object sender, EventArgs e)
         {
-            MeetingDAO meetingDAO = new MeetingDAO();       
-            List<Meeting> mts= meetingDAO.getListMeeting(UserInfo.giaoVien.Id.ToString());
+            MeetingDAO meetingDAO = new MeetingDAO();
+            List<Meeting> mts;
+            if (UserInfo.user == "Hoc Sinh")
+                mts = meetingDAO.getListMeetingGroup(UserInfo.sinhVien);
+            else
+                mts= meetingDAO.getListMeeting(UserInfo.giaoVien);
             if (mts != null)
             {
                 foreach (Meeting meeting in mts)

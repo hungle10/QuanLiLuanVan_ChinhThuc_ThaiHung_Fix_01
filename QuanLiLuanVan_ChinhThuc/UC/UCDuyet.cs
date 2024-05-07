@@ -37,12 +37,7 @@ namespace QuanLiLuanVan_ChinhThuc.UC
             FormDuyet fduyet = new FormDuyet(lv); ;
             fduyet.ShowDialog();
         }
-        public Guna2Button Guna2Button3 { get => btnDuyet; set => btnDuyet = value; }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-           
-        }
+        public Guna2Button btnDuyet { get => btnDuyet; set => btnDuyet = value; }
 
         private void UCDuyet_Load(object sender, EventArgs e)
         {

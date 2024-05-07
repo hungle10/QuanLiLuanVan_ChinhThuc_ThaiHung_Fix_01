@@ -40,14 +40,6 @@ namespace QuanLiLuanVan_ChinhThuc
             chbGiaoVien.Checked = false;
         }
 
-        private void linklbPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            fGetPass f = new fGetPass();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string chucVu = "";

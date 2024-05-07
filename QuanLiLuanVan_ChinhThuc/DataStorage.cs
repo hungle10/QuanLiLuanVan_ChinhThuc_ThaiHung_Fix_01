@@ -16,7 +16,9 @@ namespace QuanLiLuanVan_ChinhThuc
         public static LuanVan luanVan { get; set; }
         public static Nhom nhom { get; set; }
         public static DiemLV diemLV { get; set ;}
+        public static GiaoVien giaoVien { get; set; }
         public static FormWatchDetailOfDeTai fDetailDeTai { get; set; }
+        public static HomePage homePage { get; set; }
         public static fDSNhom fDSNhom { get; set; }
         public static int? getIDGroupByIDSinhVien()
         {

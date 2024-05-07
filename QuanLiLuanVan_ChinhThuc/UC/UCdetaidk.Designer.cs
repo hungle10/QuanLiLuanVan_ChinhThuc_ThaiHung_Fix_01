@@ -91,7 +91,6 @@
             this.tendt.Size = new System.Drawing.Size(149, 20);
             this.tendt.TabIndex = 20;
             this.tendt.Text = "Luận văn tốt nghiệp";
-            this.tendt.Click += new System.EventHandler(this.tendt_Click);
             // 
             // guna2Button2
             // 
@@ -140,7 +139,6 @@
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(235)))));
             this.guna2Button1.Size = new System.Drawing.Size(1323, 89);
             this.guna2Button1.TabIndex = 17;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -181,7 +179,6 @@
             this.Controls.Add(this.guna2Button1);
             this.Name = "UCdetaidk";
             this.Size = new System.Drawing.Size(1362, 111);
-            this.Load += new System.EventHandler(this.UCdetaidk_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

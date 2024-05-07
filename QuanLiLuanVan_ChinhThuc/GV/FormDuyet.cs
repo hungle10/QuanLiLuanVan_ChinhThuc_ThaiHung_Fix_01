@@ -16,7 +16,6 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         LuanVan lv;
         DangKyDao dkd = new DangKyDao();
         LuanVanDao lvd = new LuanVanDao();
-     //   YeuCauDAO ycd = new YeuCauDAO();
         DangKy dk;
         public FormDuyet(LuanVan lv)
         {
@@ -25,17 +24,6 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             dk=dkd.getFromIDSinhVien(dkd.GetIDSvienByLV(lv).ToString());
             loadInfo();
         }
-        /*public void loadGiaoVien()
-        {
-            GiaoVienDAO gvd = new GiaoVienDAO();
-            DataTable dt = DataProvider.Instance.GetTable("GiaoVien");
-            tbGiaoVien.Items.Clear();
-            foreach (DataRow r in dt.Rows)
-            {
-                //tMessageBox.Show(cbbGiaoVien.Items.Add(r["HoTen"]).ToString());
-                t.Add(r["HoTen"]);
-            }
-        }*/
         public void loadInfo()
         {
             tbGiaoVien.Text = lv.GiangVien;
@@ -45,7 +33,6 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             tbNoiDung.Text = lv.ChiTiet;
             tbNhom.Text = dkd.getMemberNhom(dk);
         }
-
         public bool isYeuCauEmpty()
         {
             if (tbYeuCau.Text.Length <= 0)
@@ -70,12 +57,8 @@ namespace QuanLiLuanVan_ChinhThuc.GV
             }
             lv.YeuCau = tbYeuCau.Text;
             lvd.updateYeuCau(lv);
-            /*foreach (string line in tbYeuCau.Lines)
-                ycd.add(DataStorage.getIDGroupByIDSinhVien().ToString(), dk.IDLuanVan, line, 0);
-            */
             dkd.removeDuyet(dk);
             this.Close();
-
         }
     }
 }

@@ -45,29 +45,31 @@ namespace QuanLiLuanVan_ChinhThuc.SV
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            OpenChildFrom(new HomePage());
-        }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-            OpenChildFrom(new FormInforStudent());
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            OpenChildFrom(new FormDangKyDeTai());
-        }
-
-        private void guna2Button5_Click(object sender, EventArgs e)
-        {
-            OpenChildFrom(new FormGiangVien());
-        }
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            OpenChildFrom(new HomePage());
+        }
+
+        private void btnDeTai_Click(object sender, EventArgs e)
+        {
+            OpenChildFrom(new FormDangKyDeTai());
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            OpenChildFrom(new FormInforStudent());
+        }
+
+        private void btnTeacher_Click(object sender, EventArgs e)
+        {
+            OpenChildFrom(new FormGiangVien());
         }
     }
 }

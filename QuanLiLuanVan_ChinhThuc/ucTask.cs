@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace QuanLiLuanVan_ChinhThuc
 {
     public partial class ucTask : UserControl
     {
-        public ucTask()
+        public int idSV;
+        public ucTask(int idSV)
         {
             InitializeComponent();
+            this.idSV = idSV;
         }
         public Guna.UI2.WinForms.Guna2TrackBar pgTienDo
         {
@@ -46,6 +49,11 @@ namespace QuanLiLuanVan_ChinhThuc
             get { return ucTbNoiDung; }
             set { ucTbNoiDung = value; }
         }
+        public Guna2Button btnCapNhat
+        {
+            get { return ucBtnCapNhat;}
+            set { ucBtnCapNhat = value;}
+        }
         private void ucBtnXoaTask_Click(object sender, EventArgs e)
         {
             FormWatchDetailOfDeTai f=new FormWatchDetailOfDeTai();
@@ -64,14 +72,31 @@ namespace QuanLiLuanVan_ChinhThuc
         {
             TaskDAO dao=new TaskDAO();
             int a;
-            if(UserInfo.user=="Giao Vien")
-            {
-                MessageBox.Show("Giao vien khong the cap nhat task !");
-                return;
-            }
             TaskLV t=new TaskLV(int.Parse(ucLbId.Text),pgTienDo.Value,UserInfo.sinhVien.Id);
             dao.Update(t);
             DataStorage.fDetailDeTai.LoadTask();
+        }
+
+        private void btnThaoLuan_Click(object sender, EventArgs e)
+        {
+            if (UserInfo.user=="Hoc Sinh")
+            {
+                if (UserInfo.sinhVien.Id != idSV)
+                {
+                    MessageBox.Show("Bạn không làm task này nên không thảo luận task này được");
+                    return;
+                }
+            }
+            else
+            {
+                if (idSV<0)
+                {
+                    MessageBox.Show("Chưa có sinh viên nhận task này nên chưa thể thảo luận được");
+                    return;
+                }
+            }
+            FChatBoxTask f = new FChatBoxTask(idSV, int.Parse(lbId.Text));
+            f.ShowDialog();
         }
     }
 }

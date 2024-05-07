@@ -48,7 +48,7 @@ namespace QuanLiLuanVan_ChinhThuc
             foreach (DataRow row in dt.Rows)
             {
                 TaskLV task = new TaskLV(int.Parse(row["MaTask"].ToString()), int.Parse(row["IDGroup"].ToString()) ,int.Parse(row["IDLuanVan"].ToString()), row["NoiDung"].ToString(), DateTime.Parse(row["ThoiHan"].ToString()), int.Parse(row["TienDo"].ToString()));
-                ucTask uc = new ucTask();
+                ucTask uc = new ucTask(-1);
                 int b;
                 if (int.TryParse(row["IDSinhVien"].ToString(),out b) ==true)
                 {
@@ -56,6 +56,12 @@ namespace QuanLiLuanVan_ChinhThuc
                     SinhVienDao svdao = new SinhVienDao();
                     SinhVien sv = svdao.GetSinhVienById(task.IDSinhVien.ToString());
                     uc.lbTenSV.Text = sv.HoTen;
+                    uc.idSV = task.IDSinhVien;
+                }
+                if(UserInfo.user=="Giao Vien") 
+                {
+                    uc.btnCapNhat.Visible= false;
+                    uc.pgTienDo.Enabled= false;
                 }
                 uc.tbNoiDung.Text = task.NoiDung;
                 uc.lbThoiHan.Text = task.FormatNgay();
@@ -70,26 +76,6 @@ namespace QuanLiLuanVan_ChinhThuc
             int k = (int)tiendo;
             lbTienDo.Text = k.ToString() + "%";
         }
-            private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void uCnoidungBB2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uCnoidungBB1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void FormWatchDetailOfDeTai_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();

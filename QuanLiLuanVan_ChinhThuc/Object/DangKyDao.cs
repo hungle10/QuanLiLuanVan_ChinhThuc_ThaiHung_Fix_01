@@ -37,7 +37,6 @@ namespace QuanLiLuanVan_ChinhThuc.Object
             foreach(string line in lines)
             {
                 SinhVienDao dao=new SinhVienDao();
-                //SinhVien sv=dao.GetSinhVienByName(line);
                 string queryDK = String.Format("INSERT INTO Nhom(IDGroup, MemberName) VALUES({0}, '{1}')", dk.IDGroup, line);
                 dBConn.runSql(queryDK);
             }
@@ -110,7 +109,7 @@ namespace QuanLiLuanVan_ChinhThuc.Object
         }
         public DangKy getFromMember(string id)
         {
-            string query = String.Format("SELECT * FROM DangKi inner join Nhom on Nhom.IdGroup=DangKi.IdGroup  WHERE MemberName={0}", id);
+            string query = String.Format("SELECT * FROM DangKi inner join Nhom on Nhom.IdGroup=DangKi.IdGroup  WHERE MemberName='{0}'", id);
             DataTable data = dBConn.Excute(query);
 
             if (data.Rows.Count > 0)

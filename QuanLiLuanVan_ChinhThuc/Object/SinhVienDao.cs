@@ -28,6 +28,15 @@ namespace QuanLiLuanVan_ChinhThuc.GV
         public SinhVien GetSinhVienById(string id)
         {
             string query = string.Format("select * from SinhVien where ID='{0}'", id);
+            try
+            {
+                int.Parse(id.ToString());
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Tồn tại kí tự trong id");
+                return null;
+            }
+             
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             if (dt.Rows.Count == 0)
             {
@@ -110,6 +119,16 @@ namespace QuanLiLuanVan_ChinhThuc.GV
                 MessageBox.Show("Xoa thanh cong !");
             else
                 MessageBox.Show("Xoa khong thanh cong !");
+        }
+        public bool hasGroup(SinhVien sv)
+        {
+            string query = String.Format("SELECT * FROM Nhom WHERE MemberName='{0}'", sv.Id);
+            SqlDataReader data = dBConn.runSqlReturn(query);
+            if (data != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

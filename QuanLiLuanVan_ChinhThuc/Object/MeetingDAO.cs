@@ -24,10 +24,10 @@ namespace QuanLiLuanVan_ChinhThuc.Object
             string queryDK = String.Format("DELETE FROM Meeting WHERE MaMeeting ='{0}'",mt.MaMeeting);
             dBConn.runSql(queryDK);
         }
-        public List<Meeting> getListMeeting(string idGiaoVien) 
+        public List<Meeting> getListMeeting(GiaoVien gv) 
         {
             List<Meeting> mts = new List<Meeting>();
-            string query = String.Format("SELECT * FROM Meeting where IDGiaoVien ='{0}'",idGiaoVien);
+            string query = String.Format("SELECT * FROM Meeting where IDGiaoVien ='{0}'",gv.Id);
             DataTable data = dBConn.Excute(query);
             if (data == null)
             {
@@ -49,7 +49,35 @@ namespace QuanLiLuanVan_ChinhThuc.Object
                 return mts;
             }
             return null;
-        }  
+        }
+        public List<Meeting> getListMeetingGroup(SinhVien sv)
+        {
+            NhomDAO nhomDAO = new NhomDAO();
+            int n = nhomDAO.GetIDGroupByMemBer(sv);
+            List<Meeting> mts = new List<Meeting>();
+            string query = String.Format("SELECT * FROM Meeting where IDGroup ='{0}'", n);
+            DataTable data = dBConn.Excute(query);
+            if (data == null)
+            {
+                MessageBox.Show("Error");
+                return null;
+            }
+            if (data.Rows.Count > 0)
+            {
+                foreach (DataRow row in data.Rows)
+                {
+                    Meeting mt = new Meeting();
+                    mt.MaMeeting = Convert.ToInt32(row["MaMeeting"]);
+                    mt.IdGiaoVien = row["IDGiaoVien"].ToString();
+                    mt.IdGroup = row["IDGroup"].ToString();
+                    mt.ThoiGian = DateTime.Parse(row["ThoiGian"].ToString());
+                    mt.ChiTiet = row["ChiTiet"].ToString();
+                    mts.Add(mt);
+                }
+                return mts;
+            }
+            return null;
+        }
 
     }
 }

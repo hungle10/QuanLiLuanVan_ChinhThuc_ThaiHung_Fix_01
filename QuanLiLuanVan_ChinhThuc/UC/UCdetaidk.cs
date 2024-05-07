@@ -14,6 +14,7 @@ namespace QuanLiLuanVan_ChinhThuc.UC
     {
         LuanVan lv;
         DangKyDao dkd = new DangKyDao();
+        SinhVienDao svd = new SinhVienDao();
      //   YeuCauDAO ycd = new YeuCauDAO();
         DangKy dk;
         FormXacNhan FXacNhan;
@@ -72,11 +73,21 @@ namespace QuanLiLuanVan_ChinhThuc.UC
             }
             if (!dkd.checkDK(dk))
             {
+                if (svd.hasGroup(UserInfo.sinhVien))
+                {
+                    MessageBox.Show("Không thể đăng ký, bạn đang trong 1 đề tài!!");
+                    return;
+                }
                 FXacNhan.ShowDialog();
             }
             else
             {
-              //  ycd.delete(DataStorage.getIDGroupByIDSinhVien().ToString(), lv.IDLuanVan);
+                //  ycd.delete(DataStorage.getIDGroupByIDSinhVien().ToString(), lv.IDLuanVan);
+                if (!dkd.daDK(dk))
+                {
+                    MessageBox.Show("Bạn không phải trưởng nhóm!");
+                    return;
+                }
                 dkd.remove(dkd.getFromMember(UserInfo.sinhVien.Id.ToString()));
             }
             loadInfomation();
@@ -86,35 +97,13 @@ namespace QuanLiLuanVan_ChinhThuc.UC
 
         public Guna2Button Guna2Button3 { get => guna2Button3; set => guna2Button3 = value; }
 
-        private void tendt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UCdetaidk_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            /*FormWatchDetailOfDeTai frm = new FormWatchDetailOfDeTai(lv.TenLuanVan, lv.GiangVien, lv.ChiTiet);
-            NhomDAO dao = new NhomDAO();
-            DataStorage.nhom = new Nhom(dao.GetIDGroupByMemBer(UserInfo.sinhVien));
             LuanVanDao daoLV = new LuanVanDao();
-            LuanVan lvan= daoLV.GetLVByTenLV(lv.TenLuanVan);
-            if(lvan==null)
-            {
-                MessageBox.Show("Khong tim thay luan van");
-                return;
-            }
-            DataStorage.luanVan = lvan;
-            frm.ShowDialog();*/
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
+            LuanVan lvan = daoLV.GetLVByTenLV(lv.TenLuanVan);
+            DataStorage.luanVan=lvan;
+            FChiTietLuanVan fChiTietLV = new FChiTietLuanVan(lvan);
+            fChiTietLV.ShowDialog();
         }
     }
 }
